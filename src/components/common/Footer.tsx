@@ -155,9 +155,9 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/portal" className="hover:text-white transition-colors flex items-center gap-1.5">
+                <Link to="/contact" className="hover:text-white transition-colors flex items-center gap-1.5">
                   <ChevronRight className="w-3.5 h-3.5 text-[#63484C]" />
-                  Parent Portal Preview
+                  Contact & Campus Map
                 </Link>
               </li>
             </ul>

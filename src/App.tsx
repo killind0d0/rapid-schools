@@ -17,7 +17,6 @@ import { EventsPage } from './pages/EventsPage';
 import { GalleryPage } from './pages/GalleryPage';
 import { DownloadsPage } from './pages/DownloadsPage';
 import { ContactPage } from './pages/ContactPage';
-import { ParentPortalPage } from './pages/ParentPortalPage';
 import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
 import { TermsPage } from './pages/TermsPage';
 import { NotFoundPage } from './pages/NotFoundPage';
@@ -75,7 +74,6 @@ export const App: React.FC = () => {
               <Route path="/gallery" element={<GalleryPage />} />
               <Route path="/downloads" element={<DownloadsPage />} />
               <Route path="/contact" element={<ContactPage />} />
-              <Route path="/portal" element={<ParentPortalPage />} />
               <Route path="/privacy" element={<PrivacyPolicyPage />} />
               <Route path="/terms" element={<TermsPage />} />
 
