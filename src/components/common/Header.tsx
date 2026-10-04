@@ -10,17 +10,20 @@ import {
   Menu,
   X,
   Building2,
-  Lock
+  Lock,
+  ChevronDown
 } from 'lucide-react';
 
 export const Header: React.FC = () => {
   const { settings } = useSite();
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [moreMenuOpen, setMoreMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     setMobileMenuOpen(false);
+    setMoreMenuOpen(false);
   }, [location.pathname]);
 
   useEffect(() => {
@@ -121,18 +124,18 @@ export const Header: React.FC = () => {
         </div>
       </div>
 
-      {/* Main Navigation Bar in Alabaster Sandstone with Frosted Glass Blur */}
-      <div className="bg-[#F8FAFC]/95 backdrop-blur-md">
+      {/* Main Navigation Bar in Academic Sapphire Deep Navy */}
+      <div className="bg-[#020617]/95 backdrop-blur-md border-b border-[#1E293B]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-20 gap-3">
             {/* Logo & Brand Emblem with Dual-Ring Metallic Framing */}
             <Link
               to={isDreamz ? '/dreamz' : isShakuntlayan ? '/shakuntlayan' : '/'}
-              className="flex items-center gap-3 group shrink-0"
+              className="flex items-center gap-2.5 sm:gap-3 group shrink-0"
             >
-              <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-[#0F172A] to-[#020617] p-[2px] ring-1 ring-[#F59E0B]/40 shadow-md group-hover:ring-[#F59E0B] transition-all shrink-0">
+              <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-[#0F172A] to-[#020617] p-[2px] ring-1 ring-[#F59E0B]/40 shadow-md group-hover:ring-[#F59E0B] transition-all shrink-0">
                 <div className="w-full h-full rounded-[10px] bg-[#0F172A] border border-[#F59E0B]/30 flex items-center justify-center">
-                  <svg className="w-6 h-6 sm:w-7 sm:h-7" viewBox="0 0 64 64" fill="none">
+                  <svg className="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 64 64" fill="none">
                     <path
                       d="M32 9L49 15.5V32C49 44 41.5 52.5 32 55.5C22.5 52.5 15 44 15 32V15.5L32 9Z"
                       stroke="#FBBF24"
@@ -154,79 +157,79 @@ export const Header: React.FC = () => {
                 </div>
               </div>
               <div className="flex flex-col whitespace-nowrap">
-                <span className="font-outfit font-extrabold text-lg sm:text-xl lg:text-2xl tracking-tight text-[#020617] leading-none mb-1">
+                <span className="font-outfit font-extrabold text-base sm:text-lg lg:text-xl tracking-tight text-white leading-none mb-1">
                   {isDreamz ? (
                     <>RAPID <span className="text-[#F59E0B]">DREAMZ</span></>
                   ) : isShakuntlayan ? (
-                    <>RAPID <span className="text-[#115E59]">SHAKUNTLAYAN</span></>
+                    <>RAPID <span className="text-[#2DD4BF]">SHAKUNTLAYAN</span></>
                   ) : (
                     <>RAPID <span className="text-[#F59E0B]">SCHOOLS</span></>
                   )}
                 </span>
-                <span className="text-[10px] sm:text-[11px] font-medium tracking-wide text-[#475569] leading-none">
+                <span className="hidden sm:inline text-[10px] sm:text-[11px] font-medium tracking-wide text-[#94A3B8] leading-none">
                   {isDreamz
                     ? 'Junior Wing • Play Group to UKG'
                     : isShakuntlayan
-                    ? 'Class 1 to 12 • Affiliated to CBSE, New Delhi'
-                    : 'Play Group to Class 12 • An Integrated Ecosystem'}
+                    ? 'Class 1 to 12 • CBSE Affiliated'
+                    : 'Play Group to Class 12 Ecosystem'}
                 </span>
               </div>
             </Link>
 
             {/* Desktop Nav Links */}
-            <nav className="hidden xl:flex items-center gap-1 text-[13px] font-semibold text-[#1E293B]">
+            <nav className="hidden xl:flex items-center gap-1 text-[13px] font-semibold text-[#E2E8F0]">
               {isDreamz ? (
                 // Dreamz Navigation
                 <>
                   <Link
                     to="/dreamz"
-                    className={`px-3 py-1.5 rounded-lg transition-colors ${
+                    className={`px-2.5 py-1.5 rounded-lg transition-colors whitespace-nowrap ${
                       location.pathname === '/dreamz'
-                        ? 'text-[#F59E0B] font-bold bg-[#F59E0B]/10 border border-[#F59E0B]/20'
-                        : 'hover:text-[#F59E0B] hover:bg-[#F1F5F9]'
+                        ? 'text-[#F59E0B] font-bold bg-[#F59E0B]/15 border border-[#F59E0B]/30'
+                        : 'hover:text-white hover:bg-[#1E293B]/70'
                     }`}
                   >
                     Overview
                   </Link>
                   <Link
                     to="/dreamz/approach"
-                    className={`px-3 py-1.5 rounded-lg transition-colors ${
+                    className={`px-2.5 py-1.5 rounded-lg transition-colors whitespace-nowrap ${
                       location.pathname === '/dreamz/approach'
-                        ? 'text-[#F59E0B] font-bold bg-[#F59E0B]/10 border border-[#F59E0B]/20'
-                        : 'hover:text-[#F59E0B] hover:bg-[#F1F5F9]'
+                        ? 'text-[#F59E0B] font-bold bg-[#F59E0B]/15 border border-[#F59E0B]/30'
+                        : 'hover:text-white hover:bg-[#1E293B]/70'
                     }`}
                   >
                     Learning Approach
                   </Link>
                   <Link
                     to="/dreamz/academics"
-                    className={`px-3 py-1.5 rounded-lg transition-colors ${
+                    className={`px-2.5 py-1.5 rounded-lg transition-colors whitespace-nowrap ${
                       location.pathname === '/dreamz/academics'
-                        ? 'text-[#F59E0B] font-bold bg-[#F59E0B]/10 border border-[#F59E0B]/20'
-                        : 'hover:text-[#F59E0B] hover:bg-[#F1F5F9]'
+                        ? 'text-[#F59E0B] font-bold bg-[#F59E0B]/15 border border-[#F59E0B]/30'
+                        : 'hover:text-white hover:bg-[#1E293B]/70'
                     }`}
                   >
                     Early Years Stages
                   </Link>
                   <Link
                     to="/gallery"
-                    className="px-3 py-1.5 rounded-lg hover:text-[#F59E0B] hover:bg-[#F1F5F9] transition-colors"
+                    className="px-2.5 py-1.5 rounded-lg hover:text-white hover:bg-[#1E293B]/70 transition-colors whitespace-nowrap"
                   >
                     Play Campus
                   </Link>
                   <Link
                     to="/dreamz/admissions"
-                    className={`px-3 py-1.5 rounded-lg transition-colors ${
+                    className={`px-2.5 py-1.5 rounded-lg transition-colors whitespace-nowrap ${
                       location.pathname === '/dreamz/admissions'
-                        ? 'text-[#F59E0B] font-bold bg-[#F59E0B]/10 border border-[#F59E0B]/20'
-                        : 'hover:text-[#F59E0B] hover:bg-[#F1F5F9]'
+                        ? 'text-[#F59E0B] font-bold bg-[#F59E0B]/15 border border-[#F59E0B]/30'
+                        : 'hover:text-white hover:bg-[#1E293B]/70'
                     }`}
                   >
                     Admissions
                   </Link>
                   <Link
                     to="/"
-                    className="px-3 py-1.5 text-xs font-bold text-[#475569] hover:text-[#020617] transition-colors flex items-center gap-1.5 border-l pl-3 ml-2 border-[#E2E8F0]"
+                    className="px-2.5 py-1.5 text-xs font-bold text-[#CBD5E1] hover:text-[#FDE68A] transition-colors flex items-center gap-1.5 border-l pl-3 ml-2 border-[#1E293B] whitespace-nowrap"
                     title="Return to Rapid Schools Main Portal"
                   >
                     <Building2 className="w-3.5 h-3.5 text-[#F59E0B]" />
@@ -238,60 +241,60 @@ export const Header: React.FC = () => {
                 <>
                   <Link
                     to="/shakuntlayan"
-                    className={`px-3 py-1.5 rounded-lg transition-colors ${
+                    className={`px-2.5 py-1.5 rounded-lg transition-colors whitespace-nowrap ${
                       location.pathname === '/shakuntlayan'
-                        ? 'text-[#115E59] font-bold bg-[#115E59]/10 border border-[#115E59]/20'
-                        : 'hover:text-[#115E59] hover:bg-[#F1F5F9]'
+                        ? 'text-[#2DD4BF] font-bold bg-[#115E59]/20 border border-[#14B8A6]/30'
+                        : 'hover:text-white hover:bg-[#1E293B]/70'
                     }`}
                   >
                     Overview
                   </Link>
                   <Link
                     to="/shakuntlayan/academics"
-                    className={`px-3 py-1.5 rounded-lg transition-colors ${
+                    className={`px-2.5 py-1.5 rounded-lg transition-colors whitespace-nowrap ${
                       location.pathname === '/shakuntlayan/academics'
-                        ? 'text-[#115E59] font-bold bg-[#115E59]/10 border border-[#115E59]/20'
-                        : 'hover:text-[#115E59] hover:bg-[#F1F5F9]'
+                        ? 'text-[#2DD4BF] font-bold bg-[#115E59]/20 border border-[#14B8A6]/30'
+                        : 'hover:text-white hover:bg-[#1E293B]/70'
                     }`}
                   >
-                    Academic Journey (1–12)
+                    Academic Journey
                   </Link>
                   <Link
                     to="/shakuntlayan/campus"
-                    className={`px-3 py-1.5 rounded-lg transition-colors ${
+                    className={`px-2.5 py-1.5 rounded-lg transition-colors whitespace-nowrap ${
                       location.pathname === '/shakuntlayan/campus'
-                        ? 'text-[#115E59] font-bold bg-[#115E59]/10 border border-[#115E59]/20'
-                        : 'hover:text-[#115E59] hover:bg-[#F1F5F9]'
+                        ? 'text-[#2DD4BF] font-bold bg-[#115E59]/20 border border-[#14B8A6]/30'
+                        : 'hover:text-white hover:bg-[#1E293B]/70'
                     }`}
                   >
                     Campus Facilities
                   </Link>
                   <Link
                     to="/shakuntlayan/student-life"
-                    className={`px-3 py-1.5 rounded-lg transition-colors ${
+                    className={`px-2.5 py-1.5 rounded-lg transition-colors whitespace-nowrap ${
                       location.pathname === '/shakuntlayan/student-life'
-                        ? 'text-[#115E59] font-bold bg-[#115E59]/10 border border-[#115E59]/20'
-                        : 'hover:text-[#115E59] hover:bg-[#F1F5F9]'
+                        ? 'text-[#2DD4BF] font-bold bg-[#115E59]/20 border border-[#14B8A6]/30'
+                        : 'hover:text-white hover:bg-[#1E293B]/70'
                     }`}
                   >
                     Student Life
                   </Link>
                   <Link
                     to="/shakuntlayan/admissions"
-                    className={`px-3 py-1.5 rounded-lg transition-colors ${
+                    className={`px-2.5 py-1.5 rounded-lg transition-colors whitespace-nowrap ${
                       location.pathname === '/shakuntlayan/admissions'
-                        ? 'text-[#115E59] font-bold bg-[#115E59]/10 border border-[#115E59]/20'
-                        : 'hover:text-[#115E59] hover:bg-[#F1F5F9]'
+                        ? 'text-[#2DD4BF] font-bold bg-[#115E59]/20 border border-[#14B8A6]/30'
+                        : 'hover:text-white hover:bg-[#1E293B]/70'
                     }`}
                   >
                     CBSE Admissions
                   </Link>
                   <Link
                     to="/"
-                    className="px-3 py-1.5 text-xs font-bold text-[#475569] hover:text-[#020617] transition-colors flex items-center gap-1.5 border-l pl-3 ml-2 border-[#E2E8F0]"
+                    className="px-2.5 py-1.5 text-xs font-bold text-[#CBD5E1] hover:text-[#2DD4BF] transition-colors flex items-center gap-1.5 border-l pl-3 ml-2 border-[#1E293B] whitespace-nowrap"
                     title="Return to Rapid Schools Main Portal"
                   >
-                    <Building2 className="w-3.5 h-3.5 text-[#115E59]" />
+                    <Building2 className="w-3.5 h-3.5 text-[#14B8A6]" />
                     <span>Rapid Schools</span>
                   </Link>
                 </>
@@ -300,121 +303,131 @@ export const Header: React.FC = () => {
                 <>
                   <Link
                     to="/"
-                    className={`px-2.5 py-1.5 rounded-lg transition-colors ${
+                    className={`px-2.5 py-1.5 rounded-lg transition-colors whitespace-nowrap ${
                       location.pathname === '/'
-                        ? 'text-[#F59E0B] font-bold bg-[#F59E0B]/10 border border-[#F59E0B]/20'
-                        : 'hover:text-[#F59E0B] hover:bg-[#F1F5F9]'
+                        ? 'text-[#F59E0B] font-bold bg-[#F59E0B]/15 border border-[#F59E0B]/30'
+                        : 'hover:text-white hover:bg-[#1E293B]/70'
                     }`}
                   >
                     Home
                   </Link>
                   <Link
                     to="/about"
-                    className={`px-2.5 py-1.5 rounded-lg transition-colors ${
+                    className={`px-2.5 py-1.5 rounded-lg transition-colors whitespace-nowrap ${
                       location.pathname === '/about'
-                        ? 'text-[#F59E0B] font-bold bg-[#F59E0B]/10 border border-[#F59E0B]/20'
-                        : 'hover:text-[#F59E0B] hover:bg-[#F1F5F9]'
+                        ? 'text-[#F59E0B] font-bold bg-[#F59E0B]/15 border border-[#F59E0B]/30'
+                        : 'hover:text-white hover:bg-[#1E293B]/70'
                     }`}
                   >
                     About Us
                   </Link>
                   <Link
                     to="/dreamz"
-                    className="px-2.5 py-1.5 rounded-lg text-[#F59E0B] hover:text-[#D97706] hover:bg-[#F59E0B]/10 transition-colors"
+                    className="px-2.5 py-1.5 rounded-lg text-[#FDE68A] hover:text-[#F59E0B] hover:bg-[#1E293B]/70 transition-colors whitespace-nowrap"
                   >
                     Rapid Dreamz
                   </Link>
                   <Link
                     to="/shakuntlayan"
-                    className="px-2.5 py-1.5 rounded-lg text-[#115E59] hover:text-[#134E4A] hover:bg-[#115E59]/10 transition-colors"
+                    className="px-2.5 py-1.5 rounded-lg text-[#5EEAD4] hover:text-[#2DD4BF] hover:bg-[#1E293B]/70 transition-colors whitespace-nowrap"
                   >
                     Rapid Shakuntlayan
                   </Link>
                   <Link
                     to="/admissions"
-                    className={`px-2.5 py-1.5 rounded-lg transition-colors ${
+                    className={`px-2.5 py-1.5 rounded-lg transition-colors whitespace-nowrap ${
                       location.pathname === '/admissions'
-                        ? 'text-[#F59E0B] font-bold bg-[#F59E0B]/10 border border-[#F59E0B]/20'
-                        : 'hover:text-[#F59E0B] hover:bg-[#F1F5F9]'
+                        ? 'text-[#F59E0B] font-bold bg-[#F59E0B]/15 border border-[#F59E0B]/30'
+                        : 'hover:text-white hover:bg-[#1E293B]/70'
                     }`}
                   >
                     Admissions
                   </Link>
                   <Link
-                    to="/notices"
-                    className={`px-2.5 py-1.5 rounded-lg transition-colors ${
-                      location.pathname === '/notices'
-                        ? 'text-[#F59E0B] font-bold bg-[#F59E0B]/10 border border-[#F59E0B]/20'
-                        : 'hover:text-[#F59E0B] hover:bg-[#F1F5F9]'
-                    }`}
-                  >
-                    Notices
-                  </Link>
-                  <Link
-                    to="/news"
-                    className={`px-2.5 py-1.5 rounded-lg transition-colors ${
-                      location.pathname === '/news'
-                        ? 'text-[#F59E0B] font-bold bg-[#F59E0B]/10 border border-[#F59E0B]/20'
-                        : 'hover:text-[#F59E0B] hover:bg-[#F1F5F9]'
-                    }`}
-                  >
-                    News
-                  </Link>
-                  <Link
-                    to="/events"
-                    className={`px-2.5 py-1.5 rounded-lg transition-colors ${
-                      location.pathname === '/events'
-                        ? 'text-[#F59E0B] font-bold bg-[#F59E0B]/10 border border-[#F59E0B]/20'
-                        : 'hover:text-[#F59E0B] hover:bg-[#F1F5F9]'
-                    }`}
-                  >
-                    Events
-                  </Link>
-                  <Link
                     to="/gallery"
-                    className={`px-2.5 py-1.5 rounded-lg transition-colors ${
+                    className={`px-2.5 py-1.5 rounded-lg transition-colors whitespace-nowrap ${
                       location.pathname === '/gallery'
-                        ? 'text-[#F59E0B] font-bold bg-[#F59E0B]/10 border border-[#F59E0B]/20'
-                        : 'hover:text-[#F59E0B] hover:bg-[#F1F5F9]'
+                        ? 'text-[#F59E0B] font-bold bg-[#F59E0B]/15 border border-[#F59E0B]/30'
+                        : 'hover:text-white hover:bg-[#1E293B]/70'
                     }`}
                   >
                     Gallery
                   </Link>
                   <Link
-                    to="/downloads"
-                    className={`px-2.5 py-1.5 rounded-lg transition-colors ${
-                      location.pathname === '/downloads'
-                        ? 'text-[#F59E0B] font-bold bg-[#F59E0B]/10 border border-[#F59E0B]/20'
-                        : 'hover:text-[#F59E0B] hover:bg-[#F1F5F9]'
-                    }`}
-                  >
-                    Downloads
-                  </Link>
-                  <Link
                     to="/contact"
-                    className={`px-2.5 py-1.5 rounded-lg transition-colors ${
+                    className={`px-2.5 py-1.5 rounded-lg transition-colors whitespace-nowrap ${
                       location.pathname === '/contact'
-                        ? 'text-[#F59E0B] font-bold bg-[#F59E0B]/10 border border-[#F59E0B]/20'
-                        : 'hover:text-[#F59E0B] hover:bg-[#F1F5F9]'
+                        ? 'text-[#F59E0B] font-bold bg-[#F59E0B]/15 border border-[#F59E0B]/30'
+                        : 'hover:text-white hover:bg-[#1E293B]/70'
                     }`}
                   >
                     Contact
                   </Link>
+
+                  {/* More Dropdown */}
+                  <div className="relative">
+                    <button
+                      type="button"
+                      onClick={() => setMoreMenuOpen(!moreMenuOpen)}
+                      className={`px-2.5 py-1.5 rounded-lg transition-colors flex items-center gap-1 whitespace-nowrap cursor-pointer ${
+                        ['/notices', '/news', '/events', '/downloads'].includes(location.pathname)
+                          ? 'text-[#F59E0B] font-bold bg-[#F59E0B]/15 border border-[#F59E0B]/30'
+                          : 'hover:text-white hover:bg-[#1E293B]/70'
+                      }`}
+                    >
+                      <span>More</span>
+                      <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${moreMenuOpen ? 'rotate-180' : ''}`} />
+                    </button>
+
+                    {moreMenuOpen && (
+                      <div className="absolute right-0 top-full mt-2 w-48 rounded-xl bg-[#0F172A] border border-[#1E293B] shadow-2xl py-1.5 z-50 animate-in fade-in slide-in-from-top-1 duration-150">
+                        <Link
+                          to="/notices"
+                          onClick={() => setMoreMenuOpen(false)}
+                          className="flex items-center justify-between px-3.5 py-2 text-xs font-medium text-[#CBD5E1] hover:text-white hover:bg-[#1E293B]/80 transition-colors"
+                        >
+                          <span>Notice Board</span>
+                          <span className="w-1.5 h-1.5 rounded-full bg-[#F59E0B]" />
+                        </Link>
+                        <Link
+                          to="/news"
+                          onClick={() => setMoreMenuOpen(false)}
+                          className="block px-3.5 py-2 text-xs font-medium text-[#CBD5E1] hover:text-white hover:bg-[#1E293B]/80 transition-colors"
+                        >
+                          News & Updates
+                        </Link>
+                        <Link
+                          to="/events"
+                          onClick={() => setMoreMenuOpen(false)}
+                          className="block px-3.5 py-2 text-xs font-medium text-[#CBD5E1] hover:text-white hover:bg-[#1E293B]/80 transition-colors"
+                        >
+                          Events & Calendar
+                        </Link>
+                        <Link
+                          to="/downloads"
+                          onClick={() => setMoreMenuOpen(false)}
+                          className="block px-3.5 py-2 text-xs font-medium text-[#CBD5E1] hover:text-white hover:bg-[#1E293B]/80 transition-colors"
+                        >
+                          Downloads & Forms
+                        </Link>
+                      </div>
+                    )}
+                  </div>
                 </>
               )}
             </nav>
 
             {/* Action CTAs */}
-            <div className="hidden sm:flex items-center gap-3">
+            <div className="hidden sm:flex items-center gap-2 lg:gap-3 shrink-0">
               <Link
                 to="/visit"
-                className="luxury-btn-outline px-4 py-2 text-xs font-bold uppercase tracking-wider rounded-xl transition-all"
+                className="luxury-btn-outline px-3 sm:px-4 py-2 text-xs font-bold uppercase tracking-wider rounded-xl transition-all whitespace-nowrap text-[#FDE68A] border-[#F59E0B]/40 hover:bg-[#F59E0B]/10 hover:text-white"
               >
-                Book Campus Tour
+                Book Tour
               </Link>
               <Link
                 to={isDreamz ? '/dreamz/admissions' : isShakuntlayan ? '/shakuntlayan/admissions' : '/admissions'}
-                className="luxury-btn-primary px-5 py-2 text-xs font-bold uppercase tracking-wider rounded-xl transition-all"
+                className="luxury-btn-primary px-3.5 sm:px-4 py-2 text-xs font-bold uppercase tracking-wider rounded-xl transition-all whitespace-nowrap shadow-md text-white"
               >
                 Apply 2025–26
               </Link>
@@ -424,65 +437,70 @@ export const Header: React.FC = () => {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="xl:hidden p-2.5 rounded-xl text-[#020617] hover:bg-[#F1F5F9] focus:outline-none focus:ring-2 focus:ring-[#F59E0B]"
+              className="xl:hidden p-2.5 rounded-xl text-white hover:bg-[#1E293B] focus:outline-none focus:ring-2 focus:ring-[#F59E0B] shrink-0"
               aria-label="Toggle navigation menu"
               aria-expanded={mobileMenuOpen}
             >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {mobileMenuOpen ? <X className="w-6 h-6 text-[#F59E0B]" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
       </div>
 
-      {/* Mobile Drawer Menu */}
+      {/* Mobile Drawer Menu in Deep Navy */}
       {mobileMenuOpen && (
-        <div className="xl:hidden bg-[#F8FAFC] border-b border-[#E2E8F0] shadow-2xl px-4 pt-4 pb-8 max-h-[85vh] overflow-y-auto">
+        <div className="xl:hidden bg-[#0F172A] border-b border-[#1E293B] shadow-2xl px-4 pt-4 pb-8 max-h-[85vh] overflow-y-auto text-[#E2E8F0]">
           {/* Quick Actions in Mobile Drawer */}
-          <div className="grid grid-cols-2 gap-2.5 mb-5 pb-4 border-b border-[#E2E8F0]">
+          <div className="grid grid-cols-2 gap-2.5 mb-5 pb-4 border-b border-[#1E293B]">
             <Link
               to="/admissions"
+              onClick={() => setMobileMenuOpen(false)}
               className="luxury-btn-primary flex items-center justify-center py-2.5 px-3 text-white font-bold text-xs uppercase tracking-wider rounded-xl text-center"
             >
               <span>Apply 2025–26</span>
             </Link>
             <Link
               to="/visit"
-              className="luxury-btn-outline flex items-center justify-center py-2.5 px-3 font-bold text-xs uppercase tracking-wider rounded-xl text-center"
+              onClick={() => setMobileMenuOpen(false)}
+              className="luxury-btn-outline flex items-center justify-center py-2.5 px-3 font-bold text-xs uppercase tracking-wider rounded-xl text-center text-[#FDE68A] border-[#F59E0B]/40 hover:bg-[#F59E0B]/10 hover:text-white"
             >
               <span>Book Tour</span>
             </Link>
           </div>
 
-          <div className="space-y-1 text-sm font-semibold text-[#020617]">
+          <div className="space-y-1 text-sm font-semibold text-[#E2E8F0]">
             <div className="text-[10px] font-bold text-[#F59E0B] uppercase tracking-[0.2em] py-1.5">
               School Institutions
             </div>
             <Link
               to="/"
+              onClick={() => setMobileMenuOpen(false)}
               className={`block px-3 py-2 rounded-xl transition-colors ${
                 location.pathname === '/'
-                  ? 'text-[#F59E0B] bg-[#F59E0B]/10 font-bold border border-[#F59E0B]/20'
-                  : 'hover:bg-[#F1F5F9]'
+                  ? 'text-[#F59E0B] bg-[#F59E0B]/15 font-bold border border-[#F59E0B]/30'
+                  : 'hover:bg-[#1E293B] hover:text-white'
               }`}
             >
               Rapid Schools Parent Ecosystem
             </Link>
             <Link
               to="/dreamz"
+              onClick={() => setMobileMenuOpen(false)}
               className={`block px-3 py-2 rounded-xl transition-colors ${
                 isDreamz
                   ? 'text-[#F59E0B] bg-[#F59E0B]/15 font-bold border border-[#F59E0B]/30'
-                  : 'hover:bg-[#F1F5F9]'
+                  : 'hover:bg-[#1E293B] hover:text-white'
               }`}
             >
               Rapid Dreamz (Play Group to UKG)
             </Link>
             <Link
               to="/shakuntlayan"
+              onClick={() => setMobileMenuOpen(false)}
               className={`block px-3 py-2 rounded-xl transition-colors ${
                 isShakuntlayan
-                  ? 'text-[#115E59] bg-[#115E59]/10 font-bold border border-[#115E59]/20'
-                  : 'hover:bg-[#F1F5F9]'
+                  ? 'text-[#2DD4BF] bg-[#115E59]/20 font-bold border border-[#14B8A6]/30'
+                  : 'hover:bg-[#1E293B] hover:text-white'
               }`}
             >
               Rapid Shakuntlayan (Class 1 to 12 CBSE)
@@ -491,41 +509,41 @@ export const Header: React.FC = () => {
             <div className="text-[10px] font-bold text-[#F59E0B] uppercase tracking-[0.2em] pt-4 pb-1.5">
               Academics & Life
             </div>
-            <Link to="/about" className="block px-3 py-2 rounded-xl hover:bg-[#F1F5F9]">
+            <Link to="/about" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 rounded-xl hover:bg-[#1E293B] hover:text-white">
               About Institutional Vision
             </Link>
-            <Link to="/dreamz/approach" className="block px-3 py-2 rounded-xl hover:bg-[#F1F5F9]">
+            <Link to="/dreamz/approach" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 rounded-xl hover:bg-[#1E293B] hover:text-white">
               Dreamz Early Childhood Approach
             </Link>
-            <Link to="/shakuntlayan/academics" className="block px-3 py-2 rounded-xl hover:bg-[#F1F5F9]">
+            <Link to="/shakuntlayan/academics" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 rounded-xl hover:bg-[#1E293B] hover:text-white">
               Shakuntlayan Academic Journey
             </Link>
-            <Link to="/shakuntlayan/campus" className="block px-3 py-2 rounded-xl hover:bg-[#F1F5F9]">
+            <Link to="/shakuntlayan/campus" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 rounded-xl hover:bg-[#1E293B] hover:text-white">
               Campus Facilities & Labs
             </Link>
-            <Link to="/gallery" className="block px-3 py-2 rounded-xl hover:bg-[#F1F5F9]">
+            <Link to="/gallery" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 rounded-xl hover:bg-[#1E293B] hover:text-white">
               Photo & Campus Gallery
             </Link>
 
             <div className="text-[10px] font-bold text-[#F59E0B] uppercase tracking-[0.2em] pt-4 pb-1.5">
               Information & Administration
             </div>
-            <Link to="/notices" className="block px-3 py-2 rounded-xl hover:bg-[#F1F5F9]">
+            <Link to="/notices" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 rounded-xl hover:bg-[#1E293B] hover:text-white">
               Official Circulars & Notice Board
             </Link>
-            <Link to="/news" className="block px-3 py-2 rounded-xl hover:bg-[#F1F5F9]">
+            <Link to="/news" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 rounded-xl hover:bg-[#1E293B] hover:text-white">
               Institutional News
             </Link>
-            <Link to="/events" className="block px-3 py-2 rounded-xl hover:bg-[#F1F5F9]">
+            <Link to="/events" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 rounded-xl hover:bg-[#1E293B] hover:text-white">
               Calendar & Events
             </Link>
-            <Link to="/downloads" className="block px-3 py-2 rounded-xl hover:bg-[#F1F5F9]">
+            <Link to="/downloads" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 rounded-xl hover:bg-[#1E293B] hover:text-white">
               Download Center
             </Link>
-            <Link to="/contact" className="block px-3 py-2 rounded-xl hover:bg-[#F1F5F9]">
+            <Link to="/contact" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 rounded-xl hover:bg-[#1E293B] hover:text-white">
               Contact & Directions
             </Link>
-            <Link to="/admin" className="block px-3 py-2 rounded-xl hover:bg-[#F1F5F9] text-[#F59E0B] font-bold">
+            <Link to="/admin" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 rounded-xl hover:bg-[#1E293B] text-[#F59E0B] font-bold">
               Admin CMS Console
             </Link>
           </div>
