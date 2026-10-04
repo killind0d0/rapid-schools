@@ -3,7 +3,8 @@ import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 
 // https://vitejs.dev/config/
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
+  base: mode === 'production' ? '/rapid-schools/' : '/',
   plugins: [
     react(),
     tailwindcss(),
@@ -30,4 +31,4 @@ export default defineConfig({
     port: 5173,
     host: true
   }
-});
+}));

@@ -51,7 +51,7 @@ const ScrollToTop: React.FC = () => {
 export const App: React.FC = () => {
   return (
     <SiteProvider>
-      <BrowserRouter>
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <ScrollToTop />
         <div className="flex flex-col min-h-screen">
           {/* Top Announcement Ticker */}
