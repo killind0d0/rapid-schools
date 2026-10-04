@@ -190,6 +190,7 @@ export const initialNews: NewsArticle[] = [
 ];
 
 export const initialGallery: GalleryItem[] = [
+  // 13 Authentic School Videos & Reels
   {
     id: 'gal-fb-v01',
     title: 'Student Expression & Campus Life',
@@ -257,6 +258,84 @@ export const initialGallery: GalleryItem[] = [
     targetSchool: 'shakuntlayan'
   },
   {
+    id: 'gal-fb-v07',
+    title: 'Patriotic Celebrations & Flag Hoisting',
+    category: 'Celebrations',
+    imageUrl: '/rapid-schools/gallery/photos/poster_1230369338489040.jpg',
+    videoUrl: '/rapid-schools/gallery/videos/1230369338489040.mp4',
+    mediaType: 'video',
+    caption: 'Ceremonial flag salutation, national anthem chorus, and patriotic march-past by student house contingents.',
+    altText: 'Independence Day flag hoisting assembly',
+    targetSchool: 'all'
+  },
+  {
+    id: 'gal-fb-v08',
+    title: 'Rapid Dreamz: Junior Learning & Rhymes',
+    category: 'Early Years',
+    imageUrl: '/rapid-schools/gallery/photos/poster_1426754705716888.jpg',
+    videoUrl: '/rapid-schools/gallery/videos/1426754705716888.mp4',
+    mediaType: 'video',
+    caption: 'Rapid Dreamz junior scholars participating in tactile learning games, puzzle coordination, and rhythm exercises.',
+    altText: 'Junior kindergarten learning and playful activities',
+    targetSchool: 'dreamz'
+  },
+  {
+    id: 'gal-fb-v09',
+    title: 'Inter-House Drill & Physical Conditioning',
+    category: 'Sports',
+    imageUrl: '/rapid-schools/gallery/photos/poster_1476739274464624.jpg',
+    videoUrl: '/rapid-schools/gallery/videos/1476739274464624.mp4',
+    mediaType: 'video',
+    caption: 'Synchronized calisthenics, agility drills, and yoga postures promoting physical fitness and team cohesion.',
+    altText: 'Students during physical education drills',
+    targetSchool: 'shakuntlayan'
+  },
+  {
+    id: 'gal-fb-v10',
+    title: 'Saraswati Puja & Devotional Chorus',
+    category: 'Arts & Culture',
+    imageUrl: '/rapid-schools/gallery/photos/poster_1519727795795889.jpg',
+    videoUrl: '/rapid-schools/gallery/videos/1519727795795889.mp4',
+    mediaType: 'video',
+    caption: 'Reverent invocation of Goddess Saraswati with student shloka chanting and devotional choral arrangements.',
+    altText: 'Saraswati Puja devotional ceremony',
+    targetSchool: 'shakuntlayan'
+  },
+  {
+    id: 'gal-fb-v11',
+    title: 'Annual Day Theatrical & Musical Gala',
+    category: 'Arts & Culture',
+    imageUrl: '/rapid-schools/gallery/photos/poster_1914517019148179.jpg',
+    videoUrl: '/rapid-schools/gallery/videos/1914517019148179.mp4',
+    mediaType: 'video',
+    caption: 'Comprehensive theatrical plays, classical choreography, and auditorium productions performed before parents and dignitaries.',
+    altText: 'Annual day stage performances and drama showcase',
+    targetSchool: 'all'
+  },
+  {
+    id: 'gal-fb-v12',
+    title: 'Classroom Inquiry & Collaborative Study',
+    category: 'Classrooms',
+    imageUrl: '/rapid-schools/gallery/photos/poster_4129280310720278.jpg',
+    videoUrl: '/rapid-schools/gallery/videos/4129280310720278.mp4',
+    mediaType: 'video',
+    caption: 'Students engaging in structured classroom discourse, public speaking practice, and collaborative problem-solving.',
+    altText: 'Interactive classroom seminar and student presentation',
+    targetSchool: 'shakuntlayan'
+  },
+  {
+    id: 'gal-fb-v13',
+    title: 'Ceremonial Parade & Guard of Honor',
+    category: 'Celebrations',
+    imageUrl: '/rapid-schools/gallery/photos/poster_907139858568404.jpg',
+    videoUrl: '/rapid-schools/gallery/videos/907139858568404.mp4',
+    mediaType: 'video',
+    caption: 'Disciplined student battalion march-past, salute to the tricolor, and ceremonial brass band performance.',
+    altText: 'Republic Day parade and inspection',
+    targetSchool: 'all'
+  },
+  // 16 Authentic School Photographs
+  {
     id: 'gal-fb-p01',
     title: 'Rapid Shakuntalayan School Crest & Gate',
     category: 'Campus',
@@ -268,6 +347,16 @@ export const initialGallery: GalleryItem[] = [
   },
   {
     id: 'gal-fb-p02',
+    title: 'Tekuna Farm Main Academic Complex',
+    category: 'Campus',
+    imageUrl: '/rapid-schools/gallery/photos/photo_015.jpg',
+    mediaType: 'photo',
+    caption: 'Sprawling green school estate and modern multi-story academic buildings on Bodh Gaya Road.',
+    altText: 'Rapid Shakuntalayan main academic campus building',
+    targetSchool: 'shakuntlayan'
+  },
+  {
+    id: 'gal-fb-p03',
     title: 'Gandhi Jayanti & Shastri Jayanti Commemoration',
     category: 'Celebrations',
     imageUrl: '/rapid-schools/gallery/photos/photo_006.jpg',
@@ -277,7 +366,7 @@ export const initialGallery: GalleryItem[] = [
     targetSchool: 'shakuntlayan'
   },
   {
-    id: 'gal-fb-p03',
+    id: 'gal-fb-p04',
     title: 'Inter-House Sports Meet & Parade',
     category: 'Sports',
     imageUrl: '/rapid-schools/gallery/photos/photo_005.jpg',
@@ -287,8 +376,8 @@ export const initialGallery: GalleryItem[] = [
     targetSchool: 'shakuntlayan'
   },
   {
-    id: 'gal-fb-p04',
-    title: 'Classroom Scholastic Inquiry',
+    id: 'gal-fb-p05',
+    title: 'Classroom Scholastic Inquiry & Debate',
     category: 'Classrooms',
     imageUrl: '/rapid-schools/gallery/photos/photo_003.jpg',
     mediaType: 'photo',
@@ -297,7 +386,47 @@ export const initialGallery: GalleryItem[] = [
     targetSchool: 'shakuntlayan'
   },
   {
-    id: 'gal-fb-p05',
+    id: 'gal-fb-p06',
+    title: 'Faculty Mentorship & Teacher Development',
+    category: 'Campus',
+    imageUrl: '/rapid-schools/gallery/photos/photo_004.jpg',
+    mediaType: 'photo',
+    caption: 'Dedicated educators collaborating on pedagogical frameworks, lesson planning, and student mentorship.',
+    altText: 'Teaching staff and faculty symposium',
+    targetSchool: 'shakuntlayan'
+  },
+  {
+    id: 'gal-fb-p07',
+    title: 'National Celebration Assembly & Speeches',
+    category: 'Celebrations',
+    imageUrl: '/rapid-schools/gallery/photos/photo_007.jpg',
+    mediaType: 'photo',
+    caption: 'Distinguished guests, faculty, and student council gathered for ceremonial national day addresses.',
+    altText: 'Dignitaries addressing students during national celebration',
+    targetSchool: 'shakuntlayan'
+  },
+  {
+    id: 'gal-fb-p08',
+    title: 'Morning Assembly & School Discipline',
+    category: 'Campus',
+    imageUrl: '/rapid-schools/gallery/photos/photo_008.jpg',
+    mediaType: 'photo',
+    caption: 'Orderly morning assembly rows, uniform inspection, and collective pledge recitation.',
+    altText: 'Students lined up during morning assembly',
+    targetSchool: 'shakuntlayan'
+  },
+  {
+    id: 'gal-fb-p09',
+    title: 'Applied Science & Discovery Laboratory',
+    category: 'Classrooms',
+    imageUrl: '/rapid-schools/gallery/photos/photo_010.jpg',
+    mediaType: 'photo',
+    caption: 'Curious scholars conducting observational science experiments and apparatus measurements.',
+    altText: 'Science laboratory workspace with students',
+    targetSchool: 'shakuntlayan'
+  },
+  {
+    id: 'gal-fb-p10',
     title: 'Rapid Dreamz: Early Sensory Learning',
     category: 'Early Years',
     imageUrl: '/rapid-schools/gallery/photos/photo_011.jpg',
@@ -307,24 +436,64 @@ export const initialGallery: GalleryItem[] = [
     targetSchool: 'dreamz'
   },
   {
-    id: 'gal-01',
-    title: 'Rapid Dreamz Play Environment',
+    id: 'gal-fb-p11',
+    title: 'Rapid Dreamz: Kindergarten Play & Story Circle',
     category: 'Early Years',
-    imageUrl: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: '/rapid-schools/gallery/photos/photo_012.jpg',
     mediaType: 'photo',
-    caption: 'Safe, rubberized indoor play space supporting motor dexterity and social interaction.',
-    altText: 'Children engaging in creative play at Rapid Dreamz',
+    caption: 'Interactive storytelling circle, foundational literacy building, and social emotional bonding.',
+    altText: 'Kindergarten children enjoying group learning at Rapid Dreamz',
     targetSchool: 'dreamz'
   },
   {
-    id: 'gal-02',
-    title: 'Central Learning Resource Library',
+    id: 'gal-fb-p12',
+    title: 'Student Leadership Council & Prefects',
     category: 'Campus',
-    imageUrl: 'https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: '/rapid-schools/gallery/photos/photo_016.jpg',
     mediaType: 'photo',
-    caption: 'Peaceful reading zones with diverse literature, research journals, and digital catalogues.',
-    altText: 'Quiet library study area with book collections',
+    caption: 'Elected student prefects and house captains taking leadership oath for campus order and peer support.',
+    altText: 'Student leaders and prefect body investiture',
     targetSchool: 'shakuntlayan'
+  },
+  {
+    id: 'gal-fb-p13',
+    title: 'Academic Honors & Inter-School Laurels',
+    category: 'Celebrations',
+    imageUrl: '/rapid-schools/gallery/photos/photo_017.jpg',
+    mediaType: 'photo',
+    caption: 'Merit scholars awarded trophies and certificates for distinguished performance in regional olympiads.',
+    altText: 'Scholars receiving academic trophies and certificates',
+    targetSchool: 'shakuntlayan'
+  },
+  {
+    id: 'gal-fb-p14',
+    title: 'Creative Visual Arts & Painting Studio',
+    category: 'Arts & Culture',
+    imageUrl: '/rapid-schools/gallery/photos/photo_018.jpg',
+    mediaType: 'photo',
+    caption: 'Student artwork gallery featuring vibrant watercolors, sketching, and cultural craft projects.',
+    altText: 'Student art exhibition and fine arts showcase',
+    targetSchool: 'shakuntlayan'
+  },
+  {
+    id: 'gal-fb-p15',
+    title: 'Athletic Sports Complex & Games Field',
+    category: 'Sports',
+    imageUrl: '/rapid-schools/gallery/photos/photo_019.jpg',
+    mediaType: 'photo',
+    caption: 'Extensive sports facilities supporting football, cricket nets, kabaddi, and athletic track training.',
+    altText: 'School playground and sporting facilities',
+    targetSchool: 'shakuntlayan'
+  },
+  {
+    id: 'gal-fb-p16',
+    title: 'Rapid Dreamz: Creative Activity & Play Hub',
+    category: 'Early Years',
+    imageUrl: '/rapid-schools/gallery/photos/photo_020.jpg',
+    mediaType: 'photo',
+    caption: 'Child-safe indoor arena equipped with cognitive puzzles, building blocks, and vibrant learning aids.',
+    altText: 'Early childhood play and activity zone at Rapid Dreamz',
+    targetSchool: 'dreamz'
   }
 ];
 

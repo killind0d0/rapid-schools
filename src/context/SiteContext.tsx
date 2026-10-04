@@ -53,7 +53,7 @@ interface SiteContextType {
   resetAllToDefault: () => void;
 }
 
-const STORAGE_KEY = 'rapid_schools_cms_state_v3';
+const STORAGE_KEY = 'rapid_schools_cms_state_v5';
 
 const SiteContext = createContext<SiteContextType | undefined>(undefined);
 
@@ -97,7 +97,13 @@ export const SiteProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [gallery, setGallery] = useState<GalleryItem[]>(() => {
     try {
       const saved = localStorage.getItem(`${STORAGE_KEY}_gallery`);
-      return saved ? JSON.parse(saved) : initialGallery;
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed) && parsed.length >= 20 && parsed.some((item: GalleryItem) => item.id?.startsWith('gal-fb-'))) {
+          return parsed;
+        }
+      }
+      return initialGallery;
     } catch {
       return initialGallery;
     }

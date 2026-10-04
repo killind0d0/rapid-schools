@@ -3,6 +3,7 @@ import { useSite } from '../context/SiteContext';
 import { Breadcrumbs } from '../components/common/Breadcrumbs';
 import { LightboxModal } from '../components/common/LightboxModal';
 import { GalleryItem } from '../data/types';
+import { getMediaUrl } from '../utils/mediaUrl';
 import { Maximize2, Image as ImageIcon, Play, Film, Camera } from 'lucide-react';
 
 export const GalleryPage: React.FC = () => {
@@ -181,7 +182,7 @@ export const GalleryPage: React.FC = () => {
                   >
                     <div className="relative h-64 overflow-hidden bg-[#020617]">
                       <img
-                        src={item.imageUrl}
+                        src={getMediaUrl(item.imageUrl)}
                         alt={item.altText}
                         loading="lazy"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"

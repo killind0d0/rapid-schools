@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { GalleryItem } from '../../data/types';
+import { getMediaUrl } from '../../utils/mediaUrl';
 
 interface LightboxModalProps {
   item: GalleryItem | null;
@@ -78,7 +79,8 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
         <div className="p-2 rounded-2xl bg-[#0F172A]/80 border border-[#F59E0B]/30 shadow-2xl overflow-hidden max-w-full">
           {item.videoUrl ? (
             <video
-              src={item.videoUrl}
+              src={getMediaUrl(item.videoUrl)}
+              poster={getMediaUrl(item.imageUrl)}
               controls
               autoPlay
               playsInline
@@ -86,7 +88,7 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
             />
           ) : (
             <img
-              src={item.imageUrl}
+              src={getMediaUrl(item.imageUrl)}
               alt={item.altText || item.title}
               className="max-h-[70vh] w-auto max-w-full rounded-xl object-contain"
             />
