@@ -53,7 +53,7 @@ interface SiteContextType {
   resetAllToDefault: () => void;
 }
 
-const STORAGE_KEY = 'rapid_schools_cms_state_v2';
+const STORAGE_KEY = 'rapid_schools_cms_state_v3';
 
 const SiteContext = createContext<SiteContextType | undefined>(undefined);
 

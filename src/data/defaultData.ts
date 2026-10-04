@@ -29,7 +29,7 @@ export const initialSettings: SiteSettings = {
   academicYear: '2025-2026',
   emergencyHelpline: '+91 94312 63570 / +91 91538 30765',
   socialLinks: {
-    facebook: 'https://www.facebook.com/people/Rapid-Shakuntalayan-School-Gaya/100083236058097/',
+    facebook: 'https://www.facebook.com/rapid.shakuntalayan.school.gaya/',
     instagram: 'https://instagram.com',
     youtube: 'https://youtube.com',
     linkedin: 'https://linkedin.com'
@@ -173,6 +173,18 @@ export const initialNews: NewsArticle[] = [
     content: 'Art at Rapid Schools is celebrated as a fundamental language of human expression. The Spring Visual Arts exhibition brings together vibrant finger-painting experiments from Rapid Dreamz alongside intricate canvas studies by Rapid Shakuntlayan seniors.',
     author: 'Cultural Co-Curricular Committee',
     targetSchool: 'all',
+    isPublished: true
+  },
+  {
+    id: 'news-04',
+    title: 'A Grand Celebration of Gandhi Jayanti & Lal Bahadur Shastri Jayanti',
+    category: 'Campus Life',
+    date: '2026-10-02',
+    featuredImage: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=1000&q=80',
+    summary: 'Rapid Shakuntalayan School celebrated the birth anniversaries of Mahatma Gandhi Ji and Lal Bahadur Shastri Ji with patriotic reverence and student assemblies.',
+    content: 'Today, Rapid Shakuntalayan School celebrated the birth anniversaries of Mahatma Gandhi Ji and Lal Bahadur Shastri Ji with heartfelt enthusiasm. Students and faculty paid floral tributes, reflected on the principles of truth, non-violence, and self-reliance, and performed cultural speeches celebrating the leaders who forged the nation.',
+    author: 'Rapid Shakuntalayan Editorial Desk',
+    targetSchool: 'shakuntlayan',
     isPublished: true
   }
 ];
