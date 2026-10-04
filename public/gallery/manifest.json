@@ -1,0 +1,246 @@
+{
+  "school": "Rapid Shakuntalayan School Gaya",
+  "facebook_source": "https://www.facebook.com/rapid.shakuntalayan.school.gaya/",
+  "storage_limit_mb": 650.0,
+  "total_storage_used_bytes": 281081883,
+  "total_storage_used_mb": 268.06,
+  "limit_bypassed": false,
+  "photos_count": 16,
+  "videos_count": 13,
+  "photos": [
+    {
+      "id": "photo_003",
+      "filename": "photo_003.jpg",
+      "type": "photo",
+      "size_bytes": 12286,
+      "size_display": "12.0 KB",
+      "url": "/rapid-schools/gallery/photos/photo_003.jpg"
+    },
+    {
+      "id": "photo_004",
+      "filename": "photo_004.jpg",
+      "type": "photo",
+      "size_bytes": 10705,
+      "size_display": "10.5 KB",
+      "url": "/rapid-schools/gallery/photos/photo_004.jpg"
+    },
+    {
+      "id": "photo_005",
+      "filename": "photo_005.jpg",
+      "type": "photo",
+      "size_bytes": 13315,
+      "size_display": "13.0 KB",
+      "url": "/rapid-schools/gallery/photos/photo_005.jpg"
+    },
+    {
+      "id": "photo_006",
+      "filename": "photo_006.jpg",
+      "type": "photo",
+      "size_bytes": 14081,
+      "size_display": "13.8 KB",
+      "url": "/rapid-schools/gallery/photos/photo_006.jpg"
+    },
+    {
+      "id": "photo_007",
+      "filename": "photo_007.jpg",
+      "type": "photo",
+      "size_bytes": 12286,
+      "size_display": "12.0 KB",
+      "url": "/rapid-schools/gallery/photos/photo_007.jpg"
+    },
+    {
+      "id": "photo_008",
+      "filename": "photo_008.jpg",
+      "type": "photo",
+      "size_bytes": 10533,
+      "size_display": "10.3 KB",
+      "url": "/rapid-schools/gallery/photos/photo_008.jpg"
+    },
+    {
+      "id": "photo_010",
+      "filename": "photo_010.jpg",
+      "type": "photo",
+      "size_bytes": 10705,
+      "size_display": "10.5 KB",
+      "url": "/rapid-schools/gallery/photos/photo_010.jpg"
+    },
+    {
+      "id": "photo_011",
+      "filename": "photo_011.jpg",
+      "type": "photo",
+      "size_bytes": 10278,
+      "size_display": "10.0 KB",
+      "url": "/rapid-schools/gallery/photos/photo_011.jpg"
+    },
+    {
+      "id": "photo_012",
+      "filename": "photo_012.jpg",
+      "type": "photo",
+      "size_bytes": 10533,
+      "size_display": "10.3 KB",
+      "url": "/rapid-schools/gallery/photos/photo_012.jpg"
+    },
+    {
+      "id": "photo_014",
+      "filename": "photo_014.jpg",
+      "type": "photo",
+      "size_bytes": 86491,
+      "size_display": "84.5 KB",
+      "url": "/rapid-schools/gallery/photos/photo_014.jpg"
+    },
+    {
+      "id": "photo_015",
+      "filename": "photo_015.jpg",
+      "type": "photo",
+      "size_bytes": 86491,
+      "size_display": "84.5 KB",
+      "url": "/rapid-schools/gallery/photos/photo_015.jpg"
+    },
+    {
+      "id": "photo_016",
+      "filename": "photo_016.jpg",
+      "type": "photo",
+      "size_bytes": 10628,
+      "size_display": "10.4 KB",
+      "url": "/rapid-schools/gallery/photos/photo_016.jpg"
+    },
+    {
+      "id": "photo_017",
+      "filename": "photo_017.jpg",
+      "type": "photo",
+      "size_bytes": 10628,
+      "size_display": "10.4 KB",
+      "url": "/rapid-schools/gallery/photos/photo_017.jpg"
+    },
+    {
+      "id": "photo_018",
+      "filename": "photo_018.jpg",
+      "type": "photo",
+      "size_bytes": 14081,
+      "size_display": "13.8 KB",
+      "url": "/rapid-schools/gallery/photos/photo_018.jpg"
+    },
+    {
+      "id": "photo_019",
+      "filename": "photo_019.jpg",
+      "type": "photo",
+      "size_bytes": 13315,
+      "size_display": "13.0 KB",
+      "url": "/rapid-schools/gallery/photos/photo_019.jpg"
+    },
+    {
+      "id": "photo_020",
+      "filename": "photo_020.jpg",
+      "type": "photo",
+      "size_bytes": 10278,
+      "size_display": "10.0 KB",
+      "url": "/rapid-schools/gallery/photos/photo_020.jpg"
+    }
+  ],
+  "videos": [
+    {
+      "id": "1084680567729794",
+      "filename": "1084680567729794.mp4",
+      "type": "video",
+      "size_bytes": 4542739,
+      "size_display": "4.33 MB",
+      "url": "/rapid-schools/gallery/videos/1084680567729794.mp4"
+    },
+    {
+      "id": "1230369338489040",
+      "filename": "1230369338489040.mp4",
+      "type": "video",
+      "size_bytes": 54772197,
+      "size_display": "52.23 MB",
+      "url": "/rapid-schools/gallery/videos/1230369338489040.mp4"
+    },
+    {
+      "id": "1426754705716888",
+      "filename": "1426754705716888.mp4",
+      "type": "video",
+      "size_bytes": 19551351,
+      "size_display": "18.65 MB",
+      "url": "/rapid-schools/gallery/videos/1426754705716888.mp4"
+    },
+    {
+      "id": "1476739274464624",
+      "filename": "1476739274464624.mp4",
+      "type": "video",
+      "size_bytes": 6744272,
+      "size_display": "6.43 MB",
+      "url": "/rapid-schools/gallery/videos/1476739274464624.mp4"
+    },
+    {
+      "id": "1519727795795889",
+      "filename": "1519727795795889.mp4",
+      "type": "video",
+      "size_bytes": 4247384,
+      "size_display": "4.05 MB",
+      "url": "/rapid-schools/gallery/videos/1519727795795889.mp4"
+    },
+    {
+      "id": "1914517019148179",
+      "filename": "1914517019148179.mp4",
+      "type": "video",
+      "size_bytes": 58858962,
+      "size_display": "56.13 MB",
+      "url": "/rapid-schools/gallery/videos/1914517019148179.mp4"
+    },
+    {
+      "id": "1979336363017799",
+      "filename": "1979336363017799.mp4",
+      "type": "video",
+      "size_bytes": 10316647,
+      "size_display": "9.84 MB",
+      "url": "/rapid-schools/gallery/videos/1979336363017799.mp4"
+    },
+    {
+      "id": "4129280310720278",
+      "filename": "4129280310720278.mp4",
+      "type": "video",
+      "size_bytes": 3025454,
+      "size_display": "2.89 MB",
+      "url": "/rapid-schools/gallery/videos/4129280310720278.mp4"
+    },
+    {
+      "id": "798529716599286",
+      "filename": "798529716599286.mp4",
+      "type": "video",
+      "size_bytes": 63652709,
+      "size_display": "60.70 MB",
+      "url": "/rapid-schools/gallery/videos/798529716599286.mp4"
+    },
+    {
+      "id": "857001857365218",
+      "filename": "857001857365218.mp4",
+      "type": "video",
+      "size_bytes": 29943564,
+      "size_display": "28.56 MB",
+      "url": "/rapid-schools/gallery/videos/857001857365218.mp4"
+    },
+    {
+      "id": "907139858568404",
+      "filename": "907139858568404.mp4",
+      "type": "video",
+      "size_bytes": 6234297,
+      "size_display": "5.95 MB",
+      "url": "/rapid-schools/gallery/videos/907139858568404.mp4"
+    },
+    {
+      "id": "919466247147412",
+      "filename": "919466247147412.mp4",
+      "type": "video",
+      "size_bytes": 4698274,
+      "size_display": "4.48 MB",
+      "url": "/rapid-schools/gallery/videos/919466247147412.mp4"
+    },
+    {
+      "id": "920614683788172",
+      "filename": "920614683788172.mp4",
+      "type": "video",
+      "size_bytes": 14157399,
+      "size_display": "13.50 MB",
+      "url": "/rapid-schools/gallery/videos/920614683788172.mp4"
+    }
+  ]
+}

@@ -52,6 +52,8 @@ export interface GalleryItem {
   caption: string;
   altText: string;
   targetSchool: TargetSchool;
+  videoUrl?: string;
+  mediaType?: 'photo' | 'video';
 }
 
 export interface DownloadItem {

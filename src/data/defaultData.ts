@@ -191,57 +191,139 @@ export const initialNews: NewsArticle[] = [
 
 export const initialGallery: GalleryItem[] = [
   {
+    id: 'gal-fb-v01',
+    title: 'Student Expression & Campus Life',
+    category: 'Celebrations',
+    imageUrl: '/rapid-schools/gallery/photos/poster_1084680567729794.jpg',
+    videoUrl: '/rapid-schools/gallery/videos/1084680567729794.mp4',
+    mediaType: 'video',
+    caption: 'Official student reel highlighting energy, creativity, and student life at Rapid Shakuntalayan School.',
+    altText: 'Student performance and campus life reel',
+    targetSchool: 'shakuntlayan'
+  },
+  {
+    id: 'gal-fb-v02',
+    title: 'Director Mr. Amitabh Kumar — Address to Scholars',
+    category: 'Campus',
+    imageUrl: '/rapid-schools/gallery/photos/poster_919466247147412.jpg',
+    videoUrl: '/rapid-schools/gallery/videos/919466247147412.mp4',
+    mediaType: 'video',
+    caption: 'School Director Mr. Amitabh Kumar sharing words of encouragement and guidance with students.',
+    altText: 'Director addressing school assembly',
+    targetSchool: 'shakuntlayan'
+  },
+  {
+    id: 'gal-fb-v03',
+    title: 'Annual Track & Field Championships',
+    category: 'Sports',
+    imageUrl: '/rapid-schools/gallery/photos/poster_1979336363017799.jpg',
+    videoUrl: '/rapid-schools/gallery/videos/1979336363017799.mp4',
+    mediaType: 'video',
+    caption: 'High-energy track events, sprint finals, and athletic teamwork on the school sports field.',
+    altText: 'Track and field competition video',
+    targetSchool: 'shakuntlayan'
+  },
+  {
+    id: 'gal-fb-v04',
+    title: 'Science Practical & STEM Demonstration',
+    category: 'Classrooms',
+    imageUrl: '/rapid-schools/gallery/photos/poster_857001857365218.jpg',
+    videoUrl: '/rapid-schools/gallery/videos/857001857365218.mp4',
+    mediaType: 'video',
+    caption: 'Secondary students demonstrating empirical physics and chemical reaction models in the laboratory.',
+    altText: 'Students conducting science experiments',
+    targetSchool: 'shakuntlayan'
+  },
+  {
+    id: 'gal-fb-v05',
+    title: 'Cultural Harmony & Performing Arts',
+    category: 'Arts & Culture',
+    imageUrl: '/rapid-schools/gallery/photos/poster_920614683788172.jpg',
+    videoUrl: '/rapid-schools/gallery/videos/920614683788172.mp4',
+    mediaType: 'video',
+    caption: 'Choral recitations, traditional Indian instruments, and dance performances celebrating our heritage.',
+    altText: 'Cultural musical performances on stage',
+    targetSchool: 'all'
+  },
+  {
+    id: 'gal-fb-v06',
+    title: 'Annual Felicitation & Recognition Ceremony',
+    category: 'Celebrations',
+    imageUrl: '/rapid-schools/gallery/photos/poster_798529716599286.jpg',
+    videoUrl: '/rapid-schools/gallery/videos/798529716599286.mp4',
+    mediaType: 'video',
+    caption: 'Celebrating academic distinction, board honors, and student leadership trophies.',
+    altText: 'Annual prize distribution and awards assembly',
+    targetSchool: 'shakuntlayan'
+  },
+  {
+    id: 'gal-fb-p01',
+    title: 'Rapid Shakuntalayan School Crest & Gate',
+    category: 'Campus',
+    imageUrl: '/rapid-schools/gallery/photos/photo_014.jpg',
+    mediaType: 'photo',
+    caption: 'Official institutional crest and perimeter entrance at Tekuna Farm, Bodh Gaya Road.',
+    altText: 'School campus entrance gate and official insignia',
+    targetSchool: 'shakuntlayan'
+  },
+  {
+    id: 'gal-fb-p02',
+    title: 'Gandhi Jayanti & Shastri Jayanti Commemoration',
+    category: 'Celebrations',
+    imageUrl: '/rapid-schools/gallery/photos/photo_006.jpg',
+    mediaType: 'photo',
+    caption: 'Staff and student leaders offering floral tributes on Mahatma Gandhi and Lal Bahadur Shastri Jayanti.',
+    altText: 'Gandhi Jayanti commemorative tribute ceremony',
+    targetSchool: 'shakuntlayan'
+  },
+  {
+    id: 'gal-fb-p03',
+    title: 'Inter-House Sports Meet & Parade',
+    category: 'Sports',
+    imageUrl: '/rapid-schools/gallery/photos/photo_005.jpg',
+    mediaType: 'photo',
+    caption: 'House march-past and athletic assembly on the school playground.',
+    altText: 'Students marching in house colors on sports field',
+    targetSchool: 'shakuntlayan'
+  },
+  {
+    id: 'gal-fb-p04',
+    title: 'Classroom Scholastic Inquiry',
+    category: 'Classrooms',
+    imageUrl: '/rapid-schools/gallery/photos/photo_003.jpg',
+    mediaType: 'photo',
+    caption: 'Interactive secondary classroom environment emphasizing disciplined study and peer debate.',
+    altText: 'Students and educators in modern classroom',
+    targetSchool: 'shakuntlayan'
+  },
+  {
+    id: 'gal-fb-p05',
+    title: 'Rapid Dreamz: Early Sensory Learning',
+    category: 'Early Years',
+    imageUrl: '/rapid-schools/gallery/photos/photo_011.jpg',
+    mediaType: 'photo',
+    caption: 'Joyful tactile exploration and motor skill enrichment at the A.P. Colony junior campus.',
+    altText: 'Early years learners exploring sensory games',
+    targetSchool: 'dreamz'
+  },
+  {
     id: 'gal-01',
-    title: 'Early Explorations & Play Area',
+    title: 'Rapid Dreamz Play Environment',
     category: 'Early Years',
     imageUrl: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=1000&q=80',
+    mediaType: 'photo',
     caption: 'Safe, rubberized indoor play space supporting motor dexterity and social interaction.',
     altText: 'Children engaging in creative play at Rapid Dreamz',
     targetSchool: 'dreamz'
   },
   {
     id: 'gal-02',
-    title: 'Advanced Science Laboratory',
-    category: 'Classrooms',
-    imageUrl: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=1000&q=80',
-    caption: 'Dedicated chemistry and physics workbenches conforming to national safety guidelines.',
-    altText: 'Science laboratory with experimental equipment at Rapid Shakuntlayan',
-    targetSchool: 'shakuntlayan'
-  },
-  {
-    id: 'gal-03',
     title: 'Central Learning Resource Library',
     category: 'Campus',
     imageUrl: 'https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=1000&q=80',
+    mediaType: 'photo',
     caption: 'Peaceful reading zones with diverse literature, research journals, and digital catalogues.',
     altText: 'Quiet library study area with book collections',
-    targetSchool: 'shakuntlayan'
-  },
-  {
-    id: 'gal-04',
-    title: 'Visual Arts and Sculpture Studio',
-    category: 'Arts & Culture',
-    imageUrl: 'https://images.unsplash.com/photo-1460518451285-97b6aa326961?auto=format&fit=crop&w=1000&q=80',
-    caption: 'Dedicated creative studio space for sketching, watercolor, clay modeling, and crafts.',
-    altText: 'Art supplies and creative works in the school art room',
-    targetSchool: 'all'
-  },
-  {
-    id: 'gal-05',
-    title: 'Athletics & Physical Training Field',
-    category: 'Sports',
-    imageUrl: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1000&q=80',
-    caption: 'Spacious sports grounds for athletics, football, cricket practice, and physical education.',
-    altText: 'School athletic field and running track',
-    targetSchool: 'all'
-  },
-  {
-    id: 'gal-06',
-    title: 'Interactive Smart Learning Room',
-    category: 'Classrooms',
-    imageUrl: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1000&q=80',
-    caption: 'Ergonomic seating with multimedia interactive display panels for engaging classroom discussions.',
-    altText: 'Classroom with modern presentation boards and student desks',
     targetSchool: 'shakuntlayan'
   }
 ];

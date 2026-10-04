@@ -75,12 +75,22 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
 
       {/* Main Image and Caption Card */}
       <div className="max-w-4xl max-h-[90vh] flex flex-col items-center">
-        <div className="p-2 rounded-2xl bg-[#0F172A]/80 border border-[#F59E0B]/30 shadow-2xl">
-          <img
-            src={item.imageUrl}
-            alt={item.altText || item.title}
-            className="max-h-[70vh] w-auto max-w-full rounded-xl object-contain"
-          />
+        <div className="p-2 rounded-2xl bg-[#0F172A]/80 border border-[#F59E0B]/30 shadow-2xl overflow-hidden max-w-full">
+          {item.videoUrl ? (
+            <video
+              src={item.videoUrl}
+              controls
+              autoPlay
+              playsInline
+              className="max-h-[70vh] w-auto max-w-full rounded-xl object-contain bg-black"
+            />
+          ) : (
+            <img
+              src={item.imageUrl}
+              alt={item.altText || item.title}
+              className="max-h-[70vh] w-auto max-w-full rounded-xl object-contain"
+            />
+          )}
         </div>
         <div className="mt-4 text-center text-white max-w-xl">
           <span className="text-[11px] uppercase tracking-[0.2em] text-[#FDE68A] font-semibold block mb-1 font-mono">
