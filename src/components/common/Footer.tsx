@@ -96,6 +96,21 @@ export const Footer: React.FC = () => {
                 </div>
               </Link>
             </div>
+
+            {/* Social Media Links */}
+            {settings.socialLinks?.facebook && (
+              <div className="pt-2 flex items-center gap-2">
+                <a
+                  href={settings.socialLinks.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-[#1877F2]/15 hover:bg-[#1877F2]/25 text-[#93C5FD] border border-[#1877F2]/30 text-xs font-medium transition-colors"
+                >
+                  <span className="w-5 h-5 rounded-full bg-[#1877F2] text-white flex items-center justify-center font-bold text-[11px]">f</span>
+                  <span>Facebook Official</span>
+                </a>
+              </div>
+            )}
           </div>
 
           {/* Institutional Navigation / Explore */}
@@ -196,13 +211,27 @@ export const Footer: React.FC = () => {
             <ul className="space-y-3 text-xs text-[#94A3B8]">
               <li className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#F59E0B] shrink-0 mt-0.5" />
-                <span className="leading-relaxed">{settings.address}</span>
+                <div className="leading-relaxed space-y-1">
+                  <div>
+                    <span className="text-white font-mono text-[11px] font-bold block">Senior Wing:</span>
+                    <span>Tekuna Farm, BMP-3, Bodhgaya Road, Gaya – 824231</span>
+                  </div>
+                  <div className="pt-1">
+                    <span className="text-white font-mono text-[11px] font-bold block">Junior Wing:</span>
+                    <span>Prawanand Path, A.P. Colony, Gaya – 823001</span>
+                  </div>
+                </div>
               </li>
-              <li className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 text-[#F59E0B] shrink-0" />
-                <a href={`tel:${settings.phone.replace(/[^0-9+]/g, '')}`} className="hover:text-[#FDE68A] transition-colors font-semibold">
-                  {settings.phone}
-                </a>
+              <li className="flex items-start gap-2.5">
+                <Phone className="w-4 h-4 text-[#F59E0B] shrink-0 mt-0.5" />
+                <div className="space-y-0.5">
+                  <a href="tel:+919153830765" className="hover:text-[#FDE68A] transition-colors font-semibold block text-white">
+                    +91 91538 30765 / +91 94312 63570
+                  </a>
+                  <a href="tel:+7765805526" className="hover:text-[#FDE68A] transition-colors text-[11px] font-mono text-[#CBD5E1] block">
+                    Junior Wing: +91 77658 05526
+                  </a>
+                </div>
               </li>
               <li className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-[#F59E0B] shrink-0" />
@@ -227,10 +256,10 @@ export const Footer: React.FC = () => {
                     </span>
                   </div>
                   <p className="text-[11px] text-[#94A3B8] leading-relaxed">
-                    Rapid Shakuntlayan is proudly affiliated with the Central Board of Secondary Education, New Delhi.
+                    Rapid Shakuntalayan School is affiliated with the Central Board of Secondary Education, New Delhi.
                   </p>
-                  <div className="mt-2 text-[10px] font-mono text-[#FDE68A] font-semibold bg-[#020617] px-2 py-1 rounded border border-[#F59E0B]/20 inline-block">
-                    {settings.cbseAffiliationNumber}
+                  <div className="mt-2 text-[10px] font-mono text-[#FDE68A] font-semibold bg-[#020617] px-2.5 py-1 rounded border border-[#F59E0B]/20 inline-block">
+                    Affiliation No. 331099 • School Code: 65598
                   </div>
                 </div>
               </li>

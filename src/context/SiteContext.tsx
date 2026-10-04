@@ -53,7 +53,7 @@ interface SiteContextType {
   resetAllToDefault: () => void;
 }
 
-const STORAGE_KEY = 'rapid_schools_cms_state_v1';
+const STORAGE_KEY = 'rapid_schools_cms_state_v2';
 
 const SiteContext = createContext<SiteContextType | undefined>(undefined);
 
@@ -61,7 +61,7 @@ export const SiteProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [settings, setSettings] = useState<SiteSettings>(() => {
     try {
       const saved = localStorage.getItem(`${STORAGE_KEY}_settings`);
-      return saved ? JSON.parse(saved) : initialSettings;
+      return saved ? { ...initialSettings, ...JSON.parse(saved) } : initialSettings;
     } catch {
       return initialSettings;
     }

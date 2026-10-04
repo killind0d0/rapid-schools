@@ -125,14 +125,23 @@ export const CampusVisitPage: React.FC = () => {
                 </div>
               </div>
 
-              <div className="pt-5 border-t border-[#E2E8F0] text-xs text-[#475569] space-y-2.5 font-sans">
+              <div className="pt-5 border-t border-[#E2E8F0] text-xs text-[#475569] space-y-3 font-sans">
                 <div className="flex items-start gap-2.5">
                   <MapPin className="w-4 h-4 text-[#F59E0B] shrink-0 mt-0.5" />
-                  <span>{settings.address}</span>
+                  <div className="space-y-1">
+                    <div>
+                      <strong className="text-[#020617] block font-mono text-[11px]">Senior Wing (Class 1–12):</strong>
+                      <span>Tekuna Farm, BMP-3, Bodhgaya Road, Gaya – 824231</span>
+                    </div>
+                    <div>
+                      <strong className="text-[#020617] block font-mono text-[11px]">Junior Wing (Play–UKG):</strong>
+                      <span>Prawanand Path, A.P. Colony, Gaya – 823001</span>
+                    </div>
+                  </div>
                 </div>
                 <div className="flex items-center gap-2.5">
                   <Phone className="w-4 h-4 text-[#F59E0B] shrink-0" />
-                  <span>Visiting Desk: {settings.phone}</span>
+                  <span>Visiting Desk: +91 91538 30765 / +91 77658 05526</span>
                 </div>
               </div>
             </div>

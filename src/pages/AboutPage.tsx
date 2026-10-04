@@ -67,38 +67,42 @@ export const AboutPage: React.FC = () => {
         <div className="mt-12 p-8 sm:p-12 rounded-3xl bg-white border border-[#E2E8F0] shadow-[0_20px_45px_-15px_rgba(44,7,12,0.05)]">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
             
-            <div className="lg:col-span-4 text-center lg:text-left">
+            <div className="lg:col-span-4 text-center lg:text-left space-y-3">
               <div className="w-28 h-28 rounded-2xl bg-gradient-to-br from-[#0F172A] to-[#020617] p-[2px] ring-1 ring-[#F59E0B]/50 mx-auto lg:mx-0 shadow-md flex items-center justify-center">
                 <div className="w-full h-full rounded-[14px] bg-[#0F172A] flex items-center justify-center">
                   <Quote className="w-12 h-12 text-[#FDE68A]" />
                 </div>
               </div>
-              <div className="mt-4">
+              <div>
                 <h3 className="font-editorial text-2xl font-medium text-[#020617]">
                   Leadership Desk
                 </h3>
                 <span className="text-xs text-[#475569] block font-sans">
-                  Board of Academic Governors
+                  Mr. Rajiv Charan (Principal) • Mrs. Mamta Rani (Director)
                 </span>
                 <div className="text-xs text-[#F59E0B] font-semibold mt-1 font-mono uppercase tracking-wider">
-                  Rapid Schools Educational Society
+                  Estd. 2014 • Bodh Gaya & Gaya
                 </div>
+              </div>
+
+              <div className="pt-2 text-[11px] font-mono text-[#0F766E] bg-[#CCFBF1] py-1 px-3 rounded-full inline-block border border-[#99F6E4]">
+                CBSE Affiliation No. 331099
               </div>
             </div>
 
             <div className="lg:col-span-8 space-y-4">
               <div className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#F59E0B] font-mono flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#F59E0B]" />
-                Institutional Perspective
+                School Motto: "Love One Another"
               </div>
               <h2 className="font-editorial text-2xl sm:text-4xl font-medium text-[#020617] italic leading-snug">
-                "Education is not the filling of a pail, but the lighting of a fire."
+                "Cultivating Culture, Character, Compassion and Academic Excellence."
               </h2>
               <p className="text-sm sm:text-base text-[#334155] leading-relaxed font-sans">
-                At Rapid Schools, we measure our success not merely through examination transcripts, but through the intellectual curiosity, emotional resilience, and moral character of our graduates. Whether guiding a four-year-old taking their initial exploratory steps in our early childhood atelier or preparing a senior secondary scholar for national competitive horizons, our commitment remains constant: every student is valued, challenged, and supported.
+                Established in 2014, Rapid Schools is dedicated to creating a disciplined yet deeply empathetic scholastic environment. Under the guidance of our leadership team, our senior secondary campus at Tekuna Farm, Bodh Gaya and our foundational junior wing in A.P. Colony, Gaya provide learners with modern facilities, moral clarity, and national-standard academic inquiry.
               </p>
-              <div className="pt-2 text-xs text-[#475569] font-sans italic">
-                * Official institutional addresses and circulars are updated periodically under Notifications.
+              <div className="pt-2 text-xs text-[#475569] font-sans">
+                <strong>Campus Governance:</strong> Rapid Shakuntalayan School (Tekuna Farm, BMP-3, Bodhgaya Road) & Rapid Dreamz (Prawanand Path, A.P. Colony, Gaya).
               </div>
             </div>
 

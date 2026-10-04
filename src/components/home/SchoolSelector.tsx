@@ -42,7 +42,7 @@ export const SchoolSelector: React.FC = () => {
                 Rapid <span className="italic font-normal">Dreamz</span>
               </h3>
               <p className="text-xs font-bold uppercase tracking-wider text-[#F59E0B] mt-1 font-mono">
-                Play Group • Nursery • LKG • UKG
+                Play Group • Nursery • LKG • UKG • A.P. Colony Campus
               </p>
 
               <blockquote className="my-5 p-4 rounded-2xl bg-[#F8FAFC] border-l-4 border-[#F59E0B] text-sm italic font-editorial text-[#1E293B] text-base">
@@ -50,7 +50,7 @@ export const SchoolSelector: React.FC = () => {
               </blockquote>
 
               <p className="text-sm text-[#334155] leading-relaxed mb-6 font-sans">
-                A warm, nurturing sanctuary where foundational curiosity flourishes through sensory play, motor skill development, emotional safety, and interactive discovery.
+                A warm, nurturing sanctuary at Prawanand Path, A.P. Colony, where foundational curiosity flourishes through sensory play, motor skill development, emotional safety, and interactive discovery.
               </p>
 
               {/* Distinctive Features */}
@@ -92,7 +92,7 @@ export const SchoolSelector: React.FC = () => {
             </div>
           </div>
 
-          {/* Architectural Card 2: Rapid Shakuntlayan (Class 1 to 12) */}
+          {/* Architectural Card 2: Rapid Shakuntalayan (Class 1 to 12) */}
           <div className="relative rounded-3xl bg-white border border-[#E2E8F0] hover:border-[#115E59]/60 shadow-[0_20px_45px_-15px_rgba(44,7,12,0.05)] hover:shadow-[0_25px_50px_-12px_rgba(6,78,59,0.15)] transition-all duration-300 overflow-hidden flex flex-col group">
             {/* Top Forest Green Accent Bar */}
             <div className="h-1.5 bg-gradient-to-r from-[#115E59] via-[#0F766E] to-[#2DD4BF]" />
@@ -101,45 +101,45 @@ export const SchoolSelector: React.FC = () => {
               <div className="flex items-center justify-between gap-4 mb-4">
                 <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-[#115E59]/10 text-[#115E59] border border-[#115E59]/30 font-mono">
                   <GraduationCap className="w-3.5 h-3.5 text-[#115E59]" />
-                  Class 1 to 12
+                  Pre-Nursery to Class 12
                 </span>
-                <span className="text-xs font-semibold text-[#475569] bg-[#F8FAFC] border border-[#E2E8F0] px-3 py-1 rounded-full">
-                  Primary to Senior Secondary
+                <span className="text-xs font-semibold text-[#0F766E] bg-[#CCFBF1] border border-[#99F6E4] px-3 py-1 rounded-full font-mono">
+                  CBSE Affil. 331099
                 </span>
               </div>
 
               <h3 className="font-editorial text-3xl sm:text-4xl font-medium text-[#020617] group-hover:text-[#115E59] transition-colors">
-                Rapid <span className="italic font-normal">Shakuntlayan</span>
+                Rapid <span className="italic font-normal">Shakuntalayan</span> School
               </h3>
               <p className="text-xs font-bold uppercase tracking-wider text-[#115E59] mt-1 font-mono">
-                Affiliated to CBSE, New Delhi
+                Tekuna Farm Campus, Bodh Gaya Road • Estd. 2014
               </p>
 
-              <blockquote className="my-5 p-4 rounded-2xl bg-[#F8FAFC] border-l-4 border-[#115E59] text-sm italic font-editorial text-[#1E293B] text-base">
-                "Building minds that shape tomorrow."
+              <blockquote className="my-5 p-4 rounded-2xl bg-[#F0FDFA] border-l-4 border-[#115E59] text-sm italic font-editorial text-[#042F2E] text-base">
+                "Love One Another" — Building Minds That Shape Tomorrow
               </blockquote>
 
               <p className="text-sm text-[#334155] leading-relaxed mb-6 font-sans">
-                An academically disciplined, progressive environment equipping students with critical inquiry, scientific rigor, moral fortitude, and leadership for competitive horizons.
+                A premier CBSE-affiliated co-ed institution at Tekuna Farm, BMP-3, Bodh Gaya. Equipping scholars with empirical science laboratories, athletic training, moral fortitude, and leadership.
               </p>
 
               {/* Distinctive Features */}
               <div className="grid grid-cols-2 gap-3 mb-8 text-xs text-[#1E293B] font-medium font-sans">
                 <div className="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0]/80">
                   <Award className="w-4 h-4 text-[#115E59] shrink-0" />
-                  <span>CBSE Curriculum</span>
+                  <span>CBSE Board Affiliated</span>
                 </div>
                 <div className="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0]/80">
                   <Compass className="w-4 h-4 text-[#F59E0B] shrink-0" />
-                  <span>STEM & Science Labs</span>
+                  <span>Equipped Science & STEM Labs</span>
                 </div>
                 <div className="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0]/80">
                   <Users className="w-4 h-4 text-[#162032] shrink-0" />
-                  <span>Leadership & Debating</span>
+                  <span>Dedicated Mentorship</span>
                 </div>
                 <div className="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0]/80">
                   <ShieldCheck className="w-4 h-4 text-[#115E59] shrink-0" />
-                  <span>Values & Discipline</span>
+                  <span>Values & Character</span>
                 </div>
               </div>
 
