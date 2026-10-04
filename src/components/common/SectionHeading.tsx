@@ -2,7 +2,7 @@ import React from 'react';
 
 interface SectionHeadingProps {
   badge?: string;
-  badgeColor?: 'gold' | 'amber' | 'blue' | 'teal';
+  badgeColor?: 'copper' | 'claret' | 'forest' | 'terracotta' | 'gold';
   title: string;
   subtitle?: string;
   align?: 'left' | 'center';
@@ -11,17 +11,18 @@ interface SectionHeadingProps {
 
 export const SectionHeading: React.FC<SectionHeadingProps> = ({
   badge,
-  badgeColor = 'gold',
+  badgeColor = 'copper',
   title,
   subtitle,
   align = 'center',
   light = false
 }) => {
   const badgeClasses = {
-    gold: 'bg-amber-500/10 text-amber-700 border-amber-500/20',
-    amber: 'bg-orange-500/10 text-orange-700 border-orange-500/20',
-    blue: 'bg-sky-500/10 text-sky-700 border-sky-500/20',
-    teal: 'bg-teal-500/10 text-teal-700 border-teal-500/20'
+    copper: 'bg-[#BD672A]/10 text-[#A2521C] border-[#BD672A]/20',
+    claret: 'bg-[#5A121E]/10 text-[#5A121E] border-[#5A121E]/20',
+    forest: 'bg-[#064E3B]/10 text-[#064E3B] border-[#064E3B]/20',
+    terracotta: 'bg-[#C2410C]/10 text-[#C2410C] border-[#C2410C]/20',
+    gold: 'bg-[#D47A3B]/15 text-[#9E4D14] border-[#D47A3B]/30'
   }[badgeColor];
 
   const textAlign = align === 'center' ? 'text-center items-center' : 'text-left items-start';
@@ -30,31 +31,33 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
     <div className={`flex flex-col ${textAlign} mb-12`}>
       {badge && (
         <span
-          className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider border mb-3 ${badgeClasses}`}
+          className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-widest border mb-3 ${badgeClasses}`}
         >
           {badge}
         </span>
       )}
       <h2
-        className={`font-outfit text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight ${
-          light ? 'text-white' : 'text-slate-900'
+        className={`font-outfit text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight ${
+          light ? 'text-[#FCFAF6]' : 'text-[#241A1B]'
         }`}
       >
         {title}
       </h2>
       <div
         className={`w-16 h-1 mt-4 mb-4 rounded-full ${
-          badgeColor === 'teal'
-            ? 'bg-teal-500'
-            : badgeColor === 'blue'
-            ? 'bg-sky-600'
-            : 'bg-amber-500'
+          badgeColor === 'forest'
+            ? 'bg-[#064E3B]'
+            : badgeColor === 'claret'
+            ? 'bg-[#5A121E]'
+            : badgeColor === 'terracotta'
+            ? 'bg-[#C2410C]'
+            : 'bg-[#BD672A]'
         } ${align === 'center' ? 'mx-auto' : ''}`}
       />
       {subtitle && (
         <p
-          className={`max-w-3xl text-base sm:text-lg leading-relaxed ${
-            light ? 'text-slate-300' : 'text-slate-600'
+          className={`max-w-3xl text-sm sm:text-base leading-relaxed ${
+            light ? 'text-[#DBCDC5]' : 'text-[#5E4D4F]'
           }`}
         >
           {subtitle}

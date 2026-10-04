@@ -2,14 +2,41 @@
 
 @layer base {
   :root {
-    --font-serif: 'Cinzel', Georgia, serif;
+    --font-editorial: 'Cormorant Garamond', Georgia, serif;
     --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+    /* Bespoke Editorial Palette */
+    --color-claret-950: #26050B;
+    --color-claret-900: #3D0B12;
+    --color-claret-850: #4B0E17;
+    --color-claret-800: #5A121E;
+    --color-claret-700: #751B29;
+
+    --color-copper-500: #BD672A;
+    --color-copper-400: #D47A3B;
+    --color-copper-300: #E8955A;
+
+    --color-cream-50: #FCFAF6;
+    --color-cream-100: #F6F1E7;
+    --color-cream-200: #EDE5D5;
+    --color-cream-300: #E0D4C0;
+
+    --color-forest-900: #064E3B;
+    --color-forest-800: #0D654E;
+    --color-forest-700: #147D62;
+
+    --color-ink-950: #140E0F;
+    --color-ink-900: #1F1718;
+    --color-ink-800: #2E2325;
+    --color-ink-700: #48393C;
   }
 
   html {
     scroll-behavior: smooth;
     font-family: var(--font-sans);
+    background-color: #FAF7F2;
+    color: #1F1718;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -24,26 +51,26 @@
     }
   }
 
-  /* Custom subtle scrollbar */
+  /* Custom Warm Scrollbar */
   ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
   }
   ::-webkit-scrollbar-track {
-    background: #F1F5F9;
+    background: #F4EFE6;
   }
   ::-webkit-scrollbar-thumb {
-    background: #CBD5E1;
+    background: #D4C7B4;
     border-radius: 4px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #94A3B8;
+    background: #BAAA94;
   }
 }
 
-/* Custom Typography & Utility Classes */
-.font-cinzel {
-  font-family: 'Cinzel', Georgia, serif;
+/* Bespoke Typography Classes */
+.font-editorial {
+  font-family: 'Cormorant Garamond', Georgia, serif;
 }
 
 .font-outfit {
@@ -54,13 +81,31 @@
   font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-/* Luxury card gradient borders */
-.gold-gradient-border {
-  border-image: linear-gradient(to bottom right, #F3BC55, #E2A12E, #9A6B15) 1;
+/* Custom Editorial Aesthetics */
+.academic-card {
+  background-color: #FCFAF6;
+  border: 1px solid #E6DDCF;
+  box-shadow: 0 4px 20px -4px rgba(61, 11, 18, 0.04);
 }
 
-/* Accessible focus outline */
+.academic-card:hover {
+  border-color: #D4C7B4;
+  box-shadow: 0 10px 30px -6px rgba(61, 11, 18, 0.08);
+}
+
+.paper-panel {
+  background-color: #FAF6F0;
+  border: 1px solid #EADFCF;
+}
+
+/* Subtle luxury accent line */
+.claret-accent-line {
+  height: 2px;
+  background: linear-gradient(90deg, #BD672A 0%, #5A121E 50%, transparent 100%);
+}
+
+/* Accessible focus outline in warm copper */
 *:focus-visible {
-  outline: 2px solid #E2A12E;
+  outline: 2px solid #BD672A;
   outline-offset: 3px;
 }

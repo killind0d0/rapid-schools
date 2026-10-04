@@ -81,11 +81,11 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
           className="max-h-[75vh] w-auto max-w-full rounded-lg object-contain shadow-2xl"
         />
         <div className="mt-4 text-center text-white max-w-xl">
-          <span className="text-xs uppercase tracking-wider text-amber-400 font-bold block mb-1">
+          <span className="text-xs uppercase tracking-widest text-[#EAB592] font-semibold block mb-1">
             {item.category} • {item.targetSchool === 'dreamz' ? 'Rapid Dreamz' : item.targetSchool === 'shakuntlayan' ? 'Rapid Shakuntlayan' : 'Rapid Schools'}
           </span>
-          <h3 className="text-lg font-bold font-outfit">{item.title}</h3>
-          <p className="text-xs text-slate-300 mt-1">{item.caption}</p>
+          <h3 className="text-xl font-semibold font-cormorant text-[#FCFAF6]">{item.title}</h3>
+          <p className="text-xs text-[#D4C3B3] mt-1 font-sans">{item.caption}</p>
         </div>
       </div>
     </div>

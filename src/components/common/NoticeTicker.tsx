@@ -12,23 +12,23 @@ export const NoticeTicker: React.FC = () => {
   const currentNotice = pinnedNotices[0];
 
   return (
-    <div className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-slate-200 text-xs sm:text-sm py-2 px-4 border-b border-slate-700/50">
+    <div className="bg-[#1F0408] text-[#EFE7DC] text-xs py-2 px-4 border-b border-[#3D0A11]">
       <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
         <div className="flex items-center gap-2.5 overflow-hidden">
-          <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[11px] font-bold bg-amber-500 text-slate-950 uppercase tracking-wider shrink-0">
+          <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[10px] font-bold bg-[#BD672A] text-white uppercase tracking-wider shrink-0">
             <Bell className="w-3 h-3 animate-pulse" />
-            Announcement
+            Official Bulletin
           </span>
-          <p className="truncate text-slate-200 font-medium">
-            <span className="text-amber-400 font-semibold mr-2">[{currentNotice.category}]</span>
+          <p className="truncate text-[#E8DDD1] font-medium text-xs">
+            <span className="text-[#D47A3B] font-bold mr-2">[{currentNotice.category}]</span>
             {currentNotice.title}
           </p>
         </div>
         <Link
           to="/notices"
-          className="shrink-0 inline-flex items-center gap-1 text-amber-400 hover:text-amber-300 font-medium text-xs transition-colors group"
+          className="shrink-0 inline-flex items-center gap-1 text-[#D47A3B] hover:text-[#E8955A] font-semibold text-xs transition-colors group"
         >
-          <span>View Notice Board</span>
+          <span>Notice Board</span>
           <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
         </Link>
       </div>

@@ -11,63 +11,63 @@ export const DreamzHomePage: React.FC = () => {
   const { settings } = useSite();
 
   return (
-    <div className="min-h-screen bg-[#FFFDF9] pb-24">
+    <div className="min-h-screen bg-[#FDFCF9] pb-24">
       <Breadcrumbs items={[{ label: 'Rapid Dreamz (Junior Wing)' }]} />
 
-      {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-amber-500 via-amber-600 to-orange-500 text-white py-16 sm:py-24">
+      {/* Hero Section with Warm Terracotta & Deep Spice Gradient */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#9A3412] via-[#C2410C] to-[#EA580C] text-white py-16 sm:py-24">
         {/* Playful background decorative shapes */}
         <div className="absolute top-10 right-10 w-64 h-64 bg-white/10 rounded-full blur-2xl pointer-events-none" />
-        <div className="absolute bottom-10 left-10 w-72 h-72 bg-amber-400/20 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-10 left-10 w-72 h-72 bg-[#FED7AA]/20 rounded-full blur-3xl pointer-events-none" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             <div className="lg:col-span-7 space-y-6">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-white/20 text-white backdrop-blur-md border border-white/30">
-                <Sparkles className="w-3.5 h-3.5" />
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-white/20 text-white backdrop-blur-md border border-white/30 font-mono">
+                <Sparkles className="w-3.5 h-3.5 text-[#FED7AA]" />
                 Junior School • Play Group to UKG
               </span>
 
               <h1 className="font-outfit text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
                 Little Minds.<br />
-                <span className="text-amber-200">Big Beginnings.</span>
+                <span className="font-editorial italic font-normal text-[#FED7AA]">Big Beginnings.</span>
               </h1>
 
-              <p className="text-base sm:text-lg text-amber-100 max-w-xl font-normal leading-relaxed">
+              <p className="text-base sm:text-lg text-[#FFEDD5] max-w-xl font-normal leading-relaxed">
                 Welcome to Rapid Dreamz, where every morning begins with a warm smile, curious wonder, and playful exploration. We nurture your child's innate creativity, emotional security, and foundational literacy.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center gap-3">
                 <Link
                   to="/dreamz/admissions"
-                  className="px-6 py-3.5 rounded-xl bg-slate-950 hover:bg-slate-900 text-white font-bold text-xs uppercase tracking-wider shadow-lg transition-all flex items-center gap-2"
+                  className="px-6 py-3.5 rounded-xl bg-[#3D0B12] hover:bg-[#28050B] text-white font-bold text-xs uppercase tracking-wider shadow-lg transition-all flex items-center gap-2"
                 >
                   <span>Early Years Admissions</span>
-                  <ArrowRight className="w-4 h-4 text-amber-400" />
+                  <ArrowRight className="w-4 h-4 text-[#FDBA74]" />
                 </Link>
 
                 <Link
                   to="/visit"
-                  className="px-6 py-3.5 rounded-xl bg-white hover:bg-amber-50 text-slate-900 font-bold text-xs uppercase tracking-wider shadow transition-all flex items-center gap-2"
+                  className="px-6 py-3.5 rounded-xl bg-[#FFFDF9] hover:bg-[#F6F1E7] text-[#432C2E] font-bold text-xs uppercase tracking-wider shadow transition-all flex items-center gap-2"
                 >
-                  <Calendar className="w-4 h-4 text-amber-600" />
+                  <Calendar className="w-4 h-4 text-[#C2410C]" />
                   <span>Book Early-Years Tour</span>
                 </Link>
               </div>
 
               {/* Badges */}
-              <div className="pt-6 grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs text-amber-100 border-t border-white/20">
+              <div className="pt-6 grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs text-[#FFEDD5] border-t border-white/20">
                 <div className="flex items-center gap-2">
-                  <Heart className="w-4 h-4 text-rose-300 shrink-0" />
-                  <span>Nurturing Educators</span>
+                  <Heart className="w-4 h-4 text-[#FED7AA] shrink-0" />
+                  <span>Nurturing Care</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Smile className="w-4 h-4 text-amber-200 shrink-0" />
+                  <Smile className="w-4 h-4 text-[#FED7AA] shrink-0" />
                   <span>Sensory Playrooms</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <ShieldCheck className="w-4 h-4 text-emerald-300 shrink-0" />
+                  <ShieldCheck className="w-4 h-4 text-[#BBF7D0] shrink-0" />
                   <span>Child-Proof Security</span>
                 </div>
               </div>
@@ -81,8 +81,8 @@ export const DreamzHomePage: React.FC = () => {
                   alt="Children learning through play at Rapid Dreamz"
                   className="w-full h-80 sm:h-96 object-cover"
                 />
-                <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950/80 p-6 text-white">
-                  <span className="text-xs font-bold uppercase tracking-wider text-amber-300 block mb-1">
+                <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-[#2E090F]/90 p-6 text-white">
+                  <span className="text-xs font-bold uppercase tracking-wider text-[#FDBA74] block mb-1 font-mono">
                     Holistic Early Childhood
                   </span>
                   <p className="text-sm font-medium">
@@ -100,7 +100,7 @@ export const DreamzHomePage: React.FC = () => {
       <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           badge="Learning Through Play"
-          badgeColor="amber"
+          badgeColor="terracotta"
           title="Curiosity, Not Compulsion"
           subtitle="Our early years pedagogy blends Montessori tactile methods with Reggio Emilia creative inquiry, establishing strong emotional and cognitive foundations."
           align="center"
@@ -111,7 +111,7 @@ export const DreamzHomePage: React.FC = () => {
         <div className="mt-8 text-center">
           <Link
             to="/dreamz/approach"
-            className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-700 hover:text-amber-800 uppercase tracking-wider"
+            className="inline-flex items-center gap-1.5 text-xs font-bold text-[#C2410C] hover:text-[#9A3412] uppercase tracking-wider font-mono"
           >
             <span>Read Complete Early-Years Methodology →</span>
           </Link>
@@ -119,13 +119,13 @@ export const DreamzHomePage: React.FC = () => {
       </section>
 
       {/* A Day at Rapid Dreamz Timeline */}
-      <section className="py-20 bg-amber-50/50 border-y border-amber-200/60">
+      <section className="py-20 bg-[#FFF7ED]/50 border-y border-[#FED7AA]/60">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
-            badge="Daily Schedule"
-            badgeColor="amber"
+            badge="Daily Rhythm"
+            badgeColor="terracotta"
             title="A Day at Rapid Dreamz"
-            subtitle="Predictable, joyful rhythms that help young children feel safe, independent, and enthusiastic from arrival to departure."
+            subtitle="Predictable, joyful routines that help young children feel safe, independent, and enthusiastic from arrival to departure."
             align="center"
           />
 
@@ -135,31 +135,31 @@ export const DreamzHomePage: React.FC = () => {
 
       {/* Safety & Nurturing Care */}
       <section className="py-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="p-8 sm:p-12 rounded-3xl bg-white border border-slate-200 shadow-sm space-y-6">
-          <div className="flex items-center gap-2 text-emerald-700">
+        <div className="p-8 sm:p-12 rounded-3xl bg-[#FCFAF6] border border-[#E6DDCF] shadow-xs space-y-6">
+          <div className="flex items-center gap-2 text-[#064E3B]">
             <ShieldCheck className="w-6 h-6" />
-            <span className="text-xs font-bold uppercase tracking-wider">Safety & Well-being</span>
+            <span className="text-xs font-bold uppercase tracking-widest font-mono">Safety & Well-being</span>
           </div>
 
-          <h2 className="font-outfit text-2xl sm:text-3xl font-bold text-slate-900">
+          <h2 className="font-outfit text-2xl sm:text-3xl font-bold text-[#2B1B1D]">
             A Safe, Hygienic & Loving Sanctuary
           </h2>
 
-          <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+          <p className="text-sm sm:text-base text-[#5C494A] leading-relaxed">
             We recognize that sending your child to school for the first time is a profound act of trust. Every corner of Rapid Dreamz is designed with child safety in mind: rounded furniture edges, soft-landing flooring in activity zones, full CCTV surveillance, verified support escorts, and strict authorized-guardian pickup policies.
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2 text-xs text-slate-700">
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200">
-              <strong className="block text-slate-900 mb-1">Child-Proof Facilities</strong>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2 text-xs text-[#432C2E]">
+            <div className="p-4 rounded-2xl bg-[#FAF6F0] border border-[#E8DFD0]">
+              <strong className="block text-[#2B1B1D] mb-1 font-semibold">Child-Proof Facilities</strong>
               Rounded non-toxic furniture, finger-pinch door guards, and sanitary low-height washrooms.
             </div>
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200">
-              <strong className="block text-slate-900 mb-1">Trained Caregivers</strong>
+            <div className="p-4 rounded-2xl bg-[#FAF6F0] border border-[#E8DFD0]">
+              <strong className="block text-[#2B1B1D] mb-1 font-semibold">Trained Caregivers</strong>
               Loving support ayahs and pediatric first-aid certified educators present at all times.
             </div>
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200">
-              <strong className="block text-slate-900 mb-1">Secure Pickup Protocols</strong>
+            <div className="p-4 rounded-2xl bg-[#FAF6F0] border border-[#E8DFD0]">
+              <strong className="block text-[#2B1B1D] mb-1 font-semibold">Secure Pickup Protocols</strong>
               Mandatory parent RFID/escort identity verification before any child departs campus.
             </div>
           </div>
@@ -168,28 +168,28 @@ export const DreamzHomePage: React.FC = () => {
 
       {/* CTA Box */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="p-8 sm:p-12 rounded-3xl bg-slate-950 text-white flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="p-8 sm:p-12 rounded-3xl bg-[#2D060C] text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
           <div className="space-y-2 text-center md:text-left">
-            <span className="text-xs font-bold uppercase tracking-wider text-amber-400">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#E8955A] font-mono">
               Admissions Open {settings.academicYear}
             </span>
             <h3 className="font-outfit text-2xl sm:text-3xl font-bold">
               Give Your Child the Best Beginning
             </h3>
-            <p className="text-xs sm:text-sm text-slate-300 max-w-lg">
+            <p className="text-xs sm:text-sm text-[#DBCDC5] max-w-lg">
               Applications are reviewed on a rolling basis. Schedule a visit to tour our sensory classrooms and play spaces.
             </p>
           </div>
           <div className="flex flex-wrap gap-3 shrink-0">
             <Link
               to="/dreamz/admissions"
-              className="px-6 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs uppercase tracking-wider transition-all"
+              className="px-6 py-3 rounded-xl bg-[#C2410C] hover:bg-[#9A3412] text-white font-bold text-xs uppercase tracking-wider transition-all"
             >
               Apply to Dreamz
             </Link>
             <Link
               to="/visit"
-              className="px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs uppercase tracking-wider transition-all"
+              className="px-6 py-3 rounded-xl bg-[#3D0B12] hover:bg-[#52121C] text-white font-bold text-xs uppercase tracking-wider border border-[#5E1722] transition-all"
             >
               Schedule Tour
             </Link>

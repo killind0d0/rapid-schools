@@ -64,7 +64,7 @@ const stages = [
 
 export const DreamzAcademicsPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-[#FFFDF9] pb-24">
+    <div className="min-h-screen bg-[#FCFAF6] pb-24">
       <Breadcrumbs
         items={[
           { label: 'Rapid Dreamz', href: '/dreamz' },
@@ -72,15 +72,16 @@ export const DreamzAcademicsPage: React.FC = () => {
         ]}
       />
 
-      <section className="bg-gradient-to-r from-amber-500 to-orange-500 text-white py-14">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-white/20 text-white border border-white/30">
+      <section className="bg-gradient-to-r from-[#C2410C] to-[#EA580C] text-white py-16 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/10 via-transparent to-black/20" />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
+          <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-semibold uppercase tracking-widest bg-white/20 text-white border border-white/30">
             Developmental Stages
           </span>
-          <h1 className="font-outfit text-3xl sm:text-5xl font-extrabold tracking-tight">
+          <h1 className="font-cormorant text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-white">
             Early Years Academic Journey
           </h1>
-          <p className="max-w-2xl mx-auto text-xs sm:text-sm text-amber-100">
+          <p className="max-w-2xl mx-auto text-xs sm:text-sm text-[#FFEDD5] font-sans">
             Carefully calibrated developmental stepping stones from Play Group through UKG.
           </p>
         </div>
@@ -90,34 +91,34 @@ export const DreamzAcademicsPage: React.FC = () => {
         {stages.map((st, index) => (
           <div
             key={index}
-            className="p-6 sm:p-8 rounded-3xl bg-white border border-slate-200 shadow-sm hover:border-amber-300 transition-all space-y-4"
+            className="p-6 sm:p-8 rounded-3xl bg-white border border-[#E6DDCF] shadow-sm hover:border-[#FDBA74] transition-all space-y-4"
           >
-            <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 pb-3">
+            <div className="flex flex-wrap items-center justify-between gap-2 border-b border-[#E6DDCF] pb-3">
               <div>
-                <h3 className="font-outfit text-xl sm:text-2xl font-bold text-slate-900">
+                <h3 className="font-cormorant text-2xl sm:text-3xl font-semibold text-[#1C1917]">
                   {st.grade}
                 </h3>
-                <span className="text-xs font-bold text-amber-600">
+                <span className="text-xs font-semibold text-[#C2410C]">
                   Age Benchmark: {st.age}
                 </span>
               </div>
-              <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-amber-50 text-amber-800 border border-amber-200">
+              <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-[#FFF7ED] text-[#C2410C] border border-[#FDBA74]/50">
                 Stage {index + 1}
               </span>
             </div>
 
-            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            <p className="text-xs sm:text-sm text-[#57534E] leading-relaxed">
               {st.overview}
             </p>
 
             <div>
-              <h4 className="text-xs font-bold uppercase tracking-wider text-slate-800 mb-2">
+              <h4 className="text-xs font-semibold uppercase tracking-wider text-[#1C1917] mb-2">
                 Core Developmental Milestones:
               </h4>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-700">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#57534E]">
                 {st.milestones.map((m, i) => (
                   <div key={i} className="flex items-start gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-4 h-4 text-[#15803D] shrink-0 mt-0.5" />
                     <span>{m}</span>
                   </div>
                 ))}
@@ -129,7 +130,7 @@ export const DreamzAcademicsPage: React.FC = () => {
         <div className="pt-6 text-center">
           <Link
             to="/dreamz/admissions"
-            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs uppercase tracking-wider shadow-md transition-all"
+            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#BD672A] hover:bg-[#A35520] text-white font-semibold text-xs uppercase tracking-wider shadow-sm transition-all"
           >
             <span>Apply for Early Years Admission</span>
             <ArrowRight className="w-4 h-4" />

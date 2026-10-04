@@ -45,7 +45,7 @@ const facilities = [
 
 export const ShakunCampusPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-slate-50 pb-24">
+    <div className="min-h-screen bg-[#FCFAF6] pb-24">
       <Breadcrumbs
         items={[
           { label: 'Rapid Shakuntlayan', href: '/shakuntlayan' },
@@ -53,15 +53,16 @@ export const ShakunCampusPage: React.FC = () => {
         ]}
       />
 
-      <section className="bg-slate-950 text-white py-14">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-500/20 text-sky-300 border border-blue-500/30">
+      <section className="bg-[#03231B] text-white py-16 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#064E3B]/60 via-[#03231B] to-[#01140F]" />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
+          <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-semibold uppercase tracking-widest bg-[#059669]/20 text-[#A7F3D0] border border-[#059669]/30">
             Infrastructure & Environment
           </span>
-          <h1 className="font-outfit text-3xl sm:text-5xl font-extrabold tracking-tight">
+          <h1 className="font-cormorant text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-white">
             Rapid Shakuntlayan Campus
           </h1>
-          <p className="max-w-2xl mx-auto text-xs sm:text-sm text-slate-300">
+          <p className="max-w-2xl mx-auto text-xs sm:text-sm text-[#D1FAE5]/80 font-sans">
             Modern educational facilities engineered for academic inquiry, physical health, and collaborative student activity.
           </p>
         </div>
@@ -74,7 +75,7 @@ export const ShakunCampusPage: React.FC = () => {
             return (
               <div
                 key={idx}
-                className="rounded-3xl bg-white border border-slate-200 shadow-sm overflow-hidden flex flex-col hover:shadow-md transition-shadow"
+                className="rounded-3xl bg-white border border-[#E6DDCF] shadow-sm overflow-hidden flex flex-col hover:border-[#059669]/40 hover:shadow-md transition-all"
               >
                 <div className="h-52 overflow-hidden relative">
                   <img
@@ -82,17 +83,17 @@ export const ShakunCampusPage: React.FC = () => {
                     alt={fac.title}
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute top-4 left-4 p-2 rounded-xl bg-slate-900/80 backdrop-blur-md text-amber-400 border border-amber-500/30">
+                  <div className="absolute top-4 left-4 p-2 rounded-xl bg-[#03231B]/85 backdrop-blur-md text-[#A7F3D0] border border-[#059669]/30">
                     <Icon className="w-5 h-5" />
                   </div>
                 </div>
 
                 <div className="p-6 flex-1 flex flex-col justify-between">
                   <div>
-                    <h3 className="font-outfit text-xl font-bold text-slate-900 mb-2">
+                    <h3 className="font-cormorant text-2xl font-semibold text-[#1C1917] mb-2">
                       {fac.title}
                     </h3>
-                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    <p className="text-xs sm:text-sm text-[#57534E] leading-relaxed">
                       {fac.desc}
                     </p>
                   </div>
@@ -103,18 +104,18 @@ export const ShakunCampusPage: React.FC = () => {
         </div>
 
         {/* Guided Tour Banner */}
-        <div className="mt-12 p-8 sm:p-10 rounded-3xl bg-slate-900 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
+        <div className="mt-14 p-8 sm:p-10 rounded-3xl bg-[#03231B] text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm border border-[#064E3B]/40">
           <div className="space-y-1 text-center md:text-left">
-            <h3 className="font-outfit text-xl sm:text-2xl font-bold">
+            <h3 className="font-cormorant text-2xl sm:text-3xl font-normal text-[#FCFAF6]">
               Want to see our laboratories and campus in person?
             </h3>
-            <p className="text-xs sm:text-sm text-slate-300">
+            <p className="text-xs sm:text-sm text-[#D1FAE5]/80 font-sans">
               Guided campus tours are conducted Monday through Saturday with an academic counselor.
             </p>
           </div>
           <Link
             to="/visit"
-            className="px-6 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs uppercase tracking-wider transition-colors shrink-0 flex items-center gap-2"
+            className="px-6 py-3 rounded-xl bg-[#BD672A] hover:bg-[#A35520] text-white font-semibold text-xs uppercase tracking-wider transition-colors shrink-0 flex items-center gap-2 shadow-sm"
           >
             <Calendar className="w-4 h-4" />
             <span>Book Guided Visit</span>

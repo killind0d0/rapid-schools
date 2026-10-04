@@ -1,11 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-  <rect width="64" height="64" rx="16" fill="#0C2340"/>
-  <!-- Shield/crest outline in Gold -->
-  <path d="M32 10L48 16V31C48 42.5 41 51 32 54C23 51 16 42.5 16 31V16L32 10Z" stroke="#E2A12E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="#132F54"/>
-  <!-- Open Book Symbol -->
-  <path d="M32 26C28 23 23 23 20 24V40C23 39 28 39 32 42C36 39 41 39 44 40V24C41 23 36 23 32 26Z" fill="#F8FAFC" stroke="#E2A12E" stroke-width="1.5" stroke-linejoin="round"/>
-  <!-- Central spine -->
-  <path d="M32 26V42" stroke="#E2A12E" stroke-width="1.5"/>
-  <!-- Rising sun / torch flame rays atop book -->
-  <path d="M32 17V21M27 18.5L29 22M37 18.5L35 22" stroke="#E2A12E" stroke-width="2" stroke-linecap="round"/>
+  <rect width="64" height="64" rx="14" fill="#3D0B12"/>
+  <!-- Elegant academic shield outline in burnished copper -->
+  <path d="M32 9L49 15.5V32C49 44 41.5 52.5 32 55.5C22.5 52.5 15 44 15 32V15.5L32 9Z" stroke="#D47A3B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="#4F101A"/>
+  <!-- Open parchment pages -->
+  <path d="M32 26C27.5 22.5 22 22.5 19 23.5V40C22 39 27.5 39 32 42.5C36.5 39 42 39 45 40V23.5C42 22.5 36.5 22.5 32 26Z" fill="#FAF6F0" stroke="#D47A3B" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M32 26V42.5" stroke="#D47A3B" stroke-width="1.5"/>
+  <!-- Central eternal flame / torch rays -->
+  <path d="M32 15C33.5 17.5 35 19.5 34 21.5C33 23 31 23 30 21.5C29 19.5 30.5 17.5 32 15Z" fill="#E58B48"/>
 </svg>
