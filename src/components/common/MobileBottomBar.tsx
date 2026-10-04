@@ -7,12 +7,13 @@ export const MobileBottomBar: React.FC = () => {
   const { settings } = useSite();
 
   return (
-    <div className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#24060B]/95 backdrop-blur-md border-t border-[#461019] text-[#EFE7DC] shadow-2xl safe-area-bottom">
-      <div className="grid grid-cols-4 divide-x divide-[#3D0F17] text-center py-2 px-1">
+    <div className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#1C0306]/95 backdrop-blur-md border-t border-[#3D0B12] text-[#EFE7DC] shadow-2xl safe-area-bottom">
+      <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#BD672A]/40 to-transparent" />
+      <div className="grid grid-cols-4 divide-x divide-[#2C070C] text-center py-2 px-1">
         {/* Call Office */}
         <a
           href={`tel:${settings.phone.replace(/[^0-9+]/g, '')}`}
-          className="flex flex-col items-center justify-center py-1 text-[#DBCDC0] hover:text-white active:scale-95 transition-transform"
+          className="flex flex-col items-center justify-center py-1 text-[#DBCDC0] hover:text-[#F3C292] active:scale-95 transition-transform"
         >
           <Phone className="w-4 h-4 mb-1 text-[#D47A3B]" />
           <span className="text-[10px] font-bold tracking-tight">Call</span>
@@ -32,7 +33,7 @@ export const MobileBottomBar: React.FC = () => {
         {/* Book Visit */}
         <Link
           to="/visit"
-          className="flex flex-col items-center justify-center py-1 text-[#DBCDC0] hover:text-[#FDBA74] active:scale-95 transition-transform"
+          className="flex flex-col items-center justify-center py-1 text-[#DBCDC0] hover:text-[#F3C292] active:scale-95 transition-transform"
         >
           <Calendar className="w-4 h-4 mb-1 text-[#D47A3B]" />
           <span className="text-[10px] font-bold tracking-tight">Visit</span>
@@ -41,9 +42,9 @@ export const MobileBottomBar: React.FC = () => {
         {/* Apply / Admissions */}
         <Link
           to="/admissions"
-          className="flex flex-col items-center justify-center py-1 text-white active:scale-95 transition-transform bg-[#5A121E] rounded-lg font-bold mx-1"
+          className="flex flex-col items-center justify-center py-1.5 text-white active:scale-95 transition-transform luxury-btn-primary rounded-xl font-bold mx-1 shadow-sm"
         >
-          <FileText className="w-4 h-4 mb-1 text-[#FED7AA]" />
+          <FileText className="w-4 h-4 mb-0.5 text-white" />
           <span className="text-[10px] tracking-tight">Apply</span>
         </Link>
       </div>

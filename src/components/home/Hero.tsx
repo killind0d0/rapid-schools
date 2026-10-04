@@ -7,53 +7,59 @@ export const Hero: React.FC = () => {
   const { settings } = useSite();
 
   return (
-    <section className="relative overflow-hidden bg-[#2D060C] text-white min-h-[85vh] flex items-center">
+    <section className="relative overflow-hidden bg-[#1C0306] text-white min-h-[88vh] flex items-center">
       {/* Background Graphic with warm atmospheric vignette */}
-      <div className="absolute inset-0 z-0 opacity-20">
+      <div className="absolute inset-0 z-0 opacity-25">
         <img
           src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=2000&q=80"
           alt="Modern school campus architecture"
           className="w-full h-full object-cover mix-blend-luminosity"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#24050A] via-[#2D060C]/95 to-[#1F0408]/80" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1C0306] via-[#2C070C]/90 to-[#1C0306]/85" />
       </div>
 
-      {/* Decorative ambient glowing orbs */}
-      <div className="absolute -top-40 -right-40 w-96 h-96 bg-[#BD672A]/15 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-[#064E3B]/20 rounded-full blur-3xl pointer-events-none" />
+      {/* Layered Ambient Glowing Light Meshes */}
+      <div className="absolute -top-32 -right-32 w-[500px] h-[500px] bg-[#BD672A]/18 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-[#3D0B12]/50 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-[#2C070C]/40 rounded-full blur-[120px] pointer-events-none" />
+
+      {/* Hairline Top Highlight */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#BD672A]/30 to-transparent" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
           
           {/* Main Left Content */}
-          <div className="lg:col-span-8 space-y-6">
-            {/* Top pill badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#420C14] border border-[#BD672A]/40 text-[#E8955A] text-xs font-semibold tracking-wide shadow-xs">
-              <span className="w-2 h-2 rounded-full bg-[#D47A3B] animate-ping" />
-              <span>Admissions Open for Session {settings.academicYear}</span>
+          <div className="lg:col-span-7 space-y-7">
+            {/* Luxury Eyebrow with glowing metallic dot */}
+            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#2C070C] border border-[#BD672A]/30 text-[#F3C292] text-xs font-semibold tracking-wide shadow-[0_0_15px_rgba(189,103,42,0.18)]">
+              <span className="w-2 h-2 rounded-full bg-[#BD672A] shadow-[0_0_8px_rgba(189,103,42,0.8)] animate-pulse" />
+              <span className="font-outfit uppercase tracking-[0.18em] text-[11px] font-bold">
+                Admissions Open for Session {settings.academicYear}
+              </span>
             </div>
 
-            {/* Headline */}
-            <h1 className="font-outfit text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.12]">
-              Nurturing <span className="font-editorial italic font-normal text-[#E8955A]">Curiosity.</span>
+            {/* 3-Tier Headline with Italic Serif Accents */}
+            <h1 className="font-outfit text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#FAF6F0] leading-[1.12]">
+              Nurturing <span className="font-editorial italic font-normal text-[#F3C292]">Curiosity.</span>
               <br />
-              Cultivating <span className="text-[#FAF5EE]">Character.</span>
+              Cultivating <span className="font-editorial italic font-normal text-white">Character.</span>
               <br />
-              Shaping Tomorrow.
+              Shaping <span className="font-editorial italic font-normal text-[#BD672A]">Tomorrow.</span>
             </h1>
 
             {/* Sub-headline */}
-            <p className="text-base sm:text-xl text-[#DBCDC5] max-w-2xl font-normal leading-relaxed">
-              Rapid Schools brings together foundational early childhood discovery at{' '}
-              <strong className="text-[#FB923C] font-semibold">Rapid Dreamz</strong> and disciplined, values-driven CBSE scholarship at{' '}
-              <strong className="text-[#34D399] font-semibold">Rapid Shakuntlayan</strong> — creating an unbroken continuum of growth from Play Group to Class 12.
+            <p className="text-base sm:text-lg text-[#DBCDC5] max-w-2xl font-normal leading-relaxed font-sans">
+              Rapid Schools unites foundational early childhood inquiry at{' '}
+              <strong className="text-[#F3C292] font-semibold">Rapid Dreamz</strong> and disciplined, values-driven CBSE scholarship at{' '}
+              <strong className="text-[#A7F3D0] font-semibold">Rapid Shakuntlayan</strong> — curating an unbroken educational continuum from Play Group to Class 12.
             </p>
 
             {/* Primary & Secondary Action CTAs */}
             <div className="pt-2 flex flex-wrap items-center gap-4">
               <a
                 href="#school-selector"
-                className="px-6 py-3.5 rounded-xl bg-[#BD672A] hover:bg-[#A35520] text-white font-bold text-xs uppercase tracking-wider shadow-lg hover:shadow-[#BD672A]/20 transition-all flex items-center gap-2 group"
+                className="luxury-btn-primary px-7 py-3.5 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center gap-2 group cursor-pointer"
               >
                 <span>Explore Our Schools</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -61,90 +67,112 @@ export const Hero: React.FC = () => {
 
               <Link
                 to="/admissions"
-                className="px-6 py-3.5 rounded-xl bg-[#3D0B12] hover:bg-[#54121B] text-white font-semibold text-xs uppercase tracking-wider border border-[#5E1722] hover:border-[#BD672A]/60 transition-all flex items-center gap-2"
+                className="luxury-btn-outline px-6 py-3.5 rounded-xl font-semibold text-xs uppercase tracking-wider flex items-center gap-2"
               >
                 <span>Admissions Guide</span>
               </Link>
 
               <Link
                 to="/visit"
-                className="px-6 py-3.5 rounded-xl bg-transparent hover:bg-white/5 text-[#DBCDC5] hover:text-white font-medium text-xs uppercase tracking-wider transition-all flex items-center gap-2"
+                className="px-5 py-3.5 rounded-xl bg-transparent hover:bg-white/5 text-[#DBCDC5] hover:text-white font-medium text-xs uppercase tracking-wider transition-all flex items-center gap-2 group"
               >
-                <Calendar className="w-4 h-4 text-[#D47A3B]" />
+                <Calendar className="w-4 h-4 text-[#D47A3B] group-hover:scale-110 transition-transform" />
                 <span>Book Campus Tour</span>
               </Link>
             </div>
 
             {/* Trust Markers */}
-            <div className="pt-6 grid grid-cols-2 sm:grid-cols-3 gap-4 border-t border-[#461019] text-xs text-[#C7B5A8]">
-              <div className="flex items-center gap-2">
-                <Shield className="w-4 h-4 text-[#34D399] shrink-0" />
+            <div className="pt-6 grid grid-cols-2 sm:grid-cols-3 gap-4 border-t border-[#3D0B12] text-xs text-[#C7B5A8]">
+              <div className="flex items-center gap-2.5">
+                <div className="w-6 h-6 rounded-full bg-[#064E3B]/40 flex items-center justify-center border border-[#064E3B]/60 shrink-0">
+                  <Shield className="w-3.5 h-3.5 text-[#34D399]" />
+                </div>
                 <span>CBSE Affiliated Curriculum</span>
               </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-[#D47A3B] shrink-0" />
-                <span>Safe & Secure Campuses</span>
+              <div className="flex items-center gap-2.5">
+                <div className="w-6 h-6 rounded-full bg-[#BD672A]/20 flex items-center justify-center border border-[#BD672A]/40 shrink-0">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#F3C292]" />
+                </div>
+                <span>Child-Safe Campuses</span>
               </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-[#F97316] shrink-0" />
+              <div className="flex items-center gap-2.5">
+                <div className="w-6 h-6 rounded-full bg-[#3D0B12] flex items-center justify-center border border-[#BD672A]/30 shrink-0">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#D47A3B]" />
+                </div>
                 <span>Holistic Sports & Culture</span>
               </div>
             </div>
           </div>
 
-          {/* Right Highlights Cards */}
-          <div className="lg:col-span-4 space-y-4">
-            {/* Quick Card: Rapid Dreamz */}
+          {/* Right Column: Dual Luxury Dossier Preview Cards */}
+          <div className="lg:col-span-5 space-y-4">
+            
+            {/* Dossier Card 1: Rapid Dreamz */}
             <Link
               to="/dreamz"
-              className="block p-6 rounded-2xl bg-gradient-to-br from-[#3D0B12]/95 via-[#3D0B12]/80 to-[#C2410C]/20 border border-[#C2410C]/40 hover:border-[#FB923C] shadow-xl transition-all group"
+              className="block luxury-glass-dark p-6 sm:p-7 rounded-3xl relative overflow-hidden transition-all duration-300 hover:border-[#BD672A]/60 hover:-translate-y-1 group"
             >
-              <div className="flex items-center justify-between mb-3">
-                <span className="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#C2410C]/30 text-[#FED7AA] border border-[#C2410C]/40 uppercase tracking-widest">
-                  Junior Wing
+              {/* Subtle Ambient Radial Highlight */}
+              <div className="absolute top-0 right-0 w-44 h-44 bg-[#BD672A]/10 rounded-full blur-2xl pointer-events-none group-hover:bg-[#BD672A]/20 transition-all" />
+
+              <div className="flex items-center justify-between mb-3 relative z-10">
+                <span className="px-3 py-1 rounded-full text-[10px] font-bold bg-[#BD672A]/20 text-[#F3C292] border border-[#BD672A]/40 uppercase tracking-[0.18em] font-mono">
+                  Junior Wing • PG–UKG
                 </span>
-                <Sparkles className="w-5 h-5 text-[#F97316] group-hover:scale-110 transition-transform" />
+                <div className="w-8 h-8 rounded-full bg-[#BD672A]/15 flex items-center justify-center border border-[#BD672A]/30 group-hover:scale-110 transition-transform">
+                  <Sparkles className="w-4 h-4 text-[#F3C292]" />
+                </div>
               </div>
-              <h3 className="text-xl font-bold font-outfit text-white group-hover:text-[#FDBA74] transition-colors">
-                Rapid Dreamz
+
+              <h3 className="text-2xl font-medium font-editorial text-white group-hover:text-[#F3C292] transition-colors relative z-10">
+                Rapid <span className="italic font-normal">Dreamz</span>
               </h3>
-              <p className="text-xs text-[#FED7AA]/90 font-medium mt-0.5">
+              <p className="text-xs text-[#D8C7B8] font-medium mt-1 relative z-10">
                 Play Group • Nursery • LKG • UKG
               </p>
-              <p className="text-xs text-[#D8C7B8] mt-2 leading-relaxed">
-                Play-based inquiry, tactile discovery, and caring emotional scaffolding in the foundational early years.
+              <p className="text-xs text-[#C4B2A2] mt-2.5 leading-relaxed font-sans relative z-10">
+                Tactile discovery, caring emotional scaffolding, sensory ateliers, and joyful foundational language in early childhood.
               </p>
-              <div className="mt-4 flex items-center text-xs font-bold text-[#FB923C] group-hover:text-[#FED7AA]">
-                <span>Discover Early Years</span>
-                <ArrowRight className="w-3.5 h-3.5 ml-1 group-hover:translate-x-1 transition-transform" />
+
+              <div className="mt-5 pt-3.5 border-t border-white/[0.08] flex items-center justify-between text-xs font-bold text-[#F3C292] group-hover:text-white relative z-10">
+                <span className="uppercase tracking-wider text-[11px]">Explore Early Years</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </div>
             </Link>
 
-            {/* Quick Card: Rapid Shakuntlayan */}
+            {/* Dossier Card 2: Rapid Shakuntlayan */}
             <Link
               to="/shakuntlayan"
-              className="block p-6 rounded-2xl bg-gradient-to-br from-[#3D0B12]/95 via-[#3D0B12]/80 to-[#064E3B]/40 border border-[#064E3B]/60 hover:border-[#34D399] shadow-xl transition-all group"
+              className="block luxury-glass-dark p-6 sm:p-7 rounded-3xl relative overflow-hidden transition-all duration-300 hover:border-[#064E3B]/80 hover:-translate-y-1 group"
             >
-              <div className="flex items-center justify-between mb-3">
-                <span className="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#064E3B]/40 text-[#A7F3D0] border border-[#064E3B]/60 uppercase tracking-widest">
-                  Class 1 to 12
+              {/* Subtle Ambient Radial Highlight */}
+              <div className="absolute top-0 right-0 w-44 h-44 bg-[#064E3B]/20 rounded-full blur-2xl pointer-events-none group-hover:bg-[#064E3B]/30 transition-all" />
+
+              <div className="flex items-center justify-between mb-3 relative z-10">
+                <span className="px-3 py-1 rounded-full text-[10px] font-bold bg-[#064E3B]/40 text-[#A7F3D0] border border-[#064E3B]/60 uppercase tracking-[0.18em] font-mono">
+                  CBSE Affiliated • Class 1–12
                 </span>
-                <GraduationCap className="w-5 h-5 text-[#34D399] group-hover:scale-110 transition-transform" />
+                <div className="w-8 h-8 rounded-full bg-[#064E3B]/30 flex items-center justify-center border border-[#064E3B]/50 group-hover:scale-110 transition-transform">
+                  <GraduationCap className="w-4 h-4 text-[#34D399]" />
+                </div>
               </div>
-              <h3 className="text-xl font-bold font-outfit text-white group-hover:text-[#6EE7B7] transition-colors">
-                Rapid Shakuntlayan
+
+              <h3 className="text-2xl font-medium font-editorial text-white group-hover:text-[#A7F3D0] transition-colors relative z-10">
+                Rapid <span className="italic font-normal">Shakuntlayan</span>
               </h3>
-              <p className="text-xs text-[#A7F3D0]/90 font-medium mt-0.5">
-                CBSE Affiliated, New Delhi
+              <p className="text-xs text-[#A7F3D0]/90 font-medium mt-1 relative z-10">
+                Class 1 to 12 • Affiliated to CBSE, New Delhi
               </p>
-              <p className="text-xs text-[#D8C7B8] mt-2 leading-relaxed">
-                Academic rigor, cutting-edge science and IT laboratories, athletics, and character development.
+              <p className="text-xs text-[#C4B2A2] mt-2.5 leading-relaxed font-sans relative z-10">
+                Disciplined academic rigor, scientific laboratories, sports grounds, digital literacy, and holistic character formation.
               </p>
-              <div className="mt-4 flex items-center text-xs font-bold text-[#34D399] group-hover:text-[#A7F3D0]">
-                <span>Explore Secondary School</span>
-                <ArrowRight className="w-3.5 h-3.5 ml-1 group-hover:translate-x-1 transition-transform" />
+
+              <div className="mt-5 pt-3.5 border-t border-white/[0.08] flex items-center justify-between text-xs font-bold text-[#A7F3D0] group-hover:text-white relative z-10">
+                <span className="uppercase tracking-wider text-[11px]">Explore Secondary Wing</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </div>
             </Link>
+
           </div>
 
         </div>

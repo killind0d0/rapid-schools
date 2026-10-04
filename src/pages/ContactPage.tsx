@@ -34,62 +34,67 @@ export const ContactPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#FCFAF6] pb-24">
+    <div className="min-h-screen bg-[#FAF6F0] pb-24">
       <Breadcrumbs items={[{ label: 'Contact & Directions' }]} />
 
-      {/* Banner */}
-      <section className="bg-[#2D060C] text-white py-14 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#5A121E]/60 via-[#2D060C] to-[#1A0407]" />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
-          <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-semibold uppercase tracking-widest bg-[#BD672A]/20 text-[#EAB592] border border-[#BD672A]/30">
+      {/* Header Banner */}
+      <section className="bg-[#1C0306] text-white py-16 sm:py-20 relative overflow-hidden">
+        {/* Layered radial glow */}
+        <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-[#BD672A]/15 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-[#3D0B12]/50 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#BD672A]/30 to-transparent" />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-semibold uppercase tracking-widest bg-[#2C070C] text-[#F3C292] border border-[#BD672A]/30 font-mono">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#BD672A] shadow-[0_0_8px_rgba(189,103,42,0.8)]" />
             Admissions & Administration
-          </span>
-          <h1 className="font-cormorant text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-white">
-            Connect With Rapid Schools
+          </div>
+          <h1 className="font-editorial text-3xl sm:text-5xl lg:text-6xl font-medium tracking-tight text-white leading-tight">
+            Connect With <span className="italic font-normal text-[#F3C292]">Rapid Schools</span>
           </h1>
-          <p className="max-w-2xl mx-auto text-xs sm:text-sm text-[#D4C3B3] font-sans">
-            Reach out to our admissions counselors, campus office, or schedule an in-person meeting.
+          <p className="max-w-2xl mx-auto text-sm sm:text-base text-[#D4C3B3] leading-relaxed font-sans">
+            Reach out to our admissions counselors, campus administrative office, or schedule an in-person meeting.
           </p>
         </div>
       </section>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 relative z-20">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
           {/* Left Column: Contact Cards */}
           <div className="lg:col-span-5 space-y-4">
             
             {/* Admissions Desk Card */}
-            <div className="p-6 rounded-3xl bg-white border border-[#E6DDCF] shadow-sm space-y-3">
-              <span className="text-[11px] font-bold text-[#BD672A] bg-[#FAF3EC] px-2.5 py-0.5 rounded-full uppercase tracking-wider border border-[#BD672A]/20">
+            <div className="p-7 sm:p-8 rounded-3xl bg-white border border-[#E8DFD1] shadow-[0_20px_45px_-15px_rgba(44,7,12,0.05)] space-y-4">
+              <span className="text-[10px] font-bold text-[#BD672A] bg-[#BD672A]/10 px-3 py-1 rounded-full uppercase tracking-[0.2em] border border-[#BD672A]/25 font-mono">
                 Admissions Desk
               </span>
-              <h3 className="font-cormorant text-xl font-semibold text-[#1C1917]">
+              <h3 className="font-editorial text-2xl font-medium text-[#23070B]">
                 Admissions & Enrollment Cell
               </h3>
-              <p className="text-xs text-[#57534E]">
+              <p className="text-xs sm:text-sm text-[#5C4E50] font-sans">
                 For prospectus requests, entrance eligibility queries, and registration assistance.
               </p>
-              <div className="pt-2 space-y-2 text-xs text-[#57534E]">
-                <div className="flex items-center gap-2">
+              <div className="pt-2 space-y-3 text-xs sm:text-sm text-[#5C4E50] font-sans">
+                <div className="flex items-center gap-2.5">
                   <Phone className="w-4 h-4 text-[#BD672A] shrink-0" />
-                  <a href={`tel:${settings.phone.replace(/[^0-9+]/g, '')}`} className="font-semibold text-[#1C1917] hover:text-[#BD672A]">
+                  <a href={`tel:${settings.phone.replace(/[^0-9+]/g, '')}`} className="font-semibold text-[#23070B] hover:text-[#BD672A] transition-colors">
                     {settings.phone}
                   </a>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2.5">
                   <Mail className="w-4 h-4 text-[#BD672A] shrink-0" />
-                  <a href={`mailto:${settings.email}`} className="hover:text-[#BD672A]">
+                  <a href={`mailto:${settings.email}`} className="hover:text-[#BD672A] transition-colors">
                     {settings.email}
                   </a>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2.5">
                   <MessageSquare className="w-4 h-4 text-[#064E3B] shrink-0" />
                   <a
                     href={`https://wa.me/${settings.whatsapp.replace(/[^0-9]/g, '')}?text=Hello%20Rapid%20Schools,%20I%20have%20an%20admissions%20query.`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-semibold text-[#064E3B] hover:text-[#043327]"
+                    className="font-semibold text-[#064E3B] hover:text-[#043327] transition-colors"
                   >
                     Direct WhatsApp: {settings.whatsapp}
                   </a>
@@ -97,20 +102,20 @@ export const ContactPage: React.FC = () => {
               </div>
             </div>
 
-            {/* General Administrative Information */}
-            <div className="p-6 rounded-3xl bg-white border border-[#E6DDCF] shadow-sm space-y-3">
-              <span className="text-[11px] font-bold text-[#064E3B] bg-[#ECFDF5] px-2.5 py-0.5 rounded-full uppercase tracking-wider border border-[#064E3B]/20">
+            {/* Campus Location */}
+            <div className="p-7 sm:p-8 rounded-3xl bg-white border border-[#E8DFD1] shadow-[0_20px_45px_-15px_rgba(44,7,12,0.05)] space-y-4">
+              <span className="text-[10px] font-bold text-[#064E3B] bg-[#064E3B]/10 px-3 py-1 rounded-full uppercase tracking-[0.2em] border border-[#064E3B]/25 font-mono">
                 Campus Location
               </span>
-              <h3 className="font-cormorant text-xl font-semibold text-[#1C1917]">
+              <h3 className="font-editorial text-2xl font-medium text-[#23070B]">
                 Institutional Campus
               </h3>
-              <div className="space-y-2 text-xs text-[#57534E]">
-                <div className="flex items-start gap-2">
+              <div className="space-y-3 text-xs sm:text-sm text-[#5C4E50] font-sans">
+                <div className="flex items-start gap-2.5">
                   <MapPin className="w-4 h-4 text-[#BD672A] shrink-0 mt-0.5" />
-                  <span>{settings.address}</span>
+                  <span className="leading-relaxed">{settings.address}</span>
                 </div>
-                <div className="flex items-start gap-2">
+                <div className="flex items-start gap-2.5">
                   <Clock className="w-4 h-4 text-[#BD672A] shrink-0 mt-0.5" />
                   <span>
                     Office Hours: Monday – Saturday<br />
@@ -124,7 +129,7 @@ export const ContactPage: React.FC = () => {
                   href={settings.mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#BD672A] hover:text-[#A35520]"
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#BD672A] hover:text-[#A2521C] transition-colors font-mono uppercase tracking-wider"
                 >
                   <span>Open in Google Maps</span>
                   <ExternalLink className="w-3.5 h-3.5" />
@@ -133,24 +138,24 @@ export const ContactPage: React.FC = () => {
             </div>
 
             {/* Emergency Helpline */}
-            <div className="p-4 rounded-2xl bg-[#FAF3EC] border border-[#BD672A]/30 text-xs text-[#78350F]">
-              <strong className="block font-bold mb-0.5">Emergency & Transport Desk:</strong>
+            <div className="p-5 rounded-2xl bg-white border border-[#E8DFD1] text-xs text-[#5C4E50] font-sans shadow-xs">
+              <strong className="block font-bold text-[#23070B] mb-1 font-outfit uppercase tracking-wider">Emergency & Transport Desk:</strong>
               {settings.emergencyHelpline}
             </div>
 
           </div>
 
-          {/* Right Column: Interactive Contact / Message Form */}
-          <div className="lg:col-span-7 bg-white p-6 sm:p-10 rounded-3xl border border-[#E6DDCF] shadow-sm">
+          {/* Right Column: Interactive Contact Form */}
+          <div className="lg:col-span-7 bg-white p-7 sm:p-10 rounded-3xl border border-[#E8DFD1] shadow-[0_20px_45px_-15px_rgba(44,7,12,0.05)]">
             {submitted ? (
               <div className="text-center py-10 space-y-4">
-                <div className="w-16 h-16 rounded-full bg-[#ECFDF5] text-[#064E3B] flex items-center justify-center mx-auto">
-                  <CheckCircle2 className="w-10 h-10" />
+                <div className="w-16 h-16 rounded-full bg-[#064E3B]/10 text-[#064E3B] flex items-center justify-center mx-auto border border-[#064E3B]/20">
+                  <CheckCircle2 className="w-10 h-10 text-[#064E3B]" />
                 </div>
-                <h3 className="font-cormorant text-3xl font-semibold text-[#1C1917]">
+                <h3 className="font-editorial text-3xl font-medium text-[#23070B]">
                   Message Successfully Dispatched
                 </h3>
-                <p className="text-xs sm:text-sm text-[#57534E] max-w-md mx-auto leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#5C4E50] max-w-md mx-auto leading-relaxed font-sans">
                   Thank you, <strong>{name}</strong>. Your correspondence regarding <em>"{subject}"</em> has been logged. Our administration desk will respond to <strong>{email}</strong> or call you at <strong>{phone}</strong> shortly.
                 </p>
                 <div className="pt-4 flex justify-center gap-3">
@@ -162,13 +167,13 @@ export const ContactPage: React.FC = () => {
                       setEmail('');
                       setMessage('');
                     }}
-                    className="px-5 py-2.5 rounded-xl bg-[#BD672A] text-white font-semibold text-xs uppercase tracking-wider hover:bg-[#A35520] transition-colors"
+                    className="luxury-btn-outline px-5 py-2.5 rounded-xl font-semibold text-xs uppercase tracking-wider cursor-pointer"
                   >
                     Send Another Note
                   </button>
                   <Link
                     to="/"
-                    className="px-5 py-2.5 rounded-xl bg-[#FAF7F2] text-[#1C1917] font-semibold text-xs uppercase tracking-wider hover:bg-[#E6DDCF] transition-colors"
+                    className="luxury-btn-primary px-5 py-2.5 rounded-xl font-semibold text-xs uppercase tracking-wider"
                   >
                     Return to Home
                   </Link>
@@ -176,12 +181,12 @@ export const ContactPage: React.FC = () => {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="border-b border-[#E6DDCF] pb-3 mb-2">
-                  <h3 className="font-cormorant text-2xl font-semibold text-[#1C1917]">
+                <div className="border-b border-[#E8DFD1] pb-3 mb-2">
+                  <h3 className="font-editorial text-2xl font-medium text-[#23070B]">
                     Send an Official Message
                   </h3>
-                  <p className="text-xs text-[#78716C]">
-                    Submit your query and our team will get back to you promptly.
+                  <p className="text-xs text-[#6E5D5F] font-sans mt-0.5">
+                    Submit your query and our admissions or campus administration team will respond promptly.
                   </p>
                 </div>
 
@@ -194,8 +199,8 @@ export const ContactPage: React.FC = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="contactName" className="block text-xs font-semibold text-[#57534E] uppercase tracking-wider mb-1">
-                      Full Name <span className="text-[#BE123C]">*</span>
+                    <label htmlFor="contactName" className="block text-[11px] font-bold text-[#6E5D5F] uppercase tracking-[0.15em] mb-1 font-mono">
+                      Full Name <span className="text-[#BD672A]">*</span>
                     </label>
                     <input
                       id="contactName"
@@ -203,14 +208,14 @@ export const ContactPage: React.FC = () => {
                       placeholder="e.g. Anjali Nair"
                       value={name}
                       onChange={(e) => setName(e.target.value)}
-                      className="w-full px-3.5 py-2 rounded-xl border border-[#E6DDCF] text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#BD672A]/30 focus:border-[#BD672A]"
+                      className="w-full px-3.5 py-2 rounded-xl border border-[#E8DFD1] bg-[#FCFAF6] text-[#23070B] text-xs sm:text-sm focus:bg-white focus:outline-none focus:border-[#BD672A] focus:ring-4 focus:ring-[#BD672A]/15 transition-all"
                       required
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="contactPhone" className="block text-xs font-semibold text-[#57534E] uppercase tracking-wider mb-1">
-                      Telephone / Mobile <span className="text-[#BE123C]">*</span>
+                    <label htmlFor="contactPhone" className="block text-[11px] font-bold text-[#6E5D5F] uppercase tracking-[0.15em] mb-1 font-mono">
+                      Telephone / Mobile <span className="text-[#BD672A]">*</span>
                     </label>
                     <input
                       id="contactPhone"
@@ -218,7 +223,7 @@ export const ContactPage: React.FC = () => {
                       placeholder="10-digit number"
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
-                      className="w-full px-3.5 py-2 rounded-xl border border-[#E6DDCF] text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#BD672A]/30 focus:border-[#BD672A]"
+                      className="w-full px-3.5 py-2 rounded-xl border border-[#E8DFD1] bg-[#FCFAF6] text-[#23070B] text-xs sm:text-sm focus:bg-white focus:outline-none focus:border-[#BD672A] focus:ring-4 focus:ring-[#BD672A]/15 transition-all"
                       required
                     />
                   </div>
@@ -226,8 +231,8 @@ export const ContactPage: React.FC = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="contactEmail" className="block text-xs font-semibold text-[#57534E] uppercase tracking-wider mb-1">
-                      Email Address <span className="text-[#BE123C]">*</span>
+                    <label htmlFor="contactEmail" className="block text-[11px] font-bold text-[#6E5D5F] uppercase tracking-[0.15em] mb-1 font-mono">
+                      Email Address <span className="text-[#BD672A]">*</span>
                     </label>
                     <input
                       id="contactEmail"
@@ -235,41 +240,41 @@ export const ContactPage: React.FC = () => {
                       placeholder="name@domain.com"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="w-full px-3.5 py-2 rounded-xl border border-[#E6DDCF] text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#BD672A]/30 focus:border-[#BD672A]"
+                      className="w-full px-3.5 py-2 rounded-xl border border-[#E8DFD1] bg-[#FCFAF6] text-[#23070B] text-xs sm:text-sm focus:bg-white focus:outline-none focus:border-[#BD672A] focus:ring-4 focus:ring-[#BD672A]/15 transition-all"
                       required
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="contactSubject" className="block text-xs font-semibold text-[#57534E] uppercase tracking-wider mb-1">
-                      Inquiry Department <span className="text-[#BE123C]">*</span>
+                    <label htmlFor="contactSubject" className="block text-[11px] font-bold text-[#6E5D5F] uppercase tracking-[0.15em] mb-1 font-mono">
+                      Inquiry Department <span className="text-[#BD672A]">*</span>
                     </label>
                     <select
                       id="contactSubject"
                       value={subject}
                       onChange={(e) => setSubject(e.target.value)}
-                      className="w-full px-3.5 py-2 rounded-xl border border-[#E6DDCF] bg-white text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#BD672A]/30 focus:border-[#BD672A]"
+                      className="w-full px-3.5 py-2 rounded-xl border border-[#E8DFD1] bg-[#FCFAF6] text-[#23070B] text-xs sm:text-sm focus:bg-white focus:outline-none focus:border-[#BD672A] focus:ring-4 focus:ring-[#BD672A]/15 transition-all"
                     >
-                      <option value="Admissions Inquiry">Admissions & Prospectus</option>
-                      <option value="Rapid Dreamz Inquiry">Rapid Dreamz (Junior Wing)</option>
-                      <option value="Rapid Shakuntlayan Inquiry">Rapid Shakuntlayan (Class 1-12)</option>
-                      <option value="Transport & Bus Route">Transport & Logistics</option>
+                      <option value="Admissions Inquiry">Admissions Inquiry</option>
+                      <option value="Campus Tour Booking">Campus Tour Booking</option>
+                      <option value="Academic Curriculum">Academic Curriculum</option>
+                      <option value="Fee Structure & Transport">Fee Structure & Transport</option>
                       <option value="General Administration">General Administration</option>
                     </select>
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="contactMessage" className="block text-xs font-semibold text-[#57534E] uppercase tracking-wider mb-1">
-                    Your Message / Detailed Query <span className="text-[#BE123C]">*</span>
+                  <label htmlFor="contactMessage" className="block text-[11px] font-bold text-[#6E5D5F] uppercase tracking-[0.15em] mb-1 font-mono">
+                    Your Message <span className="text-[#BD672A]">*</span>
                   </label>
                   <textarea
                     id="contactMessage"
                     rows={4}
-                    placeholder="Please specify your query or requirements..."
+                    placeholder="Provide details about your query..."
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    className="w-full px-3.5 py-2 rounded-xl border border-[#E6DDCF] text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#BD672A]/30 focus:border-[#BD672A]"
+                    className="w-full px-3.5 py-2 rounded-xl border border-[#E8DFD1] bg-[#FCFAF6] text-[#23070B] text-xs sm:text-sm focus:bg-white focus:outline-none focus:border-[#BD672A] focus:ring-4 focus:ring-[#BD672A]/15 transition-all"
                     required
                   />
                 </div>
@@ -277,14 +282,14 @@ export const ContactPage: React.FC = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-3.5 px-6 rounded-xl bg-[#BD672A] hover:bg-[#A35520] text-white font-semibold text-xs uppercase tracking-wider shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+                  className="luxury-btn-primary w-full py-3.5 px-6 rounded-xl font-semibold text-xs uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
                 >
                   {isSubmitting ? (
-                    <span>Submitting Message...</span>
+                    <span>Dispatching Message...</span>
                   ) : (
                     <>
                       <Send className="w-4 h-4 text-white" />
-                      <span>Transmit Message to Office</span>
+                      <span>Dispatch Official Correspondence</span>
                     </>
                   )}
                 </button>

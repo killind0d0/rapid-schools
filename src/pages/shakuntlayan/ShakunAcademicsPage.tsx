@@ -2,78 +2,121 @@ import React from 'react';
 import { Breadcrumbs } from '../../components/common/Breadcrumbs';
 import { SectionHeading } from '../../components/common/SectionHeading';
 import { AcademicStages } from '../../components/shakuntlayan/AcademicStages';
-import { BookOpen, GraduationCap, Award, Microscope, FileText, ArrowRight } from 'lucide-react';
+import { BookOpen, GraduationCap, Award, Microscope, FileText, ArrowRight, ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export const ShakunAcademicsPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-[#FCFAF6] pb-24">
+    <div className="min-h-screen bg-[#F8FAF8] pb-24 text-[#021C16]">
       <Breadcrumbs
         items={[
           { label: 'Rapid Shakuntlayan', href: '/shakuntlayan' },
-          { label: 'Academic Journey' }
+          { label: 'Academic Framework' }
         ]}
       />
 
-      <section className="bg-[#03231B] text-white py-16 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#064E3B]/60 via-[#03231B] to-[#01140F]" />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
-          <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-semibold uppercase tracking-widest bg-[#059669]/20 text-[#A7F3D0] border border-[#059669]/30">
-            Curriculum & Pedagogy
-          </span>
-          <h1 className="font-cormorant text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-white">
+      {/* Hero Canvas in Sovereign British Racing Forest Emerald */}
+      <section className="bg-gradient-to-br from-[#042F24] via-[#021C16] to-[#01120D] text-white py-16 sm:py-20 relative overflow-hidden">
+        {/* Mint Conifer Aurora Glow */}
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-[radial-gradient(circle,_rgba(52,211,153,0.14)_0%,_transparent_70%)] pointer-events-none" />
+        <div className="absolute -bottom-16 left-10 w-96 h-96 bg-[radial-gradient(circle,_rgba(197,160,89,0.1)_0%,_transparent_70%)] pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/10 via-transparent to-black/35 pointer-events-none" />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-mono font-bold uppercase tracking-wider bg-[#064E3B] text-[#A7F3D0] border border-[#34D399]/40 shadow-xs">
+            <GraduationCap className="w-3.5 h-3.5 text-[#34D399]" />
+            <span>National Board Affiliation • CBSE, New Delhi</span>
+          </div>
+
+          <h1 className="font-editorial text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">
             CBSE Academic Framework (Class 1–12)
           </h1>
-          <p className="max-w-2xl mx-auto text-xs sm:text-sm text-[#D1FAE5]/80 font-sans">
-            A structured progression of conceptual inquiry, laboratory investigation, and national board alignment under CBSE, New Delhi.
+
+          <p className="max-w-2xl mx-auto text-sm sm:text-base text-[#D1E7DF] font-normal leading-relaxed">
+            A disciplined continuum of conceptual inquiry, empirical laboratory investigations, and national board alignment from Primary to Senior Secondary graduation.
           </p>
         </div>
       </section>
 
+      {/* Content Container */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 space-y-12">
-        <div className="bg-white p-8 sm:p-12 rounded-3xl border border-[#E6DDCF] shadow-sm space-y-6">
-          <h2 className="font-cormorant text-2xl sm:text-4xl font-normal text-[#1C1917]">
-            Pedagogical Principles & National Curriculum
+        {/* Pedagogical Manifesto Panel */}
+        <div className="bg-[#F8FAF8] p-8 sm:p-12 rounded-3xl border border-[#D1E5DB] shadow-[0_4px_24px_-4px_rgba(4,47,36,0.06)] space-y-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E3EFE9] text-[#064E3B] text-xs font-mono font-bold uppercase tracking-wider">
+            <ShieldCheck className="w-3.5 h-3.5 text-[#064E3B]" />
+            <span>National Curriculum Alignment</span>
+          </div>
+
+          <h2 className="font-editorial text-3xl sm:text-4xl font-bold text-[#021C16]">
+            Pedagogical Principles & Scholastic Rigor
           </h2>
-          <p className="text-sm sm:text-base text-[#57534E] leading-relaxed">
-            Rapid Shakuntlayan adheres strictly to the CBSE curriculum guidelines while infusing modern experiential techniques recommended by NEP 2020. Our academic culture balances rigorous board preparation with conceptual depth, ensuring students do not merely memorize formulas but grasp the underlying empirical logic.
+
+          <p className="text-sm sm:text-base text-[#1E3B32] leading-relaxed">
+            Rapid Shakuntlayan adheres strictly to the CBSE curriculum guidelines while infusing contemporary experiential methodologies championed by the National Education Policy (NEP 2020). Our scholastic ethos balances rigorous board examination preparedness with genuine conceptual understanding — ensuring students do not merely memorize formulas, but master the underlying physical logic and analytical deductions.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2 text-xs text-[#57534E]">
-            <div className="p-4 rounded-xl bg-[#FCFAF6] border border-[#E6DDCF]">
-              <strong className="block text-[#064E3B] mb-1 font-semibold text-sm">Empirical Science Practicals</strong>
-              Regular laboratory sessions beginning in Middle School reinforcing theoretical concepts through experiment.
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2 text-xs text-[#1E3B32]">
+            <div className="p-5 rounded-2xl bg-white border border-[#D1E5DB] shadow-2xs space-y-1.5">
+              <strong className="block text-[#064E3B] font-mono text-xs uppercase tracking-wider">
+                Empirical Science Practicals
+              </strong>
+              <p className="text-[#3C584E] leading-relaxed">
+                Bi-weekly laboratory investigations commencing in Middle School, reinforcing theoretical principles through verifiable student-executed experiments.
+              </p>
             </div>
-            <div className="p-4 rounded-xl bg-[#FCFAF6] border border-[#E6DDCF]">
-              <strong className="block text-[#064E3B] mb-1 font-semibold text-sm">Mathematical Reasoning</strong>
-              Diagnostic problem-solving workshops cultivating algebraic fluency, geometric proof, and mental calculations.
+
+            <div className="p-5 rounded-2xl bg-white border border-[#D1E5DB] shadow-2xs space-y-1.5">
+              <strong className="block text-[#064E3B] font-mono text-xs uppercase tracking-wider">
+                Mathematical Reasoning
+              </strong>
+              <p className="text-[#3C584E] leading-relaxed">
+                Diagnostic problem-solving workshops cultivating algebraic fluency, geometric proofs, data interpretation, and mental calculation speed.
+              </p>
             </div>
-            <div className="p-4 rounded-xl bg-[#FCFAF6] border border-[#E6DDCF]">
-              <strong className="block text-[#064E3B] mb-1 font-semibold text-sm">Language & Eloquence</strong>
-              Command of English and Hindi through structured debates, literature discussions, and formal writing.
+
+            <div className="p-5 rounded-2xl bg-white border border-[#D1E5DB] shadow-2xs space-y-1.5">
+              <strong className="block text-[#064E3B] font-mono text-xs uppercase tracking-wider">
+                Rhetorical Command
+              </strong>
+              <p className="text-[#3C584E] leading-relaxed">
+                Mastery of English and Hindi through structured parliamentary debate, literary criticism, formal expository essays, and model assembly addresses.
+              </p>
             </div>
           </div>
         </div>
 
-        <SectionHeading
-          badge="Detailed Stages"
-          badgeColor="forest"
-          title="Curriculum Stages: Primary to Senior Secondary"
-          subtitle="Click on any stage below to inspect subjects, teaching approaches, and assessment methodologies."
-          align="center"
-        />
+        {/* 4 Academic Division Dossiers */}
+        <div>
+          <SectionHeading
+            badge="Division Dossiers"
+            badgeColor="forest"
+            title="Curriculum Stages: Primary to Senior Secondary"
+            subtitle="Click on any stage below to inspect subjects, teaching approaches, stream specializations, and assessment methodologies."
+            align="center"
+          />
 
-        <AcademicStages />
+          <AcademicStages />
+        </div>
 
-        <div className="p-8 sm:p-10 rounded-3xl bg-[#03231B] text-white flex flex-col sm:flex-row items-center justify-between gap-6 shadow-sm border border-[#064E3B]/40">
-          <div>
-            <h3 className="font-cormorant text-2xl sm:text-3xl font-normal text-[#FCFAF6]">Interested in CBSE Admissions?</h3>
-            <p className="text-xs text-[#D1FAE5]/80 mt-1 font-sans">Review age benchmarks and document checklists in the Admissions portal.</p>
+        {/* Admissions Link Banner in Sovereign Forest */}
+        <div className="p-8 sm:p-10 rounded-3xl bg-gradient-to-r from-[#042F24] via-[#021C16] to-[#01120D] text-white flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl border border-[#0F4738]">
+          <div className="space-y-1 text-center sm:text-left">
+            <span className="text-xs font-mono font-bold text-[#A7F3D0] uppercase tracking-wider block">
+              Enrollment Pathways
+            </span>
+            <h3 className="font-editorial text-2xl sm:text-3xl font-bold text-white">
+              Interested in CBSE Class 1–12 Admissions?
+            </h3>
+            <p className="text-xs sm:text-sm text-[#D1E7DF] font-normal">
+              Review age criteria, entrance diagnostic syllabi, and required transfer documents in the Admissions portal.
+            </p>
           </div>
           <Link
             to="/shakuntlayan/admissions"
-            className="px-6 py-3 rounded-xl bg-[#059669] hover:bg-[#047857] text-white font-semibold text-xs uppercase tracking-wider transition-all shrink-0 shadow-sm"
+            className="px-6 py-3.5 rounded-xl bg-[#C5A059] hover:bg-[#B38D46] text-[#021C16] font-bold text-xs uppercase tracking-wider transition-all shrink-0 shadow-md flex items-center gap-2"
           >
-            Apply to Shakuntlayan →
+            <span>Apply to Shakuntlayan</span>
+            <ArrowRight className="w-4 h-4 text-[#021C16]" />
           </Link>
         </div>
       </div>

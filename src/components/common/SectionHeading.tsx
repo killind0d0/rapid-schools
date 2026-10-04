@@ -3,7 +3,7 @@ import React from 'react';
 interface SectionHeadingProps {
   badge?: string;
   badgeColor?: 'copper' | 'claret' | 'forest' | 'terracotta' | 'gold';
-  title: string;
+  title: React.ReactNode | string;
   subtitle?: string;
   align?: 'left' | 'center';
   light?: boolean;
@@ -18,46 +18,97 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
   light = false
 }) => {
   const badgeClasses = {
-    copper: 'bg-[#BD672A]/10 text-[#A2521C] border-[#BD672A]/20',
-    claret: 'bg-[#5A121E]/10 text-[#5A121E] border-[#5A121E]/20',
-    forest: 'bg-[#064E3B]/10 text-[#064E3B] border-[#064E3B]/20',
-    terracotta: 'bg-[#C2410C]/10 text-[#C2410C] border-[#C2410C]/20',
-    gold: 'bg-[#D47A3B]/15 text-[#9E4D14] border-[#D47A3B]/30'
+    copper: 'bg-[#BD672A]/10 text-[#BD672A] border-[#BD672A]/25',
+    claret: 'bg-[#3D0B12]/15 text-[#BD672A] border-[#3D0B12]/30',
+    forest: 'bg-[#064E3B]/10 text-[#0D654E] border-[#064E3B]/20',
+    terracotta: 'bg-[#BD672A]/15 text-[#A2521C] border-[#BD672A]/30',
+    gold: 'bg-[#D47A3B]/15 text-[#BD672A] border-[#D47A3B]/30'
+  }[badgeColor];
+
+  const dotClasses = {
+    copper: 'bg-[#BD672A] shadow-[0_0_8px_rgba(189,103,42,0.6)]',
+    claret: 'bg-[#BD672A] shadow-[0_0_8px_rgba(189,103,42,0.6)]',
+    forest: 'bg-[#10B981] shadow-[0_0_8px_rgba(16,185,129,0.5)]',
+    terracotta: 'bg-[#BD672A] shadow-[0_0_8px_rgba(189,103,42,0.6)]',
+    gold: 'bg-[#D47A3B] shadow-[0_0_8px_rgba(212,122,59,0.6)]'
   }[badgeColor];
 
   const textAlign = align === 'center' ? 'text-center items-center' : 'text-left items-start';
 
+  const renderTitle = (titleNode: React.ReactNode) => {
+    if (typeof titleNode !== 'string') return titleNode;
+
+    const emotionalWords = [
+      'Philosophy',
+      'Dimensions',
+      'Dispatches',
+      'Stories',
+      'Celebrations',
+      'Gallery',
+      'Heritage',
+      'Ecosystem',
+      'Vision',
+      'Excellence',
+      'Curiosity',
+      'Character',
+      'Scholarship',
+      'Community',
+      'Journey',
+      'School',
+      'Schools'
+    ];
+
+    const words = titleNode.split(' ');
+    return words.map((word, idx) => {
+      const cleanWord = word.replace(/[^a-zA-Z]/g, '');
+      const isEmotional = emotionalWords.includes(cleanWord);
+      return (
+        <React.Fragment key={idx}>
+          {idx > 0 && ' '}
+          {isEmotional ? (
+            <span className="italic font-normal text-[#BD672A] drop-shadow-xs">
+              {word}
+            </span>
+          ) : (
+            word
+          )}
+        </React.Fragment>
+      );
+    });
+  };
+
   return (
-    <div className={`flex flex-col ${textAlign} mb-12`}>
+    <div className={`flex flex-col ${textAlign} mb-12 sm:mb-14`}>
       {badge && (
-        <span
-          className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-widest border mb-3 ${badgeClasses}`}
-        >
-          {badge}
-        </span>
+        <div className="mb-3.5 inline-flex items-center">
+          <span
+            className={`inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] border shadow-xs ${badgeClasses}`}
+          >
+            <span className={`w-1.5 h-1.5 rounded-full ${dotClasses}`} />
+            {badge}
+          </span>
+        </div>
       )}
+
       <h2
-        className={`font-outfit text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight ${
-          light ? 'text-[#FCFAF6]' : 'text-[#241A1B]'
+        className={`font-editorial text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight leading-[1.15] ${
+          light ? 'text-[#FAF6F0]' : 'text-[#23070B]'
         }`}
       >
-        {title}
+        {renderTitle(title)}
       </h2>
-      <div
-        className={`w-16 h-1 mt-4 mb-4 rounded-full ${
-          badgeColor === 'forest'
-            ? 'bg-[#064E3B]'
-            : badgeColor === 'claret'
-            ? 'bg-[#5A121E]'
-            : badgeColor === 'terracotta'
-            ? 'bg-[#C2410C]'
-            : 'bg-[#BD672A]'
-        } ${align === 'center' ? 'mx-auto' : ''}`}
-      />
+
+      {/* Luxury Hairline Metallic Divider with Center Diamond */}
+      <div className={`flex items-center gap-2 my-4 ${align === 'center' ? 'mx-auto' : ''}`}>
+        <div className="w-8 sm:w-12 h-px bg-gradient-to-r from-transparent to-[#BD672A]/50" />
+        <div className="w-1.5 h-1.5 rotate-45 bg-[#BD672A]/80 shadow-[0_0_6px_rgba(189,103,42,0.4)]" />
+        <div className="w-8 sm:w-12 h-px bg-gradient-to-l from-transparent to-[#BD672A]/50" />
+      </div>
+
       {subtitle && (
         <p
-          className={`max-w-3xl text-sm sm:text-base leading-relaxed ${
-            light ? 'text-[#DBCDC5]' : 'text-[#5E4D4F]'
+          className={`max-w-3xl text-sm sm:text-base leading-relaxed font-sans ${
+            light ? 'text-[#DBCDC5]' : 'text-[#5C4E50]'
           }`}
         >
           {subtitle}

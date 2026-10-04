@@ -2,12 +2,12 @@ import React from 'react';
 import { Breadcrumbs } from '../../components/common/Breadcrumbs';
 import { SectionHeading } from '../../components/common/SectionHeading';
 import { PlayApproach } from '../../components/dreamz/PlayApproach';
-import { Sparkles, Heart, Users, ShieldCheck, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Sparkles, Heart, Users, ShieldCheck, CheckCircle2, ArrowRight, Sun, BookOpen, Smile } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export const DreamzApproachPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-[#FCFAF6] pb-24">
+    <div className="min-h-screen bg-[#FCF8F3] pb-24 text-[#2A1208]">
       <Breadcrumbs
         items={[
           { label: 'Rapid Dreamz', href: '/dreamz' },
@@ -15,69 +15,121 @@ export const DreamzApproachPage: React.FC = () => {
         ]}
       />
 
-      <section className="bg-gradient-to-r from-[#C2410C] to-[#EA580C] text-white py-16 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/10 via-transparent to-black/20" />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
-          <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-semibold uppercase tracking-widest bg-white/20 text-white border border-white/30">
-            Early Years Pedagogy
-          </span>
-          <h1 className="font-cormorant text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-white">
+      {/* Hero Canvas in Velour Terracotta & Morning Sun Amber Highlights */}
+      <section className="bg-gradient-to-br from-[#B43B0E] via-[#A0340A] to-[#8C2C07] text-white py-16 sm:py-20 relative overflow-hidden">
+        {/* Morning Sun Amber Glow */}
+        <div className="absolute top-0 right-1/4 w-80 h-80 bg-[#FDBA74]/20 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-10 left-10 w-72 h-72 bg-[#FFEDD5]/15 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/10 via-transparent to-black/30 pointer-events-none" />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-white/15 text-[#FFEDD5] backdrop-blur-md border border-white/25 font-mono shadow-xs">
+            <Sparkles className="w-3.5 h-3.5 text-[#FDBA74]" />
+            <span>Early Childhood Pedagogy</span>
+          </div>
+          
+          <h1 className="font-editorial text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">
             How Young Children Learn at Dreamz
           </h1>
-          <p className="max-w-2xl mx-auto text-xs sm:text-sm text-[#FFEDD5] font-sans">
-            Blending play-based inquiry, tactile sensorial materials, and gentle emotional scaffolding to kindle a lifelong joy for learning.
+          
+          <p className="max-w-2xl mx-auto text-sm sm:text-base text-[#FFEDD5] font-normal leading-relaxed">
+            Harmonizing Montessori tactile discovery, Reggio Emilia expressive inquiry, and gentle emotional scaffolding to nurture lifelong wonder.
           </p>
         </div>
       </section>
 
+      {/* Content Body */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 space-y-12">
-        <div className="bg-white p-8 sm:p-12 rounded-3xl border border-[#E6DDCF] shadow-sm space-y-6">
-          <h2 className="font-cormorant text-2xl sm:text-4xl font-normal text-[#1C1917]">
+        {/* Philosophy Card in Creamy Ivory with Porcelain Border */}
+        <div className="bg-[#FCF8F3] p-8 sm:p-12 rounded-3xl border border-[#F0DEC8] shadow-[0_4px_24px_-4px_rgba(180,59,14,0.06)] space-y-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FFEDD5] text-[#9A3412] text-xs font-bold font-mono uppercase tracking-wider">
+            <Sun className="w-3.5 h-3.5 text-[#B43B0E]" />
+            <span>Foundational Philosophy</span>
+          </div>
+
+          <h2 className="font-editorial text-3xl sm:text-4xl font-bold text-[#2A1208] leading-tight">
             The Philosophy of Wonder & Play
           </h2>
-          <p className="text-sm sm:text-base text-[#57534E] leading-relaxed">
-            In the early formative years between age 2 and 6, the human brain forms more neural connections per second than at any other period in life. At Rapid Dreamz, we never subject tender children to passive desk instruction or rote recitation drills. Instead, we structure rich, engaging environments where children touch, manipulate, question, build, and celebrate their accomplishments.
+
+          <p className="text-sm sm:text-base text-[#5C3D2E] leading-relaxed">
+            Between the ages of 2 and 6, the human brain forms more neural connections per second than at any other period in human development. At Rapid Dreamz, we reject passive rote memorization and rigid desk-bound drill. Instead, children thrive inside an inviting sensory landscape where hands physically manipulate, eyes closely observe, minds joyfully question, and hearts feel safe to experiment.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 text-xs sm:text-sm text-[#57534E]">
-            <div className="flex items-start gap-2.5">
-              <CheckCircle2 className="w-5 h-5 text-[#15803D] shrink-0 mt-0.5" />
-              <span>Montessori manipulative blocks for intuitive number sense</span>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-3 text-xs sm:text-sm text-[#4A2E20]">
+            <div className="flex items-start gap-3 p-3.5 rounded-2xl bg-[#FFFDF9] border border-[#F0DEC8]">
+              <div className="w-6 h-6 rounded-full bg-[#DCFCE7] flex items-center justify-center shrink-0 mt-0.5">
+                <CheckCircle2 className="w-4 h-4 text-[#166534]" />
+              </div>
+              <div>
+                <strong className="block text-[#2A1208] font-bold">Montessori Sensorial Method</strong>
+                Self-correcting wooden apparatus building intuitive numeracy and spatial discernment.
+              </div>
             </div>
-            <div className="flex items-start gap-2.5">
-              <CheckCircle2 className="w-5 h-5 text-[#15803D] shrink-0 mt-0.5" />
-              <span>Multi-sensory Jolly Phonics for joyful early reading</span>
+
+            <div className="flex items-start gap-3 p-3.5 rounded-2xl bg-[#FFFDF9] border border-[#F0DEC8]">
+              <div className="w-6 h-6 rounded-full bg-[#DCFCE7] flex items-center justify-center shrink-0 mt-0.5">
+                <CheckCircle2 className="w-4 h-4 text-[#166534]" />
+              </div>
+              <div>
+                <strong className="block text-[#2A1208] font-bold">Multi-Sensory Jolly Phonics</strong>
+                Tactile sandpaper tracing, kinetic body gestures, and acoustic rhymes for natural literacy.
+              </div>
             </div>
-            <div className="flex items-start gap-2.5">
-              <CheckCircle2 className="w-5 h-5 text-[#15803D] shrink-0 mt-0.5" />
-              <span>Reggio Emilia art ateliers encouraging personal voice</span>
+
+            <div className="flex items-start gap-3 p-3.5 rounded-2xl bg-[#FFFDF9] border border-[#F0DEC8]">
+              <div className="w-6 h-6 rounded-full bg-[#DCFCE7] flex items-center justify-center shrink-0 mt-0.5">
+                <CheckCircle2 className="w-4 h-4 text-[#166534]" />
+              </div>
+              <div>
+                <strong className="block text-[#2A1208] font-bold">Reggio Emilia Creative Atelier</strong>
+                Expressive open-ended art celebrating individual child voice through earth pigments and clay.
+              </div>
             </div>
-            <div className="flex items-start gap-2.5">
-              <CheckCircle2 className="w-5 h-5 text-[#15803D] shrink-0 mt-0.5" />
-              <span>Gentle teacher-to-child ratios for individual emotional attention</span>
+
+            <div className="flex items-start gap-3 p-3.5 rounded-2xl bg-[#FFFDF9] border border-[#F0DEC8]">
+              <div className="w-6 h-6 rounded-full bg-[#DCFCE7] flex items-center justify-center shrink-0 mt-0.5">
+                <CheckCircle2 className="w-4 h-4 text-[#166534]" />
+              </div>
+              <div>
+                <strong className="block text-[#2A1208] font-bold">Attentive Educator Ratios</strong>
+                Warm emotional scaffolding with dedicated support ayahs ensuring continuous care.
+              </div>
             </div>
           </div>
         </div>
 
-        <SectionHeading
-          badge="Six Core Pillars"
-          badgeColor="copper"
-          title="The Multi-Sensory Approach"
-          subtitle="Every day is engineered around balanced developmental milestones."
-          align="center"
-        />
+        {/* Six Core Pillars */}
+        <div>
+          <SectionHeading
+            badge="Six Foundational Pillars"
+            badgeColor="terracotta"
+            title="The Multi-Sensory Approach"
+            subtitle="Every day is engineered around balanced developmental milestones, curiosity, and emotional confidence."
+            align="center"
+          />
 
-        <PlayApproach />
+          <PlayApproach />
+        </div>
 
-        <div className="p-8 sm:p-10 rounded-3xl bg-[#2D060C] text-white flex flex-col sm:flex-row items-center justify-between gap-6 shadow-sm border border-[#BD672A]/30">
-          <div>
-            <h3 className="font-cormorant text-2xl sm:text-3xl font-normal text-[#FCFAF6]">Explore Our Stage-by-Stage Curriculum</h3>
-            <p className="text-xs text-[#D4C3B3] mt-1 font-sans">Review milestones from Play Group through UKG.</p>
+        {/* Stage Roadmap Link Banner */}
+        <div className="p-8 sm:p-10 rounded-3xl bg-gradient-to-r from-[#2A0808] via-[#380E09] to-[#2A0808] text-white flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl border border-[#B43B0E]/30">
+          <div className="space-y-1 text-center sm:text-left">
+            <span className="text-xs font-mono font-bold text-[#FDBA74] uppercase tracking-wider block">
+              Pedagogical Progression
+            </span>
+            <h3 className="font-editorial text-2xl sm:text-3xl font-bold text-[#FCF8F3]">
+              Explore Our Stage-by-Stage Curriculum
+            </h3>
+            <p className="text-xs sm:text-sm text-[#FFEDD5]/80">
+              Review developmental milestones from Play Group through UKG.
+            </p>
           </div>
           <Link
             to="/dreamz/academics"
-            className="px-6 py-3 rounded-xl bg-[#BD672A] hover:bg-[#A35520] text-white font-semibold text-xs uppercase tracking-wider transition-colors shrink-0 shadow-sm"
+            className="px-6 py-3.5 rounded-xl bg-[#B43B0E] hover:bg-[#8C2C07] text-white font-bold text-xs uppercase tracking-wider transition-colors shrink-0 shadow-md flex items-center gap-2"
           >
-            View Early Stages →
+            <span>View Early Stages</span>
+            <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </div>

@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { useSite } from '../context/SiteContext';
 import { Breadcrumbs } from '../components/common/Breadcrumbs';
-import { SectionHeading } from '../components/common/SectionHeading';
-import { FileText, Download, Search, CheckCircle2, ShieldCheck, FileCheck } from 'lucide-react';
+import { FileText, Download, Search, ShieldCheck } from 'lucide-react';
 import { triggerInstitutionalDownload } from '../utils/downloadHelper';
 
 export const DownloadsPage: React.FC = () => {
@@ -32,37 +31,42 @@ export const DownloadsPage: React.FC = () => {
   });
 
   return (
-    <div className="min-h-screen bg-[#FCFAF6] pb-24">
+    <div className="min-h-screen bg-[#FAF6F0] pb-24">
       <Breadcrumbs items={[{ label: 'Download Center' }]} />
 
-      {/* Banner */}
-      <section className="bg-[#2D060C] text-white py-14 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#5A121E]/60 via-[#2D060C] to-[#1A0407]" />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
-          <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-semibold uppercase tracking-widest bg-[#BD672A]/20 text-[#EAB592] border border-[#BD672A]/30">
+      {/* Header Banner */}
+      <section className="bg-[#1C0306] text-white py-16 sm:py-20 relative overflow-hidden">
+        {/* Layered radial glow */}
+        <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-[#BD672A]/15 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-[#3D0B12]/50 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#BD672A]/30 to-transparent" />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-semibold uppercase tracking-widest bg-[#2C070C] text-[#F3C292] border border-[#BD672A]/30 font-mono">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#BD672A] shadow-[0_0_8px_rgba(189,103,42,0.8)]" />
             Document Repository
-          </span>
-          <h1 className="font-cormorant text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-white">
-            Institutional Downloads & Forms
+          </div>
+          <h1 className="font-editorial text-3xl sm:text-5xl lg:text-6xl font-medium tracking-tight text-white leading-tight">
+            Institutional Downloads & <span className="italic font-normal text-[#F3C292]">Forms</span>
           </h1>
-          <p className="max-w-2xl mx-auto text-xs sm:text-sm text-[#D4C3B3] font-sans">
+          <p className="max-w-2xl mx-auto text-sm sm:text-base text-[#D4C3B3] leading-relaxed font-sans">
             Official admission prospectuses, syllabi maps, academic calendars, fee policies, and registration forms available for immediate download.
           </p>
         </div>
       </section>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 relative z-20">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-20">
         {/* Search & Filter Toolbar */}
-        <div className="bg-white rounded-2xl p-4 sm:p-6 shadow-sm border border-[#E6DDCF] space-y-4">
+        <div className="bg-white rounded-2xl p-4 sm:p-6 shadow-[0_12px_36px_-12px_rgba(44,7,12,0.06)] border border-[#E8DFD1] space-y-4">
           <div className="grid grid-cols-1 sm:grid-cols-12 gap-3">
             <div className="sm:col-span-6 relative">
-              <Search className="w-4 h-4 text-[#A8A29E] absolute left-3.5 top-1/2 -translate-y-1/2" />
+              <Search className="w-4 h-4 text-[#A8988C] absolute left-3.5 top-1/2 -translate-y-1/2" />
               <input
                 type="text"
                 placeholder="Search publications or forms by title..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-9 pr-4 py-2 rounded-xl border border-[#E6DDCF] text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#BD672A]/30 focus:border-[#BD672A]"
+                className="w-full pl-9 pr-4 py-2.5 rounded-xl border border-[#E8DFD1] bg-[#FCFAF6] text-xs sm:text-sm text-[#23070B] focus:bg-white focus:outline-none focus:border-[#BD672A] focus:ring-4 focus:ring-[#BD672A]/15 transition-all font-sans"
               />
             </div>
 
@@ -70,7 +74,7 @@ export const DownloadsPage: React.FC = () => {
               <select
                 value={selectedSchool}
                 onChange={(e) => setSelectedSchool(e.target.value as any)}
-                className="w-full px-3 py-2 rounded-xl border border-[#E6DDCF] text-xs sm:text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#BD672A]/30 focus:border-[#BD672A]"
+                className="w-full px-3 py-2.5 rounded-xl border border-[#E8DFD1] bg-[#FCFAF6] text-xs sm:text-sm text-[#23070B] focus:bg-white focus:outline-none focus:border-[#BD672A] focus:ring-4 focus:ring-[#BD672A]/15 transition-all font-sans"
               >
                 <option value="all">All Wings (Both Schools)</option>
                 <option value="dreamz">Rapid Dreamz Documents</option>
@@ -82,7 +86,7 @@ export const DownloadsPage: React.FC = () => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-3 py-2 rounded-xl border border-[#E6DDCF] text-xs sm:text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#BD672A]/30 focus:border-[#BD672A]"
+                className="w-full px-3 py-2.5 rounded-xl border border-[#E8DFD1] bg-[#FCFAF6] text-xs sm:text-sm text-[#23070B] focus:bg-white focus:outline-none focus:border-[#BD672A] focus:ring-4 focus:ring-[#BD672A]/15 transition-all font-sans"
               >
                 <option value="all">All Categories</option>
                 {categories.map((c) => (
@@ -94,12 +98,12 @@ export const DownloadsPage: React.FC = () => {
         </div>
 
         {/* Document List */}
-        <div className="pt-8 space-y-3">
+        <div className="pt-8 space-y-4">
           {filteredDownloads.length === 0 ? (
-            <div className="text-center py-16 bg-white rounded-3xl border border-[#E6DDCF] p-8 space-y-3">
-              <FileText className="w-12 h-12 text-[#A8A29E] mx-auto" />
-              <h3 className="font-cormorant text-2xl font-semibold text-[#1C1917]">No documents found</h3>
-              <p className="text-xs text-[#78716C] max-w-sm mx-auto">
+            <div className="text-center py-16 bg-white rounded-3xl border border-[#E8DFD1] p-8 space-y-3 shadow-xs">
+              <FileText className="w-12 h-12 text-[#BD672A]/40 mx-auto" />
+              <h3 className="font-editorial text-2xl font-medium text-[#23070B]">No documents found</h3>
+              <p className="text-xs sm:text-sm text-[#6E5D5F] max-w-sm mx-auto font-sans">
                 No matching documents match your criteria. Try adjusting your filters or search keywords.
               </p>
             </div>
@@ -107,33 +111,33 @@ export const DownloadsPage: React.FC = () => {
             filteredDownloads.map((doc) => (
               <div
                 key={doc.id}
-                className="p-5 rounded-2xl bg-white border border-[#E6DDCF] hover:border-[#BD672A]/50 hover:shadow-sm transition-all flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
+                className="p-6 sm:p-7 rounded-3xl bg-white border border-[#E8DFD1] hover:border-[#BD672A]/50 shadow-[0_20px_45px_-15px_rgba(44,7,12,0.05)] hover:shadow-[0_25px_50px_-12px_rgba(189,103,42,0.12)] transition-all duration-300 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5"
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-[#FAF3EC] text-[#BD672A] border border-[#BD672A]/20 flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 rounded-2xl bg-[#BD672A]/10 text-[#BD672A] border border-[#BD672A]/25 flex items-center justify-center shrink-0">
                     <FileText className="w-6 h-6" />
                   </div>
                   <div>
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className="text-[11px] font-semibold text-[#064E3B] bg-[#ECFDF5] border border-[#064E3B]/20 px-2 py-0.5 rounded">
+                    <div className="flex items-center gap-2 mb-1.5 font-mono">
+                      <span className="text-[10px] font-bold text-[#BD672A] bg-[#BD672A]/10 border border-[#BD672A]/25 px-2.5 py-0.5 rounded-full uppercase tracking-wider">
                         {doc.category}
                       </span>
-                      <span className="text-[11px] font-medium text-[#78716C]">
+                      <span className="text-xs font-semibold text-[#6E5D5F]">
                         {doc.targetSchool === 'all'
                           ? 'Rapid Schools Network'
                           : doc.targetSchool === 'dreamz'
                           ? 'Rapid Dreamz'
                           : 'Rapid Shakuntlayan'}
                       </span>
-                      <span className="text-[11px] text-[#A8A29E]">
+                      <span className="text-[11px] text-[#A8988C]">
                         • {doc.fileSize}
                       </span>
                     </div>
 
-                    <h3 className="font-cormorant text-lg sm:text-xl font-semibold text-[#1C1917]">
+                    <h3 className="font-editorial text-2xl font-medium text-[#23070B] leading-snug">
                       {doc.title}
                     </h3>
-                    <p className="text-xs text-[#57534E] mt-0.5 max-w-2xl leading-relaxed">
+                    <p className="text-xs sm:text-sm text-[#5C4E50] mt-1 max-w-2xl leading-relaxed font-sans">
                       {doc.description}
                     </p>
                   </div>
@@ -154,9 +158,9 @@ export const DownloadsPage: React.FC = () => {
                         doc.description
                       )
                     }
-                    className="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-[#BD672A] hover:bg-[#A35520] text-white font-semibold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm"
+                    className="luxury-btn-primary w-full sm:w-auto px-5 py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer shadow-sm"
                   >
-                    <Download className="w-4 h-4" />
+                    <Download className="w-4 h-4 text-white" />
                     <span>Download {doc.fileType}</span>
                   </button>
                 </div>
@@ -166,10 +170,10 @@ export const DownloadsPage: React.FC = () => {
         </div>
 
         {/* Security & Verification Note */}
-        <div className="mt-10 p-5 rounded-2xl bg-[#FAF7F2] border border-[#E6DDCF] text-xs text-[#57534E] flex items-center gap-3">
-          <ShieldCheck className="w-5 h-5 text-[#064E3B] shrink-0" />
+        <div className="mt-12 p-6 rounded-3xl bg-white border border-[#E8DFD1] text-xs text-[#5C4E50] flex items-center gap-3.5 shadow-xs font-sans">
+          <ShieldCheck className="w-6 h-6 text-[#064E3B] shrink-0" />
           <span>
-            <strong className="text-[#1C1917]">Authenticity Assurance:</strong> All circulars, forms, and prospectuses downloaded from this portal are digitally generated and certified by the Rapid Schools Administrative Office.
+            <strong className="text-[#23070B] font-semibold">Authenticity Assurance:</strong> All circulars, forms, and prospectuses downloaded from this portal are digitally generated and certified by the Rapid Schools Administrative Office.
           </span>
         </div>
       </div>

@@ -14,9 +14,7 @@ import {
   RefreshCw,
   Search,
   ExternalLink,
-  Shield,
-  Download,
-  AlertCircle
+  Download
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { EnquiryStatus, VisitStatus } from '../../data/types';
@@ -34,14 +32,10 @@ export const AdminDashboardPage: React.FC = () => {
     deleteNotice,
     updateNotice,
     events,
-    addEvent,
     deleteEvent,
-    updateEvent,
     news,
-    addNews,
     deleteNews,
     downloads,
-    addDownload,
     deleteDownload,
     resetAllToDefault
   } = useSite();
@@ -134,28 +128,31 @@ export const AdminDashboardPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#FCFAF6] pb-24 text-[#1C1917]">
+    <div className="min-h-screen bg-[#FAF6F0] pb-24 text-[#23070B]">
       <Breadcrumbs items={[{ label: 'Administrative Console' }]} />
 
       {/* Admin Top Banner */}
-      <section className="bg-[#2D060C] text-white py-8 border-b border-[#3D0B12]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <section className="bg-[#1C0306] text-white py-10 sm:py-12 border-b border-[#3D0B12] relative overflow-hidden">
+        <div className="absolute top-0 right-1/4 w-[400px] h-[400px] bg-[#BD672A]/15 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#BD672A]/30 to-transparent" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center justify-between gap-5 relative z-10">
           <div>
-            <div className="flex items-center gap-2 mb-1">
-              <span className="px-2.5 py-0.5 rounded text-[10px] font-semibold uppercase tracking-wider bg-[#BD672A] text-white">
-                Staff & Admin Portal
+            <div className="flex items-center gap-2 mb-1.5 font-mono">
+              <span className="px-3 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#BD672A] text-white shadow-xs">
+                Staff & Admin Console
               </span>
-              <span className="text-xs text-[#D4C3B3]">Authenticated Operational Environment</span>
+              <span className="text-xs text-[#D8C7B8]">Authenticated Operations Portal</span>
             </div>
-            <h1 className="font-cormorant text-2xl sm:text-3xl font-semibold text-white">
+            <h1 className="font-editorial text-3xl sm:text-4xl font-medium text-white tracking-tight">
               Rapid Schools Administrative CMS
             </h1>
-            <p className="text-xs text-[#D4C3B3] font-sans">
-              Manage admission enquiries, schedule tours, publish notices, and calibrate institutional settings.
+            <p className="text-xs sm:text-sm text-[#D8C7B8] font-sans mt-0.5">
+              Manage admission enquiries, schedule tours, publish notices, and calibrate institutional configuration.
             </p>
           </div>
 
-          <div className="flex items-center gap-2.5">
+          <div className="flex items-center gap-3">
             <button
               onClick={() => {
                 if (confirm('Reset all CMS content, notices, and test enquiries back to original default state?')) {
@@ -163,26 +160,26 @@ export const AdminDashboardPage: React.FC = () => {
                   setSettingsForm(settings);
                 }
               }}
-              className="px-3.5 py-2 rounded-xl bg-[#3D0B12] hover:bg-[#5A121E] text-[#D4C3B3] text-xs font-semibold border border-[#BD672A]/30 transition-colors flex items-center gap-1.5"
+              className="luxury-btn-outline px-4 py-2 rounded-xl text-xs font-semibold flex items-center gap-2 cursor-pointer"
               title="Reset state to initial defaults"
             >
-              <RefreshCw className="w-3.5 h-3.5 text-[#EAB592]" />
-              <span>Reset to Defaults</span>
+              <RefreshCw className="w-3.5 h-3.5" />
+              <span>Reset Defaults</span>
             </button>
             <Link
               to="/"
-              className="px-4 py-2 rounded-xl bg-[#BD672A] hover:bg-[#A35520] text-white text-xs font-semibold uppercase tracking-wider transition-colors flex items-center gap-1.5 shadow-sm"
+              className="luxury-btn-primary px-4 py-2 rounded-xl text-xs font-semibold uppercase tracking-wider flex items-center gap-2 shadow-xs"
             >
               <ExternalLink className="w-3.5 h-3.5" />
-              <span>View Public Portal</span>
+              <span>Public Portal</span>
             </Link>
           </div>
         </div>
       </section>
 
       {/* Tab Navigation */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-4 relative z-20">
-        <div className="bg-white rounded-2xl shadow-sm border border-[#E6DDCF] p-2 flex flex-wrap gap-1">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-5 relative z-20">
+        <div className="bg-white rounded-2xl shadow-[0_12px_36px_-12px_rgba(44,7,12,0.06)] border border-[#E8DFD1] p-2 flex flex-wrap gap-1.5">
           {[
             { id: 'enquiries', label: `Admissions (${enquiries.length})`, icon: Users },
             { id: 'visits', label: `Campus Visits (${visits.length})`, icon: Calendar },
@@ -198,13 +195,13 @@ export const AdminDashboardPage: React.FC = () => {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id as any)}
-                className={`flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
+                className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold transition-all cursor-pointer font-sans ${
                   isActive
-                    ? 'bg-[#3D0B12] text-[#EAB592] shadow-sm'
-                    : 'text-[#78716C] hover:text-[#1C1917] hover:bg-[#FAF7F2]'
+                    ? 'bg-[#2C070C] text-[#F3C292] shadow-sm border border-[#BD672A]/40'
+                    : 'text-[#6E5D5F] hover:text-[#23070B] hover:bg-[#FCFAF6]'
                 }`}
               >
-                <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-[#EAB592]' : 'text-[#A8A29E]'}`} />
+                <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-[#F3C292]' : 'text-[#A8988C]'}`} />
                 <span>{tab.label}</span>
               </button>
             );
@@ -218,23 +215,23 @@ export const AdminDashboardPage: React.FC = () => {
         {/* ENQUIRIES TAB */}
         {activeTab === 'enquiries' && (
           <div className="space-y-4">
-            <div className="bg-white p-4 rounded-2xl border border-[#E6DDCF] shadow-sm flex flex-wrap items-center justify-between gap-4">
+            <div className="bg-white p-4 sm:p-5 rounded-2xl border border-[#E8DFD1] shadow-xs flex flex-wrap items-center justify-between gap-4">
               <div className="flex items-center gap-3">
                 <div className="relative">
-                  <Search className="w-3.5 h-3.5 text-[#A8A29E] absolute left-3 top-1/2 -translate-y-1/2" />
+                  <Search className="w-3.5 h-3.5 text-[#A8988C] absolute left-3 top-1/2 -translate-y-1/2" />
                   <input
                     type="text"
                     placeholder="Search candidate, phone, email..."
                     value={enquirySearch}
                     onChange={(e) => setEnquirySearch(e.target.value)}
-                    className="pl-8 pr-3 py-1.5 rounded-xl border border-[#E6DDCF] text-xs focus:outline-none focus:ring-2 focus:ring-[#BD672A]/30 focus:border-[#BD672A] w-64 text-[#1C1917]"
+                    className="pl-8 pr-3 py-2 rounded-xl border border-[#E8DFD1] bg-[#FCFAF6] text-xs text-[#23070B] focus:bg-white focus:outline-none focus:border-[#BD672A] focus:ring-4 focus:ring-[#BD672A]/15 w-64 font-sans transition-all"
                   />
                 </div>
 
                 <select
                   value={enquiryFilter}
                   onChange={(e) => setEnquiryFilter(e.target.value as any)}
-                  className="px-3 py-1.5 rounded-xl border border-[#E6DDCF] text-xs bg-white text-[#1C1917] focus:outline-none focus:ring-2 focus:ring-[#BD672A]/30 focus:border-[#BD672A]"
+                  className="px-3 py-2 rounded-xl border border-[#E8DFD1] bg-[#FCFAF6] text-xs text-[#23070B] focus:bg-white focus:outline-none focus:border-[#BD672A] focus:ring-4 focus:ring-[#BD672A]/15 font-sans transition-all"
                 >
                   <option value="all">All School Wings</option>
                   <option value="dreamz">Rapid Dreamz Only</option>
@@ -244,19 +241,19 @@ export const AdminDashboardPage: React.FC = () => {
 
               <button
                 onClick={exportEnquiriesCsv}
-                className="px-3.5 py-1.5 rounded-xl bg-[#FAF7F2] hover:bg-[#E6DDCF] text-[#3D0B12] text-xs font-bold transition-colors flex items-center gap-1.5 border border-[#E6DDCF]"
+                className="luxury-btn-outline px-4 py-2 rounded-xl text-xs font-semibold transition-colors flex items-center gap-1.5 cursor-pointer font-sans"
               >
                 <Download className="w-3.5 h-3.5 text-[#BD672A]" />
-                <span>Export CSV</span>
+                <span>Export Registry CSV</span>
               </button>
             </div>
 
-            <div className="bg-white rounded-3xl border border-[#E6DDCF] shadow-sm overflow-hidden">
+            <div className="bg-white rounded-3xl border border-[#E8DFD1] shadow-[0_20px_45px_-15px_rgba(44,7,12,0.05)] overflow-hidden">
               <div className="overflow-x-auto">
-                <table className="w-full text-left text-xs text-[#57534E]">
-                  <thead className="bg-[#FAF7F2] text-[11px] font-bold text-[#78716C] uppercase tracking-wider border-b border-[#E6DDCF]">
+                <table className="w-full text-left text-xs text-[#5C4E50]">
+                  <thead className="bg-[#FCFAF6] text-[10px] font-bold text-[#6E5D5F] uppercase tracking-wider border-b border-[#E8DFD1] font-mono">
                     <tr>
-                      <th className="py-3 px-4">Ref ID</th>
+                      <th className="py-3 px-4">Ref Code</th>
                       <th className="py-3 px-4">Candidate & Parent</th>
                       <th className="py-3 px-4">School & Target Class</th>
                       <th className="py-3 px-4">Contact Details</th>
@@ -264,51 +261,51 @@ export const AdminDashboardPage: React.FC = () => {
                       <th className="py-3 px-4">Status Action</th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-[#F5EFE6]">
+                  <tbody className="divide-y divide-[#F6F1E7]">
                     {filteredEnquiries.length === 0 ? (
                       <tr>
-                        <td colSpan={6} className="py-8 text-center text-[#A8A29E]">
+                        <td colSpan={6} className="py-8 text-center text-[#A8988C] font-sans">
                           No admission enquiries match the current filters.
                         </td>
                       </tr>
                     ) : (
                       filteredEnquiries.map((enq) => (
-                        <tr key={enq.id} className="hover:bg-[#FAF7F2]/80 transition-colors">
-                          <td className="py-3.5 px-4 font-mono font-bold text-[#1C1917]">
+                        <tr key={enq.id} className="hover:bg-[#FCFAF6] transition-colors">
+                          <td className="py-3.5 px-4 font-mono font-bold text-[#23070B]">
                             {enq.id}
                           </td>
-                          <td className="py-3.5 px-4">
-                            <strong className="text-[#1C1917] block font-semibold">{enq.studentName}</strong>
-                            <span className="text-[11px] text-[#78716C]">Parent: {enq.parentName}</span>
+                          <td className="py-3.5 px-4 font-sans">
+                            <strong className="text-[#23070B] block font-semibold">{enq.studentName}</strong>
+                            <span className="text-[11px] text-[#6E5D5F]">Parent: {enq.parentName}</span>
                           </td>
-                          <td className="py-3.5 px-4">
-                            <span className={`inline-block px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider mb-0.5 ${
+                          <td className="py-3.5 px-4 font-sans">
+                            <span className={`inline-block px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider mb-1 font-mono ${
                               enq.preferredSchool === 'dreamz'
-                                ? 'bg-[#FFEDD5] text-[#C2410C]'
-                                : 'bg-[#ECFDF5] text-[#064E3B]'
+                                ? 'bg-[#BD672A]/10 text-[#BD672A] border border-[#BD672A]/25'
+                                : 'bg-[#064E3B]/10 text-[#064E3B] border border-[#064E3B]/20'
                             }`}>
                               {enq.preferredSchool === 'dreamz' ? 'Rapid Dreamz' : 'Rapid Shakuntlayan'}
                             </span>
-                            <div className="font-semibold text-[#1C1917]">{enq.preferredClass}</div>
+                            <div className="font-semibold text-[#23070B]">{enq.preferredClass}</div>
                           </td>
-                          <td className="py-3.5 px-4 text-[11px]">
-                            <div><a href={`tel:${enq.phone}`} className="font-semibold text-[#1C1917] hover:text-[#BD672A]">{enq.phone}</a></div>
-                            <div className="text-[#78716C]">{enq.email}</div>
+                          <td className="py-3.5 px-4 text-[11px] font-sans">
+                            <div><a href={`tel:${enq.phone}`} className="font-semibold text-[#23070B] hover:text-[#BD672A]">{enq.phone}</a></div>
+                            <div className="text-[#6E5D5F]">{enq.email}</div>
                           </td>
-                          <td className="py-3.5 px-4 text-[#78716C] text-[11px]">
+                          <td className="py-3.5 px-4 text-[#6E5D5F] text-[11px] font-mono">
                             {enq.submittedAt}
                           </td>
                           <td className="py-3.5 px-4">
                             <select
                               value={enq.status}
                               onChange={(e) => updateEnquiryStatus(enq.id, e.target.value as EnquiryStatus)}
-                              className={`px-2.5 py-1 rounded-lg text-xs font-bold border transition-colors ${
+                              className={`px-3 py-1 rounded-xl text-xs font-bold border transition-colors cursor-pointer font-sans ${
                                 enq.status === 'new'
-                                  ? 'bg-[#FFEDD5] text-[#C2410C] border-[#FDBA74]'
+                                  ? 'bg-[#BD672A]/10 text-[#BD672A] border-[#BD672A]/30'
                                   : enq.status === 'contacted'
-                                  ? 'bg-[#ECFDF5] text-[#064E3B] border-[#A7F3D0]'
+                                  ? 'bg-[#064E3B]/10 text-[#064E3B] border-[#064E3B]/30'
                                   : enq.status === 'verified'
-                                  ? 'bg-[#FAF7F2] text-[#3D0B12] border-[#E6DDCF]'
+                                  ? 'bg-[#2C070C]/10 text-[#2C070C] border-[#2C070C]/25'
                                   : 'bg-emerald-50 text-emerald-800 border-emerald-300'
                               }`}
                             >
@@ -330,48 +327,48 @@ export const AdminDashboardPage: React.FC = () => {
 
         {/* VISITS TAB */}
         {activeTab === 'visits' && (
-          <div className="bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden">
-            <div className="p-4 border-b border-slate-200 flex items-center justify-between">
-              <h3 className="font-outfit text-base font-bold text-slate-900">
+          <div className="bg-white rounded-3xl border border-[#E8DFD1] shadow-[0_20px_45px_-15px_rgba(44,7,12,0.05)] overflow-hidden">
+            <div className="p-5 border-b border-[#E8DFD1] flex items-center justify-between">
+              <h3 className="font-editorial text-2xl font-medium text-[#23070B]">
                 Scheduled Campus Visits ({visits.length})
               </h3>
             </div>
             <div className="overflow-x-auto">
-              <table className="w-full text-left text-xs text-slate-600">
-                <thead className="bg-slate-50 text-[11px] font-bold text-slate-500 uppercase tracking-wider border-b border-slate-200">
+              <table className="w-full text-left text-xs text-[#5C4E50]">
+                <thead className="bg-[#FCFAF6] text-[10px] font-bold text-[#6E5D5F] uppercase tracking-wider border-b border-[#E8DFD1] font-mono">
                   <tr>
-                    <th className="py-3 px-4">Booking ID</th>
+                    <th className="py-3 px-4">Booking Ref</th>
                     <th className="py-3 px-4">Parent / Visitor</th>
                     <th className="py-3 px-4">Target Campus & Class</th>
                     <th className="py-3 px-4">Requested Date & Slot</th>
                     <th className="py-3 px-4">Status</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-slate-100">
+                <tbody className="divide-y divide-[#F6F1E7]">
                   {visits.map((v) => (
-                    <tr key={v.id} className="hover:bg-slate-50">
-                      <td className="py-3.5 px-4 font-mono font-bold text-slate-900">
+                    <tr key={v.id} className="hover:bg-[#FCFAF6] transition-colors">
+                      <td className="py-3.5 px-4 font-mono font-bold text-[#23070B]">
                         {v.id}
                       </td>
-                      <td className="py-3.5 px-4">
-                        <strong className="text-slate-900 block font-semibold">{v.parentName}</strong>
-                        <span className="text-[11px] text-slate-500">{v.phone} • {v.email}</span>
+                      <td className="py-3.5 px-4 font-sans">
+                        <strong className="text-[#23070B] block font-semibold">{v.parentName}</strong>
+                        <span className="text-[11px] text-[#6E5D5F]">{v.phone} • {v.email}</span>
                       </td>
-                      <td className="py-3.5 px-4">
-                        <span className="font-semibold text-slate-900 block">
+                      <td className="py-3.5 px-4 font-sans">
+                        <span className="font-semibold text-[#23070B] block">
                           {v.preferredSchool === 'both' ? 'Both Campuses' : v.preferredSchool === 'dreamz' ? 'Rapid Dreamz' : 'Rapid Shakuntlayan'}
                         </span>
-                        <span className="text-[11px] text-slate-500">Class: {v.studentClass}</span>
+                        <span className="text-[11px] text-[#6E5D5F]">Class: {v.studentClass}</span>
                       </td>
-                      <td className="py-3.5 px-4">
-                        <strong className="text-slate-900 block">{v.preferredDate}</strong>
-                        <span className="text-[11px] text-slate-500">{v.preferredTime}</span>
+                      <td className="py-3.5 px-4 font-sans">
+                        <strong className="text-[#23070B] block">{v.preferredDate}</strong>
+                        <span className="text-[11px] text-[#6E5D5F]">{v.preferredTime}</span>
                       </td>
                       <td className="py-3.5 px-4">
                         <select
                           value={v.status}
                           onChange={(e) => updateVisitStatus(v.id, e.target.value as VisitStatus)}
-                          className="px-2.5 py-1 rounded-lg text-xs font-bold border border-slate-200 bg-white"
+                          className="px-3 py-1 rounded-xl text-xs font-bold border border-[#E8DFD1] bg-[#FCFAF6] cursor-pointer font-sans"
                         >
                           <option value="pending">Pending</option>
                           <option value="confirmed">Confirmed</option>
@@ -391,41 +388,41 @@ export const AdminDashboardPage: React.FC = () => {
         {activeTab === 'notices' && (
           <div className="space-y-4">
             <div className="flex items-center justify-between">
-              <h3 className="font-cormorant text-2xl font-bold text-[#1C1917]">
+              <h3 className="font-editorial text-2xl font-medium text-[#23070B]">
                 Notice Board Publisher
               </h3>
               <button
                 onClick={() => setShowNoticeModal(true)}
-                className="px-4 py-2 rounded-xl bg-[#BD672A] hover:bg-[#A35520] text-white text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 transition-colors cursor-pointer shadow-sm"
+                className="luxury-btn-primary px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 cursor-pointer shadow-sm"
               >
                 <Plus className="w-4 h-4" />
                 <span>Publish New Circular</span>
               </button>
             </div>
 
-            <div className="bg-white rounded-3xl border border-[#E6DDCF] shadow-sm overflow-hidden">
-              <div className="divide-y divide-[#F5EFE6]">
+            <div className="bg-white rounded-3xl border border-[#E8DFD1] shadow-[0_20px_45px_-15px_rgba(44,7,12,0.05)] overflow-hidden">
+              <div className="divide-y divide-[#F6F1E7]">
                 {notices.map((n) => (
-                  <div key={n.id} className="p-4 sm:p-5 flex items-start justify-between gap-4 hover:bg-[#FAF7F2]">
+                  <div key={n.id} className="p-5 flex items-start justify-between gap-4 hover:bg-[#FCFAF6] transition-colors">
                     <div className="space-y-1">
                       <div className="flex items-center gap-2">
                         {n.isPinned && (
-                          <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-[#BD672A] text-white uppercase">
+                          <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-[#BD672A] text-white uppercase font-mono">
                             Pinned
                           </span>
                         )}
-                        <span className="text-xs font-bold text-[#064E3B] bg-[#ECFDF5] px-2 py-0.5 rounded">
+                        <span className="text-[10px] font-bold text-[#BD672A] bg-[#BD672A]/10 border border-[#BD672A]/25 px-2.5 py-0.5 rounded-full font-mono">
                           {n.category}
                         </span>
-                        <span className="text-xs text-[#78716C]">
+                        <span className="text-xs text-[#6E5D5F] font-sans">
                           {n.targetSchool === 'all' ? 'All Schools' : n.targetSchool === 'dreamz' ? 'Rapid Dreamz' : 'Rapid Shakuntlayan'}
                         </span>
-                        <span className="text-xs text-[#78716C]">• Date: {n.date}</span>
+                        <span className="text-xs text-[#6E5D5F] font-mono">• Date: {n.date}</span>
                       </div>
-                      <h4 className="font-cormorant text-lg font-bold text-[#1C1917]">
+                      <h4 className="font-editorial text-xl font-medium text-[#23070B]">
                         {n.title}
                       </h4>
-                      <p className="text-xs text-[#57534E] line-clamp-2 max-w-3xl">
+                      <p className="text-xs sm:text-sm text-[#5C4E50] line-clamp-2 max-w-3xl font-sans">
                         {n.description}
                       </p>
                     </div>
@@ -433,7 +430,7 @@ export const AdminDashboardPage: React.FC = () => {
                     <div className="flex items-center gap-2 shrink-0">
                       <button
                         onClick={() => updateNotice(n.id, { isPinned: !n.isPinned })}
-                        className={`p-2 rounded-lg border text-xs cursor-pointer ${n.isPinned ? 'bg-[#FFEDD5] text-[#C2410C] border-[#FDBA74]' : 'bg-[#FAF7F2] text-[#78716C] border-[#E6DDCF]'}`}
+                        className={`p-2 rounded-xl border text-xs cursor-pointer ${n.isPinned ? 'bg-[#BD672A]/10 text-[#BD672A] border-[#BD672A]/30' : 'bg-[#FCFAF6] text-[#6E5D5F] border-[#E8DFD1]'}`}
                         title="Toggle Pin"
                       >
                         <Pin className="w-3.5 h-3.5" />
@@ -442,7 +439,7 @@ export const AdminDashboardPage: React.FC = () => {
                         onClick={() => {
                           if (confirm(`Delete circular "${n.title}"?`)) deleteNotice(n.id);
                         }}
-                        className="p-2 rounded-lg border border-rose-200 bg-rose-50 text-rose-600 hover:bg-rose-100 cursor-pointer"
+                        className="p-2 rounded-xl border border-rose-200 bg-rose-50 text-rose-600 hover:bg-rose-100 cursor-pointer"
                         title="Delete notice"
                       >
                         <Trash2 className="w-3.5 h-3.5" />
@@ -455,15 +452,15 @@ export const AdminDashboardPage: React.FC = () => {
 
             {/* Create Notice Modal */}
             {showNoticeModal && (
-              <div className="fixed inset-0 z-50 bg-[#1C1917]/70 backdrop-blur-sm flex items-center justify-center p-4">
-                <div className="bg-white rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl space-y-4 border border-[#E6DDCF]">
-                  <h3 className="font-cormorant text-2xl font-bold text-[#1C1917]">
+              <div className="fixed inset-0 z-50 bg-[#1C0306]/85 backdrop-blur-md flex items-center justify-center p-4">
+                <div className="bg-white rounded-3xl max-w-xl w-full p-7 sm:p-9 shadow-2xl space-y-4 border border-[#E8DFD1]">
+                  <h3 className="font-editorial text-3xl font-medium text-[#23070B]">
                     Publish Official Notice
                   </h3>
 
-                  <form onSubmit={handleCreateNotice} className="space-y-3">
+                  <form onSubmit={handleCreateNotice} className="space-y-3.5">
                     <div>
-                      <label className="block text-xs font-bold text-[#44403C] uppercase tracking-wider mb-1">
+                      <label className="block text-[11px] font-bold text-[#6E5D5F] uppercase tracking-[0.15em] mb-1 font-mono">
                         Notice Title *
                       </label>
                       <input
@@ -471,20 +468,20 @@ export const AdminDashboardPage: React.FC = () => {
                         placeholder="e.g. Revision of School Timings"
                         value={newNoticeTitle}
                         onChange={(e) => setNewNoticeTitle(e.target.value)}
-                        className="w-full px-3 py-2 rounded-xl border border-[#E6DDCF] text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#BD672A]/30 focus:border-[#BD672A] text-[#1C1917]"
+                        className="w-full px-3.5 py-2 rounded-xl border border-[#E8DFD1] bg-[#FCFAF6] text-xs sm:text-sm text-[#23070B] focus:bg-white focus:outline-none focus:border-[#BD672A] focus:ring-4 focus:ring-[#BD672A]/15 font-sans"
                         required
                       />
                     </div>
 
                     <div className="grid grid-cols-2 gap-3">
                       <div>
-                        <label className="block text-xs font-bold text-[#44403C] uppercase tracking-wider mb-1">
+                        <label className="block text-[11px] font-bold text-[#6E5D5F] uppercase tracking-[0.15em] mb-1 font-mono">
                           Category *
                         </label>
                         <select
                           value={newNoticeCategory}
                           onChange={(e) => setNewNoticeCategory(e.target.value as any)}
-                          className="w-full px-3 py-2 rounded-xl border border-[#E6DDCF] text-xs bg-white text-[#1C1917]"
+                          className="w-full px-3.5 py-2 rounded-xl border border-[#E8DFD1] bg-[#FCFAF6] text-xs text-[#23070B] font-sans"
                         >
                           <option value="Admission">Admission</option>
                           <option value="Academic">Academic</option>
@@ -496,13 +493,13 @@ export const AdminDashboardPage: React.FC = () => {
                       </div>
 
                       <div>
-                        <label className="block text-xs font-bold text-[#44403C] uppercase tracking-wider mb-1">
+                        <label className="block text-[11px] font-bold text-[#6E5D5F] uppercase tracking-[0.15em] mb-1 font-mono">
                           School Wing *
                         </label>
                         <select
                           value={newNoticeSchool}
                           onChange={(e) => setNewNoticeSchool(e.target.value as any)}
-                          className="w-full px-3 py-2 rounded-xl border border-[#E6DDCF] text-xs bg-white text-[#1C1917]"
+                          className="w-full px-3.5 py-2 rounded-xl border border-[#E8DFD1] bg-[#FCFAF6] text-xs text-[#23070B] font-sans"
                         >
                           <option value="all">All Schools (Unified)</option>
                           <option value="dreamz">Rapid Dreamz</option>
@@ -512,7 +509,7 @@ export const AdminDashboardPage: React.FC = () => {
                     </div>
 
                     <div>
-                      <label className="block text-xs font-bold text-[#44403C] uppercase tracking-wider mb-1">
+                      <label className="block text-[11px] font-bold text-[#6E5D5F] uppercase tracking-[0.15em] mb-1 font-mono">
                         Attachment Filename (Optional)
                       </label>
                       <input
@@ -520,12 +517,12 @@ export const AdminDashboardPage: React.FC = () => {
                         placeholder="e.g. Schedule_March_2025.pdf"
                         value={newNoticeAttachment}
                         onChange={(e) => setNewNoticeAttachment(e.target.value)}
-                        className="w-full px-3 py-2 rounded-xl border border-[#E6DDCF] text-xs focus:outline-none focus:ring-2 focus:ring-[#BD672A]/30 focus:border-[#BD672A] text-[#1C1917]"
+                        className="w-full px-3.5 py-2 rounded-xl border border-[#E8DFD1] bg-[#FCFAF6] text-xs text-[#23070B] focus:bg-white focus:outline-none focus:border-[#BD672A] focus:ring-4 focus:ring-[#BD672A]/15 font-sans"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs font-bold text-[#44403C] uppercase tracking-wider mb-1">
+                      <label className="block text-[11px] font-bold text-[#6E5D5F] uppercase tracking-[0.15em] mb-1 font-mono">
                         Full Notice Description *
                       </label>
                       <textarea
@@ -533,12 +530,12 @@ export const AdminDashboardPage: React.FC = () => {
                         placeholder="Provide circular text and guidance for parents..."
                         value={newNoticeDesc}
                         onChange={(e) => setNewNoticeDesc(e.target.value)}
-                        className="w-full px-3 py-2 rounded-xl border border-[#E6DDCF] text-xs focus:outline-none focus:ring-2 focus:ring-[#BD672A]/30 focus:border-[#BD672A] text-[#1C1917]"
+                        className="w-full px-3.5 py-2 rounded-xl border border-[#E8DFD1] bg-[#FCFAF6] text-xs text-[#23070B] focus:bg-white focus:outline-none focus:border-[#BD672A] focus:ring-4 focus:ring-[#BD672A]/15 font-sans"
                         required
                       />
                     </div>
 
-                    <div className="flex items-center gap-2 pt-1">
+                    <div className="flex items-center gap-2 pt-1 font-sans">
                       <input
                         type="checkbox"
                         id="pinCheck"
@@ -546,22 +543,22 @@ export const AdminDashboardPage: React.FC = () => {
                         onChange={(e) => setNewNoticePin(e.target.checked)}
                         className="w-4 h-4 rounded text-[#BD672A] focus:ring-[#BD672A]"
                       />
-                      <label htmlFor="pinCheck" className="text-xs font-semibold text-[#44403C]">
+                      <label htmlFor="pinCheck" className="text-xs font-semibold text-[#423738]">
                         Pin notice to top of public Notice Board & announcement ticker
                       </label>
                     </div>
 
-                    <div className="pt-4 flex justify-end gap-2">
+                    <div className="pt-4 flex justify-end gap-2.5">
                       <button
                         type="button"
                         onClick={() => setShowNoticeModal(false)}
-                        className="px-4 py-2 rounded-xl bg-[#FAF7F2] text-[#44403C] text-xs font-bold uppercase tracking-wider hover:bg-[#E6DDCF] cursor-pointer"
+                        className="luxury-btn-outline px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider cursor-pointer"
                       >
                         Cancel
                       </button>
                       <button
                         type="submit"
-                        className="px-5 py-2 rounded-xl bg-[#BD672A] hover:bg-[#A35520] text-white text-xs font-bold uppercase tracking-wider cursor-pointer shadow-sm"
+                        className="luxury-btn-primary px-5 py-2 rounded-xl text-xs font-bold uppercase tracking-wider cursor-pointer shadow-sm"
                       >
                         Publish Notice
                       </button>
@@ -576,24 +573,24 @@ export const AdminDashboardPage: React.FC = () => {
         {/* EVENTS TAB */}
         {activeTab === 'events' && (
           <div className="space-y-4">
-            <h3 className="font-cormorant text-2xl font-bold text-[#1C1917]">
+            <h3 className="font-editorial text-2xl font-medium text-[#23070B]">
               Institutional Events Manager ({events.length})
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {events.map((evt) => (
-                <div key={evt.id} className="p-5 rounded-2xl bg-white border border-[#E6DDCF] shadow-sm flex flex-col justify-between">
+                <div key={evt.id} className="p-6 rounded-3xl bg-white border border-[#E8DFD1] shadow-xs flex flex-col justify-between">
                   <div>
-                    <div className="flex items-center justify-between text-xs mb-2">
-                      <span className="font-bold text-[#064E3B] bg-[#ECFDF5] px-2 py-0.5 rounded">
+                    <div className="flex items-center justify-between text-xs mb-2 font-mono">
+                      <span className="font-bold text-[#064E3B] bg-[#064E3B]/10 border border-[#064E3B]/20 px-2.5 py-0.5 rounded-full text-[10px] uppercase">
                         {evt.category}
                       </span>
-                      <span className="text-[#78716C]">{evt.startDate}</span>
+                      <span className="text-[#6E5D5F]">{evt.startDate}</span>
                     </div>
-                    <h4 className="font-cormorant text-lg font-bold text-[#1C1917]">{evt.title}</h4>
-                    <p className="text-xs text-[#57534E] mt-1 line-clamp-2">{evt.summary}</p>
+                    <h4 className="font-editorial text-2xl font-medium text-[#23070B]">{evt.title}</h4>
+                    <p className="text-xs sm:text-sm text-[#5C4E50] mt-1 line-clamp-2 font-sans">{evt.summary}</p>
                   </div>
-                  <div className="pt-4 mt-4 border-t border-[#F5EFE6] flex items-center justify-between">
-                    <span className="text-[11px] text-[#A8A29E]">{evt.location}</span>
+                  <div className="pt-4 mt-4 border-t border-[#E8DFD1] flex items-center justify-between">
+                    <span className="text-[11px] text-[#A8988C] font-sans">{evt.location}</span>
                     <button
                       onClick={() => {
                         if (confirm(`Remove event "${evt.title}"?`)) deleteEvent(evt.id);
@@ -612,21 +609,21 @@ export const AdminDashboardPage: React.FC = () => {
         {/* NEWS TAB */}
         {activeTab === 'news' && (
           <div className="space-y-4">
-            <h3 className="font-cormorant text-2xl font-bold text-[#1C1917]">
+            <h3 className="font-editorial text-2xl font-medium text-[#23070B]">
               Classroom Stories & Articles ({news.length})
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {news.map((item) => (
-                <div key={item.id} className="p-5 rounded-2xl bg-white border border-[#E6DDCF] shadow-sm flex flex-col justify-between">
+                <div key={item.id} className="p-6 rounded-3xl bg-white border border-[#E8DFD1] shadow-xs flex flex-col justify-between">
                   <div>
-                    <span className="text-xs font-bold text-[#064E3B] bg-[#ECFDF5] px-2 py-0.5 rounded">
+                    <span className="text-[10px] font-bold text-[#BD672A] bg-[#BD672A]/10 border border-[#BD672A]/20 px-2.5 py-0.5 rounded-full font-mono uppercase">
                       {item.category}
                     </span>
-                    <h4 className="font-cormorant text-lg font-bold text-[#1C1917] mt-2">{item.title}</h4>
-                    <p className="text-xs text-[#57534E] mt-1 line-clamp-2">{item.summary}</p>
+                    <h4 className="font-editorial text-2xl font-medium text-[#23070B] mt-2">{item.title}</h4>
+                    <p className="text-xs sm:text-sm text-[#5C4E50] mt-1 line-clamp-2 font-sans">{item.summary}</p>
                   </div>
-                  <div className="pt-4 mt-4 border-t border-[#F5EFE6] flex items-center justify-between">
-                    <span className="text-[11px] text-[#A8A29E]">By {item.author}</span>
+                  <div className="pt-4 mt-4 border-t border-[#E8DFD1] flex items-center justify-between">
+                    <span className="text-[11px] text-[#A8988C] font-sans">By {item.author}</span>
                     <button
                       onClick={() => {
                         if (confirm(`Delete article "${item.title}"?`)) deleteNews(item.id);
@@ -645,27 +642,27 @@ export const AdminDashboardPage: React.FC = () => {
         {/* DOWNLOADS TAB */}
         {activeTab === 'downloads' && (
           <div className="space-y-4">
-            <h3 className="font-cormorant text-2xl font-bold text-[#1C1917]">
+            <h3 className="font-editorial text-2xl font-medium text-[#23070B]">
               Download Repository Documents ({downloads.length})
             </h3>
-            <div className="bg-white rounded-3xl border border-[#E6DDCF] shadow-sm divide-y divide-[#F5EFE6]">
+            <div className="bg-white rounded-3xl border border-[#E8DFD1] shadow-xs divide-y divide-[#F6F1E7]">
               {downloads.map((doc) => (
-                <div key={doc.id} className="p-4 flex items-center justify-between gap-4">
+                <div key={doc.id} className="p-5 flex items-center justify-between gap-4">
                   <div>
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className="text-[11px] font-bold text-[#064E3B] bg-[#ECFDF5] px-2 py-0.5 rounded">
+                    <div className="flex items-center gap-2 mb-1 font-mono">
+                      <span className="text-[10px] font-bold text-[#BD672A] bg-[#BD672A]/10 border border-[#BD672A]/25 px-2.5 py-0.5 rounded-full">
                         {doc.category}
                       </span>
-                      <span className="text-xs text-[#78716C]">{doc.fileSize} • {doc.fileType}</span>
+                      <span className="text-xs text-[#6E5D5F]">{doc.fileSize} • {doc.fileType}</span>
                     </div>
-                    <h4 className="text-sm font-bold text-[#1C1917]">{doc.title}</h4>
-                    <p className="text-xs text-[#57534E]">{doc.description}</p>
+                    <h4 className="text-base font-semibold text-[#23070B] font-editorial">{doc.title}</h4>
+                    <p className="text-xs text-[#5C4E50] font-sans">{doc.description}</p>
                   </div>
                   <button
                     onClick={() => {
                       if (confirm(`Delete document "${doc.title}"?`)) deleteDownload(doc.id);
                     }}
-                    className="p-2 text-rose-600 hover:bg-rose-50 rounded-lg shrink-0 cursor-pointer"
+                    className="p-2 text-rose-600 hover:bg-rose-50 rounded-xl shrink-0 cursor-pointer"
                   >
                     <Trash2 className="w-4 h-4" />
                   </button>
@@ -677,110 +674,110 @@ export const AdminDashboardPage: React.FC = () => {
 
         {/* SETTINGS TAB */}
         {activeTab === 'settings' && (
-          <div className="bg-white p-6 sm:p-10 rounded-3xl border border-[#E6DDCF] shadow-sm max-w-3xl">
-            <div className="border-b border-[#F5EFE6] pb-3 mb-6">
-              <h3 className="font-cormorant text-2xl font-bold text-[#1C1917]">
+          <div className="bg-white p-7 sm:p-10 rounded-3xl border border-[#E8DFD1] shadow-[0_20px_45px_-15px_rgba(44,7,12,0.05)] max-w-3xl">
+            <div className="border-b border-[#E8DFD1] pb-3 mb-6">
+              <h3 className="font-editorial text-3xl font-medium text-[#23070B]">
                 Institutional & Contact Settings
               </h3>
-              <p className="text-xs text-[#78716C]">
-                Calibrate verified school contact details, affiliation codes, and academic years.
+              <p className="text-xs text-[#6E5D5F] font-sans mt-0.5">
+                Calibrate verified school contact details, affiliation codes, and academic sessions.
               </p>
             </div>
 
             {settingsSaved && (
-              <div className="mb-4 p-3 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs flex items-center gap-2">
+              <div className="mb-4 p-3.5 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs flex items-center gap-2 font-sans">
                 <CheckCircle className="w-4 h-4 text-emerald-600 shrink-0" />
-                <span>Institutional settings successfully updated and persisted!</span>
+                <span>Institutional configuration successfully updated and saved!</span>
               </div>
             )}
 
             <form onSubmit={handleSaveSettings} className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-bold text-[#44403C] uppercase tracking-wider mb-1">
+                  <label className="block text-[11px] font-bold text-[#6E5D5F] uppercase tracking-[0.15em] mb-1 font-mono">
                     Admissions Helpline Phone
                   </label>
                   <input
                     type="text"
                     value={settingsForm.phone}
                     onChange={(e) => setSettingsForm({ ...settingsForm, phone: e.target.value })}
-                    className="w-full px-3 py-2 rounded-xl border border-[#E6DDCF] text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#BD672A]/30 focus:border-[#BD672A] text-[#1C1917]"
+                    className="w-full px-3.5 py-2 rounded-xl border border-[#E8DFD1] bg-[#FCFAF6] text-xs sm:text-sm text-[#23070B] focus:bg-white focus:outline-none focus:border-[#BD672A] focus:ring-4 focus:ring-[#BD672A]/15 font-sans"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-[#44403C] uppercase tracking-wider mb-1">
+                  <label className="block text-[11px] font-bold text-[#6E5D5F] uppercase tracking-[0.15em] mb-1 font-mono">
                     Admissions Email Address
                   </label>
                   <input
                     type="email"
                     value={settingsForm.email}
                     onChange={(e) => setSettingsForm({ ...settingsForm, email: e.target.value })}
-                    className="w-full px-3 py-2 rounded-xl border border-[#E6DDCF] text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#BD672A]/30 focus:border-[#BD672A] text-[#1C1917]"
+                    className="w-full px-3.5 py-2 rounded-xl border border-[#E8DFD1] bg-[#FCFAF6] text-xs sm:text-sm text-[#23070B] focus:bg-white focus:outline-none focus:border-[#BD672A] focus:ring-4 focus:ring-[#BD672A]/15 font-sans"
                   />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-bold text-[#44403C] uppercase tracking-wider mb-1">
-                    Official WhatsApp Number (with country code)
+                  <label className="block text-[11px] font-bold text-[#6E5D5F] uppercase tracking-[0.15em] mb-1 font-mono">
+                    Official WhatsApp Number
                   </label>
                   <input
                     type="text"
                     value={settingsForm.whatsapp}
                     onChange={(e) => setSettingsForm({ ...settingsForm, whatsapp: e.target.value })}
-                    className="w-full px-3 py-2 rounded-xl border border-[#E6DDCF] text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#BD672A]/30 focus:border-[#BD672A] text-[#1C1917]"
+                    className="w-full px-3.5 py-2 rounded-xl border border-[#E8DFD1] bg-[#FCFAF6] text-xs sm:text-sm text-[#23070B] focus:bg-white focus:outline-none focus:border-[#BD672A] focus:ring-4 focus:ring-[#BD672A]/15 font-sans"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-[#44403C] uppercase tracking-wider mb-1">
+                  <label className="block text-[11px] font-bold text-[#6E5D5F] uppercase tracking-[0.15em] mb-1 font-mono">
                     Active Academic Session
                   </label>
                   <input
                     type="text"
                     value={settingsForm.academicYear}
                     onChange={(e) => setSettingsForm({ ...settingsForm, academicYear: e.target.value })}
-                    className="w-full px-3 py-2 rounded-xl border border-[#E6DDCF] text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#BD672A]/30 focus:border-[#BD672A] text-[#1C1917]"
+                    className="w-full px-3.5 py-2 rounded-xl border border-[#E8DFD1] bg-[#FCFAF6] text-xs sm:text-sm text-[#23070B] focus:bg-white focus:outline-none focus:border-[#BD672A] focus:ring-4 focus:ring-[#BD672A]/15 font-sans"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-[#44403C] uppercase tracking-wider mb-1">
+                <label className="block text-[11px] font-bold text-[#6E5D5F] uppercase tracking-[0.15em] mb-1 font-mono">
                   Campus Address
                 </label>
                 <input
                   type="text"
                   value={settingsForm.address}
                   onChange={(e) => setSettingsForm({ ...settingsForm, address: e.target.value })}
-                  className="w-full px-3 py-2 rounded-xl border border-[#E6DDCF] text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#BD672A]/30 focus:border-[#BD672A] text-[#1C1917]"
+                  className="w-full px-3.5 py-2 rounded-xl border border-[#E8DFD1] bg-[#FCFAF6] text-xs sm:text-sm text-[#23070B] focus:bg-white focus:outline-none focus:border-[#BD672A] focus:ring-4 focus:ring-[#BD672A]/15 font-sans"
                 />
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-bold text-[#44403C] uppercase tracking-wider mb-1">
+                  <label className="block text-[11px] font-bold text-[#6E5D5F] uppercase tracking-[0.15em] mb-1 font-mono">
                     CBSE Affiliation Disclosure Text
                   </label>
                   <input
                     type="text"
                     value={settingsForm.cbseAffiliationNumber}
                     onChange={(e) => setSettingsForm({ ...settingsForm, cbseAffiliationNumber: e.target.value })}
-                    className="w-full px-3 py-2 rounded-xl border border-[#E6DDCF] text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#BD672A]/30 focus:border-[#BD672A] text-[#1C1917]"
+                    className="w-full px-3.5 py-2 rounded-xl border border-[#E8DFD1] bg-[#FCFAF6] text-xs sm:text-sm text-[#23070B] focus:bg-white focus:outline-none focus:border-[#BD672A] focus:ring-4 focus:ring-[#BD672A]/15 font-sans"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-[#44403C] uppercase tracking-wider mb-1">
+                  <label className="block text-[11px] font-bold text-[#6E5D5F] uppercase tracking-[0.15em] mb-1 font-mono">
                     Emergency Helpline
                   </label>
                   <input
                     type="text"
                     value={settingsForm.emergencyHelpline}
                     onChange={(e) => setSettingsForm({ ...settingsForm, emergencyHelpline: e.target.value })}
-                    className="w-full px-3 py-2 rounded-xl border border-[#E6DDCF] text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#BD672A]/30 focus:border-[#BD672A] text-[#1C1917]"
+                    className="w-full px-3.5 py-2 rounded-xl border border-[#E8DFD1] bg-[#FCFAF6] text-xs sm:text-sm text-[#23070B] focus:bg-white focus:outline-none focus:border-[#BD672A] focus:ring-4 focus:ring-[#BD672A]/15 font-sans"
                   />
                 </div>
               </div>
@@ -788,9 +785,9 @@ export const AdminDashboardPage: React.FC = () => {
               <div className="pt-4 flex justify-end">
                 <button
                   type="submit"
-                  className="px-6 py-2.5 rounded-xl bg-[#BD672A] hover:bg-[#A35520] text-white font-bold text-xs uppercase tracking-wider transition-colors shadow-sm cursor-pointer"
+                  className="luxury-btn-primary px-6 py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider shadow-sm cursor-pointer"
                 >
-                  Save Settings
+                  Save Institutional Settings
                 </button>
               </div>
             </form>
