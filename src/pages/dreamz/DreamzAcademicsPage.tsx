@@ -80,7 +80,7 @@ const chapters: StageChapter[] = [
 
 export const DreamzAcademicsPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-[#FCF8F3] pb-24 text-[#2A1208]">
+    <div className="min-h-screen bg-[#F8FAFC] pb-24 text-[#451A03]">
       <Breadcrumbs
         items={[
           { label: 'Rapid Dreamz', href: '/dreamz' },
@@ -89,14 +89,14 @@ export const DreamzAcademicsPage: React.FC = () => {
       />
 
       {/* Hero Header */}
-      <section className="bg-gradient-to-br from-[#B43B0E] via-[#A0340A] to-[#8C2C07] text-white py-16 sm:py-20 relative overflow-hidden">
-        <div className="absolute top-0 right-1/4 w-80 h-80 bg-[#FDBA74]/20 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-10 left-10 w-72 h-72 bg-[#FFEDD5]/15 rounded-full blur-3xl pointer-events-none" />
+      <section className="bg-gradient-to-br from-[#B45309] via-[#B45309] to-[#92400E] text-white py-16 sm:py-20 relative overflow-hidden">
+        <div className="absolute top-0 right-1/4 w-80 h-80 bg-[#FCD34D]/20 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-10 left-10 w-72 h-72 bg-[#FEF3C7]/15 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/10 via-transparent to-black/30 pointer-events-none" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-white/15 text-[#FFEDD5] backdrop-blur-md border border-white/25 font-mono shadow-xs">
-            <Sprout className="w-3.5 h-3.5 text-[#FDBA74]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-white/15 text-[#FEF3C7] backdrop-blur-md border border-white/25 font-mono shadow-xs">
+            <Sprout className="w-3.5 h-3.5 text-[#FCD34D]" />
             <span>Developmental Pedagogical Chapters</span>
           </div>
 
@@ -104,7 +104,7 @@ export const DreamzAcademicsPage: React.FC = () => {
             Early Years Academic Chapters
           </h1>
 
-          <p className="max-w-2xl mx-auto text-sm sm:text-base text-[#FFEDD5] font-normal leading-relaxed">
+          <p className="max-w-2xl mx-auto text-sm sm:text-base text-[#FEF3C7] font-normal leading-relaxed">
             Four carefully calibrated pedagogical milestones guiding toddlers from separation comfort to confident primary school readiness.
           </p>
         </div>
@@ -115,47 +115,47 @@ export const DreamzAcademicsPage: React.FC = () => {
         {chapters.map((ch, index) => (
           <div
             key={index}
-            className="p-6 sm:p-9 rounded-3xl bg-[#FCF8F3] border border-[#F0DEC8] shadow-[0_4px_24px_-4px_rgba(180,59,14,0.06)] hover:border-[#FB923C]/60 hover:shadow-[0_12px_28px_-6px_rgba(180,59,14,0.1)] transition-all duration-300 space-y-6"
+            className="p-6 sm:p-9 rounded-3xl bg-[#F8FAFC] border border-[#FEF3C7] shadow-[0_4px_24px_-4px_rgba(180,83,9,0.06)] hover:border-[#FBBF24]/60 hover:shadow-[0_12px_28px_-6px_rgba(180,83,9,0.1)] transition-all duration-300 space-y-6"
           >
             {/* Chapter Header */}
-            <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[#F0DEC8] pb-4">
+            <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[#FEF3C7] pb-4">
               <div>
                 <div className="flex items-center gap-2 mb-1">
-                  <span className="text-xs font-mono font-bold text-[#8C2C07] uppercase tracking-wider">
+                  <span className="text-xs font-mono font-bold text-[#92400E] uppercase tracking-wider">
                     {ch.chapter}
                   </span>
-                  <span className="text-xs text-[#FDBA74]">✦</span>
-                  <span className="text-xs font-semibold text-[#166534] bg-[#DCFCE7] px-2.5 py-0.5 rounded-full border border-[#86EFAC]/50">
+                  <span className="text-xs text-[#FCD34D]">✦</span>
+                  <span className="text-xs font-semibold text-[#0F766E] bg-[#CCFBF1] px-2.5 py-0.5 rounded-full border border-[#5EEAD4]/50">
                     Age: {ch.age}
                   </span>
                 </div>
-                <h2 className="font-editorial text-2xl sm:text-3xl font-bold text-[#2A1208]">
+                <h2 className="font-editorial text-2xl sm:text-3xl font-bold text-[#451A03]">
                   {ch.grade}
                 </h2>
-                <p className="text-xs font-serif italic text-[#8C2C07]">
+                <p className="text-xs font-serif italic text-[#92400E]">
                   {ch.botanicalTitle}
                 </p>
               </div>
 
-              <span className="px-3 py-1 rounded-full text-xs font-mono font-bold bg-[#FFEDD5] text-[#9A3412] border border-[#FED7AA]">
+              <span className="px-3 py-1 rounded-full text-xs font-mono font-bold bg-[#FEF3C7] text-[#92400E] border border-[#FDE68A]">
                 Milestone 0{index + 1}
               </span>
             </div>
 
             {/* Overview */}
-            <p className="text-xs sm:text-sm text-[#5C3D2E] leading-relaxed font-normal">
+            <p className="text-xs sm:text-sm text-[#78350F] leading-relaxed font-normal">
               {ch.overview}
             </p>
 
             {/* Developmental Milestones Grid */}
             <div className="space-y-3">
-              <h3 className="text-xs font-bold uppercase tracking-wider text-[#8C2C07] font-mono">
+              <h3 className="text-xs font-bold uppercase tracking-wider text-[#92400E] font-mono">
                 Key Developmental Milestones:
               </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm text-[#4A2E20]">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm text-[#451A03]">
                 {ch.milestones.map((m, i) => (
-                  <div key={i} className="flex items-start gap-2.5 p-3 rounded-2xl bg-[#FFFDF9] border border-[#F0DEC8]">
-                    <CheckCircle2 className="w-4 h-4 text-[#166534] shrink-0 mt-0.5" />
+                  <div key={i} className="flex items-start gap-2.5 p-3 rounded-2xl bg-[#F8FAFC] border border-[#FEF3C7]">
+                    <CheckCircle2 className="w-4 h-4 text-[#0F766E] shrink-0 mt-0.5" />
                     <span className="leading-snug">{m}</span>
                   </div>
                 ))}
@@ -163,14 +163,14 @@ export const DreamzAcademicsPage: React.FC = () => {
             </div>
 
             {/* Pedagogical Footnote */}
-            <div className="pt-3 border-t border-[#F0DEC8]/70 grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-              <div className="p-3 rounded-xl bg-[#FFF7ED] text-[#8C2C07]">
+            <div className="pt-3 border-t border-[#FEF3C7]/70 grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+              <div className="p-3 rounded-xl bg-[#FFFBEB] text-[#92400E]">
                 <strong className="block font-semibold mb-0.5">Sensory Tooling:</strong>
-                <span className="text-[#5C3D2E]">{ch.sensoryFocus}</span>
+                <span className="text-[#78350F]">{ch.sensoryFocus}</span>
               </div>
-              <div className="p-3 rounded-xl bg-[#F0FDF4] text-[#166534]">
+              <div className="p-3 rounded-xl bg-[#F0FDFA] text-[#0F766E]">
                 <strong className="block font-semibold mb-0.5">Developmental Goal:</strong>
-                <span className="text-[#365314]">{ch.readinessBridge}</span>
+                <span className="text-[#134E4A]">{ch.readinessBridge}</span>
               </div>
             </div>
           </div>
@@ -180,7 +180,7 @@ export const DreamzAcademicsPage: React.FC = () => {
         <div className="pt-6 text-center">
           <Link
             to="/dreamz/admissions"
-            className="inline-flex items-center gap-2 px-7 py-4 rounded-xl bg-[#B43B0E] hover:bg-[#8C2C07] text-white font-bold text-xs uppercase tracking-wider shadow-lg hover:shadow-xl transition-all"
+            className="inline-flex items-center gap-2 px-7 py-4 rounded-xl bg-[#B45309] hover:bg-[#92400E] text-white font-bold text-xs uppercase tracking-wider shadow-lg hover:shadow-xl transition-all"
           >
             <span>Apply for Early Years Admission</span>
             <ArrowRight className="w-4 h-4" />

@@ -97,8 +97,8 @@ export const AchievementsShowcase: React.FC = () => {
             onClick={() => setFilter(tab.key as any)}
             className={`px-4 py-2 rounded-xl text-xs font-mono font-bold transition-all cursor-pointer ${
               filter === tab.key
-                ? 'bg-[#042F24] text-[#A7F3D0] shadow-sm border border-[#34D399]/40'
-                : 'bg-[#EBF2EE] text-[#1E3B32] hover:bg-[#DCEAE3] border border-transparent'
+                ? 'bg-[#134E4A] text-[#99F6E4] shadow-sm border border-[#2DD4BF]/40'
+                : 'bg-[#F0FDFA] text-[#1A3C38] hover:bg-[#CCFBF1] border border-transparent'
             }`}
           >
             {tab.label}
@@ -111,11 +111,11 @@ export const AchievementsShowcase: React.FC = () => {
         {filteredRecords.map((item) => (
           <div
             key={item.id}
-            className="p-6 rounded-3xl bg-[#F8FAF8] border border-[#D1E5DB] shadow-xs hover:border-[#042F24] hover:shadow-[0_12px_28px_-6px_rgba(4,47,36,0.1)] transition-all duration-300 flex flex-col justify-between"
+            className="p-6 rounded-3xl bg-[#F0FDFA] border border-[#CCFBF1] shadow-xs hover:border-[#134E4A] hover:shadow-[0_12px_28px_-6px_rgba(4,47,36,0.1)] transition-all duration-300 flex flex-col justify-between"
           >
             <div className="space-y-3">
-              <div className="flex items-center justify-between gap-2 border-b border-[#D1E5DB] pb-3">
-                <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#064E3B] bg-[#E3EFE9] px-2.5 py-0.5 rounded-full">
+              <div className="flex items-center justify-between gap-2 border-b border-[#CCFBF1] pb-3">
+                <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#115E59] bg-[#F0FDFA] px-2.5 py-0.5 rounded-full">
                   {item.categoryLabel}
                 </span>
                 <span className="text-[10px] font-mono font-bold text-[#8A6A27] bg-[#F9F5EA] px-2 py-0.5 rounded-full border border-[#C5A059]/40">
@@ -123,20 +123,20 @@ export const AchievementsShowcase: React.FC = () => {
                 </span>
               </div>
 
-              <h4 className="font-editorial text-xl font-bold text-[#021C16] leading-snug">
+              <h4 className="font-editorial text-xl font-bold text-[#042F2E] leading-snug">
                 {item.title}
               </h4>
 
-              <p className="text-xs sm:text-sm text-[#3C584E] leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#3D6B63] leading-relaxed">
                 {item.summary}
               </p>
             </div>
 
-            <div className="pt-4 mt-4 border-t border-[#D1E5DB] text-[11px] text-[#2D5A4C] space-y-1">
+            <div className="pt-4 mt-4 border-t border-[#CCFBF1] text-[11px] text-[#2D6A5E] space-y-1">
               <div className="font-mono">
                 <span className="text-[#8A6A27] font-bold">Verifying Authority:</span> {item.verifyingBody}
               </div>
-              <div className="text-[10px] text-[#4E776A] font-mono">
+              <div className="text-[10px] text-[#4D7C72] font-mono">
                 Benchmark: {item.session}
               </div>
             </div>
@@ -145,13 +145,13 @@ export const AchievementsShowcase: React.FC = () => {
       </div>
 
       {/* Institutional Fact Integrity & Verification Policy Card */}
-      <div className="rounded-3xl bg-[#042F24] text-white border border-[#0D654E] p-8 sm:p-10 text-center max-w-4xl mx-auto space-y-5 shadow-xl">
-        <div className="w-14 h-14 rounded-2xl bg-[#064E3B] text-[#E5C37E] flex items-center justify-center mx-auto border border-[#34D399]/30 shadow-xs">
+      <div className="rounded-3xl bg-[#134E4A] text-white border border-[#0F766E] p-8 sm:p-10 text-center max-w-4xl mx-auto space-y-5 shadow-xl">
+        <div className="w-14 h-14 rounded-2xl bg-[#115E59] text-[#E5C37E] flex items-center justify-center mx-auto border border-[#2DD4BF]/30 shadow-xs">
           <Award className="w-7 h-7" />
         </div>
 
-        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-bold uppercase tracking-widest bg-[#021C16] text-[#A7F3D0] border border-[#34D399]/30">
-          <ShieldCheck className="w-3.5 h-3.5 text-[#34D399]" />
+        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-bold uppercase tracking-widest bg-[#042F2E] text-[#99F6E4] border border-[#2DD4BF]/30">
+          <ShieldCheck className="w-3.5 h-3.5 text-[#2DD4BF]" />
           <span>Authentic Institutional Record Disclosure</span>
         </div>
 
@@ -159,20 +159,20 @@ export const AchievementsShowcase: React.FC = () => {
           Verified Merit & Examination Archives
         </h3>
 
-        <p className="text-xs sm:text-sm text-[#D1E7DF] leading-relaxed max-w-2xl mx-auto font-normal">
+        <p className="text-xs sm:text-sm text-[#CCFBF1] leading-relaxed max-w-2xl mx-auto font-normal">
           In strict fidelity to scholastic integrity and responsible institutional communication, Rapid Shakuntlayan publishes and verifies board examination records, athletic trophies, and symposium citations directly through our administrative office and CBSE archives.
         </p>
 
-        <div className="pt-2 grid grid-cols-1 sm:grid-cols-3 gap-3 text-left text-xs text-[#D1E7DF]">
-          <div className="p-4 rounded-2xl bg-[#021C16] border border-[#0F4C3C]">
+        <div className="pt-2 grid grid-cols-1 sm:grid-cols-3 gap-3 text-left text-xs text-[#CCFBF1]">
+          <div className="p-4 rounded-2xl bg-[#042F2E] border border-[#115E59]">
             <strong className="block text-[#E5C37E] font-mono uppercase mb-1">CBSE Examinations</strong>
             Annual merit rolls and stream rosters are certified following national board announcements.
           </div>
-          <div className="p-4 rounded-2xl bg-[#021C16] border border-[#0F4C3C]">
+          <div className="p-4 rounded-2xl bg-[#042F2E] border border-[#115E59]">
             <strong className="block text-[#E5C37E] font-mono uppercase mb-1">Inter-School Laurels</strong>
             SGFI athletics and debate honors are archived under official circular numbers.
           </div>
-          <div className="p-4 rounded-2xl bg-[#021C16] border border-[#0F4C3C]">
+          <div className="p-4 rounded-2xl bg-[#042F2E] border border-[#115E59]">
             <strong className="block text-[#E5C37E] font-mono uppercase mb-1">Certified Transcripts</strong>
             Parents and alumni may request signed scholastic transcripts directly from the registrar.
           </div>
@@ -181,17 +181,17 @@ export const AchievementsShowcase: React.FC = () => {
         <div className="pt-4 flex flex-wrap justify-center gap-3">
           <Link
             to="/notices"
-            className="px-5 py-2.5 rounded-xl bg-[#C5A059] hover:bg-[#B38D46] text-[#021C16] font-bold text-xs uppercase tracking-wider transition-colors flex items-center gap-1.5 shadow-sm"
+            className="px-5 py-2.5 rounded-xl bg-[#C5A059] hover:bg-[#B38D46] text-[#042F2E] font-bold text-xs uppercase tracking-wider transition-colors flex items-center gap-1.5 shadow-sm"
           >
-            <FileText className="w-4 h-4 text-[#021C16]" />
+            <FileText className="w-4 h-4 text-[#042F2E]" />
             <span>View Official Notices</span>
           </Link>
           <Link
             to="/contact"
-            className="px-5 py-2.5 rounded-xl bg-[#064E3B] border border-[#34D399]/30 text-white font-bold text-xs uppercase tracking-wider hover:bg-[#08634B] transition-colors flex items-center gap-1.5"
+            className="px-5 py-2.5 rounded-xl bg-[#115E59] border border-[#2DD4BF]/30 text-white font-bold text-xs uppercase tracking-wider hover:bg-[#0F766E] transition-colors flex items-center gap-1.5"
           >
             <span>Inquire at Registrar Office</span>
-            <ChevronRight className="w-4 h-4 text-[#A7F3D0]" />
+            <ChevronRight className="w-4 h-4 text-[#99F6E4]" />
           </Link>
         </div>
       </div>

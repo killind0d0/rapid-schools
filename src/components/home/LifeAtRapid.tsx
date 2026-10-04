@@ -50,13 +50,13 @@ const experiences = [
 
 export const LifeAtRapid: React.FC = () => {
   return (
-    <section className="py-20 sm:py-24 bg-[#1C0306] text-white relative overflow-hidden">
+    <section className="py-20 sm:py-24 bg-[#020617] text-white relative overflow-hidden">
       {/* Layered Ambient Mesh */}
-      <div className="absolute top-0 right-1/3 w-[500px] h-[500px] bg-[#BD672A]/10 rounded-full blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-0 left-1/3 w-[500px] h-[500px] bg-[#3D0B12]/40 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-0 right-1/3 w-[500px] h-[500px] bg-[#F59E0B]/10 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-0 left-1/3 w-[500px] h-[500px] bg-[#162032]/40 rounded-full blur-[100px] pointer-events-none" />
 
       {/* Hairline Divider Accent */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#BD672A]/30 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#F59E0B]/30 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -75,7 +75,7 @@ export const LifeAtRapid: React.FC = () => {
             return (
               <div
                 key={index}
-                className="group rounded-3xl luxury-glass-dark hover:border-[#BD672A]/60 overflow-hidden shadow-xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col"
+                className="group rounded-3xl luxury-glass-dark hover:border-[#F59E0B]/60 overflow-hidden shadow-xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col"
               >
                 {/* Image Header with Tag Badge */}
                 <div className="relative h-52 overflow-hidden">
@@ -84,11 +84,11 @@ export const LifeAtRapid: React.FC = () => {
                     alt={exp.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-85"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#2C070C] via-[#2C070C]/40 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A] via-[#0F172A]/40 to-transparent" />
                   
                   <div className="absolute top-4 left-4">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold tracking-[0.2em] bg-[#1C0306]/90 backdrop-blur-md text-[#F3C292] border border-[#BD672A]/40 uppercase font-mono shadow-md">
-                      <Icon className="w-3 h-3 text-[#BD672A]" />
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold tracking-[0.2em] bg-[#020617]/90 backdrop-blur-md text-[#FDE68A] border border-[#F59E0B]/40 uppercase font-mono shadow-md">
+                      <Icon className="w-3 h-3 text-[#F59E0B]" />
                       {exp.tag}
                     </span>
                   </div>
@@ -96,14 +96,14 @@ export const LifeAtRapid: React.FC = () => {
 
                 {/* Content */}
                 <div className="p-6 sm:p-7 flex-1 flex flex-col">
-                  <h3 className="font-editorial text-2xl font-medium text-white group-hover:text-[#F3C292] transition-colors tracking-tight">
+                  <h3 className="font-editorial text-2xl font-medium text-white group-hover:text-[#FDE68A] transition-colors tracking-tight">
                     {exp.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-[#D8C7B8] mt-2 leading-relaxed font-sans flex-1">
+                  <p className="text-xs sm:text-sm text-[#CBD5E1] mt-2 leading-relaxed font-sans flex-1">
                     {exp.description}
                   </p>
                   
-                  <div className="mt-5 pt-4 border-t border-white/[0.08] flex items-center justify-between text-xs font-semibold text-[#F3C292] group-hover:text-white transition-colors">
+                  <div className="mt-5 pt-4 border-t border-white/[0.08] flex items-center justify-between text-xs font-semibold text-[#FDE68A] group-hover:text-white transition-colors">
                     <span className="uppercase tracking-wider text-[11px]">Explore Dimension</span>
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </div>

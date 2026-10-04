@@ -8,7 +8,7 @@ import { QuickEnquirySection } from '../components/home/QuickEnquirySection';
 
 export const HomePage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-[#FAF6F0]">
+    <div className="min-h-screen bg-[#F8FAFC]">
       {/* Immersive Ecosystem Hero */}
       <Hero />
 

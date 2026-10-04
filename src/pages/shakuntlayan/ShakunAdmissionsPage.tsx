@@ -111,7 +111,7 @@ export const ShakunAdmissionsPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#F8FAF8] pb-24 text-[#021C16]">
+    <div className="min-h-screen bg-[#F0FDFA] pb-24 text-[#042F2E]">
       <Breadcrumbs
         items={[
           { label: 'Rapid Shakuntlayan', href: '/shakuntlayan' },
@@ -120,15 +120,15 @@ export const ShakunAdmissionsPage: React.FC = () => {
       />
 
       {/* Hero Canvas in Sovereign British Racing Forest Emerald */}
-      <section className="bg-gradient-to-br from-[#042F24] via-[#021C16] to-[#01120D] text-white py-16 sm:py-20 relative overflow-hidden">
+      <section className="bg-gradient-to-br from-[#134E4A] via-[#042F2E] to-[#042F2E] text-white py-16 sm:py-20 relative overflow-hidden">
         {/* Mint Conifer Aurora Glow */}
         <div className="absolute top-0 right-1/4 w-96 h-96 bg-[radial-gradient(circle,_rgba(52,211,153,0.14)_0%,_transparent_70%)] pointer-events-none" />
         <div className="absolute -bottom-16 left-10 w-96 h-96 bg-[radial-gradient(circle,_rgba(197,160,89,0.1)_0%,_transparent_70%)] pointer-events-none" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/10 via-transparent to-black/35 pointer-events-none" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-mono font-bold uppercase tracking-wider bg-[#064E3B] text-[#A7F3D0] border border-[#34D399]/40 shadow-xs">
-            <GraduationCap className="w-3.5 h-3.5 text-[#34D399]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-mono font-bold uppercase tracking-wider bg-[#115E59] text-[#99F6E4] border border-[#2DD4BF]/40 shadow-xs">
+            <GraduationCap className="w-3.5 h-3.5 text-[#2DD4BF]" />
             <span>CBSE Admissions Guide • Academic Session {settings.academicYear}</span>
           </div>
 
@@ -136,7 +136,7 @@ export const ShakunAdmissionsPage: React.FC = () => {
             CBSE Scholastic Admissions (Class 1–12)
           </h1>
 
-          <p className="max-w-2xl mx-auto text-sm sm:text-base text-[#D1E7DF] font-normal leading-relaxed">
+          <p className="max-w-2xl mx-auto text-sm sm:text-base text-[#CCFBF1] font-normal leading-relaxed">
             A merit-oriented, transparent admission procedure welcoming driven scholars into an institution founded on discipline, empirical inquiry, and university readiness.
           </p>
         </div>
@@ -145,64 +145,64 @@ export const ShakunAdmissionsPage: React.FC = () => {
       {/* Content Container */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 space-y-12">
         {/* 4-Stage CBSE Admission Procedure */}
-        <div className="bg-[#F8FAF8] p-8 sm:p-12 rounded-3xl border border-[#D1E5DB] shadow-[0_4px_24px_-4px_rgba(4,47,36,0.06)] space-y-8">
+        <div className="bg-[#F0FDFA] p-8 sm:p-12 rounded-3xl border border-[#CCFBF1] shadow-[0_4px_24px_-4px_rgba(4,47,36,0.06)] space-y-8">
           <div className="text-center max-w-2xl mx-auto space-y-2">
-            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#064E3B] block">
+            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#115E59] block">
               Admission Framework
             </span>
-            <h2 className="font-editorial text-3xl sm:text-4xl font-bold text-[#021C16]">
+            <h2 className="font-editorial text-3xl sm:text-4xl font-bold text-[#042F2E]">
               Four-Stage Enrollment Procedure
             </h2>
-            <p className="text-xs sm:text-sm text-[#3C584E]">
+            <p className="text-xs sm:text-sm text-[#3D6B63]">
               Guided by Central Board of Secondary Education (CBSE) institutional guidelines.
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div className="p-5 rounded-2xl bg-white border border-[#D1E5DB] shadow-2xs space-y-2.5">
-              <div className="w-9 h-9 rounded-full bg-[#064E3B] text-[#A7F3D0] font-mono font-bold text-sm flex items-center justify-center border border-[#34D399]/30">
+            <div className="p-5 rounded-2xl bg-white border border-[#CCFBF1] shadow-2xs space-y-2.5">
+              <div className="w-9 h-9 rounded-full bg-[#115E59] text-[#99F6E4] font-mono font-bold text-sm flex items-center justify-center border border-[#2DD4BF]/30">
                 01
               </div>
-              <h3 className="font-editorial text-lg font-bold text-[#021C16]">
+              <h3 className="font-editorial text-lg font-bold text-[#042F2E]">
                 Registration & Dossier
               </h3>
-              <p className="text-xs text-[#3C584E] leading-relaxed">
+              <p className="text-xs text-[#3D6B63] leading-relaxed">
                 Submit candidate credentials, current grade transcripts, and preferred stream choices either online or at the school admissions bursar.
               </p>
             </div>
 
-            <div className="p-5 rounded-2xl bg-white border border-[#D1E5DB] shadow-2xs space-y-2.5">
-              <div className="w-9 h-9 rounded-full bg-[#064E3B] text-[#A7F3D0] font-mono font-bold text-sm flex items-center justify-center border border-[#34D399]/30">
+            <div className="p-5 rounded-2xl bg-white border border-[#CCFBF1] shadow-2xs space-y-2.5">
+              <div className="w-9 h-9 rounded-full bg-[#115E59] text-[#99F6E4] font-mono font-bold text-sm flex items-center justify-center border border-[#2DD4BF]/30">
                 02
               </div>
-              <h3 className="font-editorial text-lg font-bold text-[#021C16]">
+              <h3 className="font-editorial text-lg font-bold text-[#042F2E]">
                 Diagnostic Evaluation
               </h3>
-              <p className="text-xs text-[#3C584E] leading-relaxed">
+              <p className="text-xs text-[#3D6B63] leading-relaxed">
                 Diagnostic written aptitude check assessing core English, Mathematics, and Science comprehension to benchmark learning readiness.
               </p>
             </div>
 
-            <div className="p-5 rounded-2xl bg-white border border-[#D1E5DB] shadow-2xs space-y-2.5">
-              <div className="w-9 h-9 rounded-full bg-[#064E3B] text-[#A7F3D0] font-mono font-bold text-sm flex items-center justify-center border border-[#34D399]/30">
+            <div className="p-5 rounded-2xl bg-white border border-[#CCFBF1] shadow-2xs space-y-2.5">
+              <div className="w-9 h-9 rounded-full bg-[#115E59] text-[#99F6E4] font-mono font-bold text-sm flex items-center justify-center border border-[#2DD4BF]/30">
                 03
               </div>
-              <h3 className="font-editorial text-lg font-bold text-[#021C16]">
+              <h3 className="font-editorial text-lg font-bold text-[#042F2E]">
                 Academic Conference
               </h3>
-              <p className="text-xs text-[#3C584E] leading-relaxed">
+              <p className="text-xs text-[#3D6B63] leading-relaxed">
                 A constructive conversation between student, parents, and the Academic Coordinator discussing curriculum expectations and stream goals.
               </p>
             </div>
 
-            <div className="p-5 rounded-2xl bg-white border border-[#D1E5DB] shadow-2xs space-y-2.5">
-              <div className="w-9 h-9 rounded-full bg-[#C5A059] text-[#021C16] font-mono font-bold text-sm flex items-center justify-center border border-[#C5A059]">
+            <div className="p-5 rounded-2xl bg-white border border-[#CCFBF1] shadow-2xs space-y-2.5">
+              <div className="w-9 h-9 rounded-full bg-[#C5A059] text-[#042F2E] font-mono font-bold text-sm flex items-center justify-center border border-[#C5A059]">
                 04
               </div>
-              <h3 className="font-editorial text-lg font-bold text-[#021C16]">
+              <h3 className="font-editorial text-lg font-bold text-[#042F2E]">
                 Verification & Admission
               </h3>
-              <p className="text-xs text-[#3C584E] leading-relaxed">
+              <p className="text-xs text-[#3D6B63] leading-relaxed">
                 Verification of countersigned Transfer Certificate (TC), previous report cards, and final enrollment formalization with transparent fees.
               </p>
             </div>
@@ -212,20 +212,20 @@ export const ShakunAdmissionsPage: React.FC = () => {
         {/* Division Eligibility Matrices */}
         <div className="space-y-4">
           <div className="flex items-center justify-between">
-            <h3 className="font-editorial text-2xl font-bold text-[#021C16]">
+            <h3 className="font-editorial text-2xl font-bold text-[#042F2E]">
               Academic Division Entry Criteria
             </h3>
-            <span className="text-xs font-mono text-[#064E3B]">CBSE Standard Norms</span>
+            <span className="text-xs font-mono text-[#115E59]">CBSE Standard Norms</span>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {shakunDivisions.map((div, idx) => (
               <div
                 key={idx}
-                className="p-6 rounded-3xl bg-white border border-[#D1E5DB] shadow-2xs space-y-3 hover:border-[#042F24] transition-colors"
+                className="p-6 rounded-3xl bg-white border border-[#CCFBF1] shadow-2xs space-y-3 hover:border-[#134E4A] transition-colors"
               >
-                <div className="flex items-center justify-between border-b border-[#D1E5DB] pb-2.5">
-                  <h4 className="font-editorial text-xl font-bold text-[#021C16]">
+                <div className="flex items-center justify-between border-b border-[#CCFBF1] pb-2.5">
+                  <h4 className="font-editorial text-xl font-bold text-[#042F2E]">
                     {div.division}
                   </h4>
                   <span className="text-xs font-mono font-bold text-[#8A6A27] bg-[#F9F5EA] px-2.5 py-0.5 rounded-full border border-[#C5A059]/40">
@@ -236,13 +236,13 @@ export const ShakunAdmissionsPage: React.FC = () => {
                   {div.classes.map((cls, cIdx) => (
                     <span
                       key={cIdx}
-                      className="px-2.5 py-1 rounded-lg text-[11px] font-mono font-semibold bg-[#EBF2EE] text-[#064E3B]"
+                      className="px-2.5 py-1 rounded-lg text-[11px] font-mono font-semibold bg-[#F0FDFA] text-[#115E59]"
                     >
                       {cls}
                     </span>
                   ))}
                 </div>
-                <p className="text-xs text-[#3C584E] leading-relaxed pt-1">
+                <p className="text-xs text-[#3D6B63] leading-relaxed pt-1">
                   {div.criteria}
                 </p>
               </div>
@@ -253,37 +253,37 @@ export const ShakunAdmissionsPage: React.FC = () => {
         {/* Two Columns: Document Verification & Interactive Application Form */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Document Verification Dossier */}
-          <div className="lg:col-span-5 bg-[#F8FAF8] p-6 sm:p-8 rounded-3xl border border-[#D1E5DB] shadow-xs space-y-6">
-            <div className="flex items-center gap-2 text-[#064E3B]">
-              <FileCheck className="w-5 h-5 text-[#064E3B]" />
-              <h3 className="font-editorial text-2xl font-bold text-[#021C16]">
+          <div className="lg:col-span-5 bg-[#F0FDFA] p-6 sm:p-8 rounded-3xl border border-[#CCFBF1] shadow-xs space-y-6">
+            <div className="flex items-center gap-2 text-[#115E59]">
+              <FileCheck className="w-5 h-5 text-[#115E59]" />
+              <h3 className="font-editorial text-2xl font-bold text-[#042F2E]">
                 Mandatory Documentation Checklist
               </h3>
             </div>
 
-            <ul className="space-y-3 text-xs sm:text-sm text-[#1E3B32]">
+            <ul className="space-y-3 text-xs sm:text-sm text-[#1A3C38]">
               <li className="flex items-start gap-2.5">
-                <CheckCircle2 className="w-4 h-4 text-[#064E3B] shrink-0 mt-0.5" />
+                <CheckCircle2 className="w-4 h-4 text-[#115E59] shrink-0 mt-0.5" />
                 <span>Original Transfer Certificate (TC) countersigned by Education Officer</span>
               </li>
               <li className="flex items-start gap-2.5">
-                <CheckCircle2 className="w-4 h-4 text-[#064E3B] shrink-0 mt-0.5" />
+                <CheckCircle2 className="w-4 h-4 text-[#115E59] shrink-0 mt-0.5" />
                 <span>Previous academic session final progress report card / transcript</span>
               </li>
               <li className="flex items-start gap-2.5">
-                <CheckCircle2 className="w-4 h-4 text-[#064E3B] shrink-0 mt-0.5" />
+                <CheckCircle2 className="w-4 h-4 text-[#115E59] shrink-0 mt-0.5" />
                 <span>Municipal Corporation Birth Certificate copy (verified against original)</span>
               </li>
               <li className="flex items-start gap-2.5">
-                <CheckCircle2 className="w-4 h-4 text-[#064E3B] shrink-0 mt-0.5" />
+                <CheckCircle2 className="w-4 h-4 text-[#115E59] shrink-0 mt-0.5" />
                 <span>Four recent passport-size color photographs of the student</span>
               </li>
               <li className="flex items-start gap-2.5">
-                <CheckCircle2 className="w-4 h-4 text-[#064E3B] shrink-0 mt-0.5" />
+                <CheckCircle2 className="w-4 h-4 text-[#115E59] shrink-0 mt-0.5" />
                 <span>Government photo ID & residential address proof of parents</span>
               </li>
               <li className="flex items-start gap-2.5">
-                <CheckCircle2 className="w-4 h-4 text-[#064E3B] shrink-0 mt-0.5" />
+                <CheckCircle2 className="w-4 h-4 text-[#115E59] shrink-0 mt-0.5" />
                 <span>Class 10 Board Marksheet & Migration Certificate (for Class 11/12 entrants)</span>
               </li>
             </ul>
@@ -300,65 +300,65 @@ export const ShakunAdmissionsPage: React.FC = () => {
                     'Official CBSE document checklist, stream prerequisites, and diagnostic syllabus outline.'
                   )
                 }
-                className="w-full py-3 px-4 rounded-xl bg-white border border-[#D1E5DB] text-[#064E3B] hover:bg-[#EBF2EE] font-mono font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all cursor-pointer shadow-xs"
+                className="w-full py-3 px-4 rounded-xl bg-white border border-[#CCFBF1] text-[#115E59] hover:bg-[#F0FDFA] font-mono font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all cursor-pointer shadow-xs"
               >
-                <Download className="w-4 h-4 text-[#064E3B]" />
+                <Download className="w-4 h-4 text-[#115E59]" />
                 <span>Download Official CBSE Checklist (PDF)</span>
               </button>
             </div>
 
             {/* Bursar Note */}
-            <div className="p-4 rounded-2xl bg-[#F0FDF4] border border-[#DCFCE7] space-y-1.5 text-xs text-[#166534]">
-              <strong className="block font-mono uppercase tracking-wider text-[#064E3B]">
+            <div className="p-4 rounded-2xl bg-[#F0FDFA] border border-[#CCFBF1] space-y-1.5 text-xs text-[#0F766E]">
+              <strong className="block font-mono uppercase tracking-wider text-[#115E59]">
                 Fee Schedule & Sibling Policy
               </strong>
-              <p className="leading-relaxed text-[#1E3B32]">
+              <p className="leading-relaxed text-[#1A3C38]">
                 Detailed fee breakdowns, quarterly installment calendars, and sibling concession guidelines are available upon request from the campus bursar office.
               </p>
             </div>
           </div>
 
           {/* Direct CBSE Admission Application Form */}
-          <div className="lg:col-span-7 bg-white p-6 sm:p-9 rounded-3xl border border-[#D1E5DB] shadow-md space-y-6">
+          <div className="lg:col-span-7 bg-white p-6 sm:p-9 rounded-3xl border border-[#CCFBF1] shadow-md space-y-6">
             <div>
-              <span className="text-xs font-mono font-bold text-[#064E3B] uppercase tracking-wider block mb-1">
+              <span className="text-xs font-mono font-bold text-[#115E59] uppercase tracking-wider block mb-1">
                 Official Admission Portal
               </span>
-              <h3 className="font-editorial text-2xl sm:text-3xl font-bold text-[#021C16]">
+              <h3 className="font-editorial text-2xl sm:text-3xl font-bold text-[#042F2E]">
                 Register for Rapid Shakuntlayan
               </h3>
-              <p className="text-xs text-[#3C584E]">
+              <p className="text-xs text-[#3D6B63]">
                 Initiate your candidate dossier for CBSE Class 1 to Class 12 enrollment.
               </p>
             </div>
 
             {submittedId ? (
               <div className="text-center py-8 space-y-4">
-                <div className="w-14 h-14 rounded-full bg-[#E3EFE9] text-[#064E3B] flex items-center justify-center mx-auto border border-[#34D399]/40">
+                <div className="w-14 h-14 rounded-full bg-[#F0FDFA] text-[#115E59] flex items-center justify-center mx-auto border border-[#2DD4BF]/40">
                   <CheckCircle2 className="w-8 h-8" />
                 </div>
-                <h4 className="font-editorial text-2xl font-bold text-[#021C16]">
+                <h4 className="font-editorial text-2xl font-bold text-[#042F2E]">
                   Candidate Application Logged!
                 </h4>
-                <p className="text-xs sm:text-sm text-[#3C584E] max-w-md mx-auto leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#3D6B63] max-w-md mx-auto leading-relaxed">
                   Thank you, <strong>{parentName}</strong>. The application for <strong>{studentName}</strong> for <strong>{selectedClass}</strong> has been logged under official reference:
                 </p>
-                <div className="p-3.5 rounded-2xl bg-[#F8FAF8] border border-[#D1E5DB] font-mono text-base font-bold text-[#064E3B] inline-block px-6">
+                <div className="p-3.5 rounded-2xl bg-[#F0FDFA] border border-[#CCFBF1] font-mono text-base font-bold text-[#115E59] inline-block px-6">
                   {submittedId}
                 </div>
-                <p className="text-xs text-[#4E776A]">
+                <p className="text-xs text-[#4D7C72]">
                   Our admissions registrar will contact you at <strong>{phone}</strong> within 1 working day to coordinate the diagnostic aptitude check.
                 </p>
                 <div className="pt-3 flex flex-wrap justify-center gap-3">
                   <Link
                     to="/visit"
-                    className="px-5 py-2.5 rounded-xl bg-[#064E3B] hover:bg-[#043D2E] text-white font-bold text-xs uppercase tracking-wider transition-all"
+                    className="px-5 py-2.5 rounded-xl bg-[#115E59] hover:bg-[#134E4A] text-white font-bold text-xs uppercase tracking-wider transition-all"
                   >
                     Schedule Campus Visit
                   </Link>
                   <Link
                     to="/shakuntlayan"
-                    className="px-5 py-2.5 rounded-xl bg-[#F8FAF8] border border-[#D1E5DB] text-[#021C16] font-bold text-xs uppercase tracking-wider hover:bg-[#D1E5DB]/50 transition-all"
+                    className="px-5 py-2.5 rounded-xl bg-[#F0FDFA] border border-[#CCFBF1] text-[#042F2E] font-bold text-xs uppercase tracking-wider hover:bg-[#CCFBF1]/50 transition-all"
                   >
                     Return to Shakuntlayan
                   </Link>
@@ -375,14 +375,14 @@ export const ShakunAdmissionsPage: React.FC = () => {
 
                 {/* Class Selection Dropdown */}
                 <div>
-                  <label htmlFor="targetClass" className="block text-xs font-mono font-bold text-[#064E3B] uppercase tracking-wider mb-1.5">
+                  <label htmlFor="targetClass" className="block text-xs font-mono font-bold text-[#115E59] uppercase tracking-wider mb-1.5">
                     Target Class / Academic Stream <span className="text-[#BE123C]">*</span>
                   </label>
                   <select
                     id="targetClass"
                     value={selectedClass}
                     onChange={(e) => setSelectedClass(e.target.value)}
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-[#D1E5DB] bg-[#F8FAF8] text-xs sm:text-sm text-[#021C16] focus:outline-none focus:ring-2 focus:ring-[#064E3B]/30 focus:border-[#064E3B]"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-[#CCFBF1] bg-[#F0FDFA] text-xs sm:text-sm text-[#042F2E] focus:outline-none focus:ring-2 focus:ring-[#115E59]/30 focus:border-[#115E59]"
                     required
                   >
                     <optgroup label="Primary Wing">
@@ -412,7 +412,7 @@ export const ShakunAdmissionsPage: React.FC = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div>
-                    <label htmlFor="studentName" className="block text-xs font-mono font-bold text-[#064E3B] uppercase tracking-wider mb-1">
+                    <label htmlFor="studentName" className="block text-xs font-mono font-bold text-[#115E59] uppercase tracking-wider mb-1">
                       Student Full Name <span className="text-[#BE123C]">*</span>
                     </label>
                     <input
@@ -421,13 +421,13 @@ export const ShakunAdmissionsPage: React.FC = () => {
                       placeholder="e.g. Aarav Singhania"
                       value={studentName}
                       onChange={(e) => setStudentName(e.target.value)}
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-[#D1E5DB] bg-[#F8FAF8] text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#064E3B]/30 focus:border-[#064E3B]"
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-[#CCFBF1] bg-[#F0FDFA] text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#115E59]/30 focus:border-[#115E59]"
                       required
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="parentName" className="block text-xs font-mono font-bold text-[#064E3B] uppercase tracking-wider mb-1">
+                    <label htmlFor="parentName" className="block text-xs font-mono font-bold text-[#115E59] uppercase tracking-wider mb-1">
                       Parent / Guardian Name <span className="text-[#BE123C]">*</span>
                     </label>
                     <input
@@ -436,7 +436,7 @@ export const ShakunAdmissionsPage: React.FC = () => {
                       placeholder="e.g. Dr. Rajesh Singhania"
                       value={parentName}
                       onChange={(e) => setParentName(e.target.value)}
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-[#D1E5DB] bg-[#F8FAF8] text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#064E3B]/30 focus:border-[#064E3B]"
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-[#CCFBF1] bg-[#F0FDFA] text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#115E59]/30 focus:border-[#115E59]"
                       required
                     />
                   </div>
@@ -444,7 +444,7 @@ export const ShakunAdmissionsPage: React.FC = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div>
-                    <label htmlFor="phone" className="block text-xs font-mono font-bold text-[#064E3B] uppercase tracking-wider mb-1">
+                    <label htmlFor="phone" className="block text-xs font-mono font-bold text-[#115E59] uppercase tracking-wider mb-1">
                       Telephone / Mobile <span className="text-[#BE123C]">*</span>
                     </label>
                     <input
@@ -453,13 +453,13 @@ export const ShakunAdmissionsPage: React.FC = () => {
                       placeholder="10-digit mobile number"
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-[#D1E5DB] bg-[#F8FAF8] text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#064E3B]/30 focus:border-[#064E3B]"
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-[#CCFBF1] bg-[#F0FDFA] text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#115E59]/30 focus:border-[#115E59]"
                       required
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="block text-xs font-mono font-bold text-[#064E3B] uppercase tracking-wider mb-1">
+                    <label htmlFor="email" className="block text-xs font-mono font-bold text-[#115E59] uppercase tracking-wider mb-1">
                       Email Address <span className="text-[#BE123C]">*</span>
                     </label>
                     <input
@@ -468,7 +468,7 @@ export const ShakunAdmissionsPage: React.FC = () => {
                       placeholder="parent@domain.com"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-[#D1E5DB] bg-[#F8FAF8] text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#064E3B]/30 focus:border-[#064E3B]"
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-[#CCFBF1] bg-[#F0FDFA] text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#115E59]/30 focus:border-[#115E59]"
                       required
                     />
                   </div>
@@ -476,7 +476,7 @@ export const ShakunAdmissionsPage: React.FC = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div>
-                    <label htmlFor="previousSchool" className="block text-xs font-mono font-bold text-[#064E3B] uppercase tracking-wider mb-1">
+                    <label htmlFor="previousSchool" className="block text-xs font-mono font-bold text-[#115E59] uppercase tracking-wider mb-1">
                       Current / Previous School & Board
                     </label>
                     <input
@@ -485,12 +485,12 @@ export const ShakunAdmissionsPage: React.FC = () => {
                       placeholder="e.g. DPS (CBSE) / St. Xavier's (ICSE)"
                       value={previousSchool}
                       onChange={(e) => setPreviousSchool(e.target.value)}
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-[#D1E5DB] bg-[#F8FAF8] text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#064E3B]/30 focus:border-[#064E3B]"
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-[#CCFBF1] bg-[#F0FDFA] text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#115E59]/30 focus:border-[#115E59]"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="address" className="block text-xs font-mono font-bold text-[#064E3B] uppercase tracking-wider mb-1">
+                    <label htmlFor="address" className="block text-xs font-mono font-bold text-[#115E59] uppercase tracking-wider mb-1">
                       Residential Locality
                     </label>
                     <input
@@ -499,13 +499,13 @@ export const ShakunAdmissionsPage: React.FC = () => {
                       placeholder="e.g. Model Town, Sector 18"
                       value={address}
                       onChange={(e) => setAddress(e.target.value)}
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-[#D1E5DB] bg-[#F8FAF8] text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#064E3B]/30 focus:border-[#064E3B]"
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-[#CCFBF1] bg-[#F0FDFA] text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#115E59]/30 focus:border-[#115E59]"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-xs font-mono font-bold text-[#064E3B] uppercase tracking-wider mb-1">
+                  <label htmlFor="message" className="block text-xs font-mono font-bold text-[#115E59] uppercase tracking-wider mb-1">
                     Scholastic Goals / Stream Preferences (Optional)
                   </label>
                   <textarea
@@ -514,7 +514,7 @@ export const ShakunAdmissionsPage: React.FC = () => {
                     placeholder="Specific academic ambitions, Olympiad aspirations, or inquiries for the academic dean..."
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-[#D1E5DB] bg-[#F8FAF8] text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#064E3B]/30 focus:border-[#064E3B]"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-[#CCFBF1] bg-[#F0FDFA] text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#115E59]/30 focus:border-[#115E59]"
                   />
                 </div>
 
@@ -522,13 +522,13 @@ export const ShakunAdmissionsPage: React.FC = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-3.5 px-6 rounded-xl bg-[#042F24] hover:bg-[#021C16] text-[#A7F3D0] border border-[#34D399]/40 font-mono font-bold text-xs uppercase tracking-wider shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+                    className="w-full py-3.5 px-6 rounded-xl bg-[#134E4A] hover:bg-[#042F2E] text-[#99F6E4] border border-[#2DD4BF]/40 font-mono font-bold text-xs uppercase tracking-wider shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
                   >
                     {isSubmitting ? (
                       <span>Submitting Candidate Dossier...</span>
                     ) : (
                       <>
-                        <Send className="w-4 h-4 text-[#34D399]" />
+                        <Send className="w-4 h-4 text-[#2DD4BF]" />
                         <span>Submit CBSE Admission Application</span>
                       </>
                     )}

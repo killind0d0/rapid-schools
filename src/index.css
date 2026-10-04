@@ -6,50 +6,55 @@
     --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
 
-    /* Imperial Obsidian Claret Heritage Palette */
-    --color-claret-950: #1C0306;
-    --color-claret-900: #2C070C;
-    --color-claret-850: #3D0B12;
-    --color-claret-800: #4A101A;
-    --color-claret-700: #5A121E;
-    --color-claret-600: #751B29;
+    /* Academic Sapphire - Deep Navy */
+    --color-navy-950: #020617;
+    --color-navy-900: #0F172A;
+    --color-navy-850: #162032;
+    --color-navy-800: #1E293B;
+    --color-navy-700: #283548;
+    --color-navy-600: #334155;
 
-    /* Burnished Copper & Warm Gold Accents */
-    --color-copper-600: #A2521C;
-    --color-copper-500: #BD672A;
-    --color-copper-400: #D47A3B;
-    --color-copper-300: #E8955A;
-    --color-copper-200: #F3C292;
-    --color-copper-100: #FCE8D5;
+    /* Warm Amber & Gold Accents */
+    --color-amber-600: #D97706;
+    --color-amber-500: #F59E0B;
+    --color-amber-400: #FBBF24;
+    --color-amber-300: #FCD34D;
+    --color-amber-200: #FDE68A;
+    --color-amber-100: #FEF3C7;
 
-    /* Alabaster Linen & Sandstone Paper Canvas */
-    --color-alabaster-base: #FAF6F0;
-    --color-alabaster-card: #FFFFFF;
-    --color-alabaster-surface: #FCFAF6;
-    --color-alabaster-subtle: #F6F1E7;
-    --color-alabaster-border: #E8DFD1;
-    --color-alabaster-border-subtle: #EFE8DD;
+    /* Clean Slate White Surfaces */
+    --color-surface-base: #F8FAFC;
+    --color-surface-card: #FFFFFF;
+    --color-surface-main: #F8FAFC;
+    --color-surface-subtle: #F1F5F9;
+    --color-surface-border: #E2E8F0;
+    --color-surface-border-subtle: #F1F5F9;
 
-    /* Deep Ink & Scholarly Typography */
-    --color-ink-950: #23070B;
-    --color-ink-900: #2E1F21;
-    --color-ink-800: #423738;
-    --color-ink-700: #5C4E50;
-    --color-ink-500: #7D6E70;
-    --color-ink-400: #9E8F91;
+    /* Slate Text Typography */
+    --color-text-950: #020617;
+    --color-text-900: #0F172A;
+    --color-text-800: #1E293B;
+    --color-text-700: #334155;
+    --color-text-500: #64748B;
+    --color-text-400: #94A3B8;
 
-    /* Institutional Accents */
-    --color-forest-900: #043327;
-    --color-forest-800: #064E3B;
-    --color-forest-700: #0D654E;
-    --color-forest-500: #10B981;
+    /* Institutional Accents - Teal / Emerald (for Shakuntlayan) */
+    --color-teal-900: #134E4A;
+    --color-teal-800: #115E59;
+    --color-teal-700: #0F766E;
+    --color-teal-500: #14B8A6;
   }
 
   html {
     scroll-behavior: smooth;
     font-family: var(--font-sans);
-    background-color: #FAF6F0;
-    color: #423738;
+    background-color: #F8FAFC;
+    color: #1E293B;
+  }
+
+  ::selection {
+    background-color: #F59E0B;
+    color: #FFFFFF;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -70,15 +75,15 @@
     height: 8px;
   }
   ::-webkit-scrollbar-track {
-    background: #F4EFE6;
+    background: #F1F5F9;
   }
   ::-webkit-scrollbar-thumb {
-    background: #D4C7B4;
+    background: #CBD5E1;
     border-radius: 4px;
-    border: 2px solid #F4EFE6;
+    border: 2px solid #F1F5F9;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #BD672A;
+    background: #F59E0B;
   }
 }
 
@@ -99,55 +104,55 @@
 
 /* Luxury Glass & Surface Helpers */
 .luxury-glass-dark {
-  background: rgba(44, 7, 12, 0.88);
+  background: rgba(15, 23, 42, 0.92);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.12), 0 20px 40px -15px rgba(28, 3, 6, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.12), 0 20px 40px -15px rgba(2, 6, 23, 0.7);
 }
 
 .luxury-glass-light {
   background-color: #FFFFFF;
-  border: 1px solid #E8DFD1;
-  box-shadow: 0 20px 45px -15px rgba(44, 7, 12, 0.05), 0 2px 8px -2px rgba(44, 7, 12, 0.02);
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 20px 45px -15px rgba(15, 23, 42, 0.05), 0 2px 8px -2px rgba(15, 23, 42, 0.02);
 }
 
 .luxury-glass-linen {
-  background-color: #FCFAF6;
-  border: 1px solid #E8DFD1;
-  box-shadow: 0 12px 36px -12px rgba(44, 7, 12, 0.04);
+  background-color: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 12px 36px -12px rgba(15, 23, 42, 0.04);
 }
 
 /* Luxury Button System */
 .luxury-btn-primary {
-  background: linear-gradient(135deg, #BD672A 0%, #D47A3B 50%, #C26829 100%);
+  background: linear-gradient(135deg, #D97706 0%, #F59E0B 50%, #D97706 100%);
   color: #FFFFFF;
-  box-shadow: 0 4px 18px -2px rgba(189, 103, 42, 0.38), inset 0 1px 0 0 rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 18px -2px rgba(245, 158, 11, 0.38), inset 0 1px 0 0 rgba(255, 255, 255, 0.25);
   transition: all 300ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .luxury-btn-primary:hover {
-  background: linear-gradient(135deg, #C97232 0%, #E08544 50%, #BD672A 100%);
+  background: linear-gradient(135deg, #E08514 0%, #FBBF24 50%, #D97706 100%);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px -2px rgba(189, 103, 42, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.35);
+  box-shadow: 0 8px 24px -2px rgba(245, 158, 11, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.35);
 }
 
 .luxury-btn-primary:active {
   transform: translateY(0);
-  box-shadow: 0 2px 10px -2px rgba(189, 103, 42, 0.4);
+  box-shadow: 0 2px 10px -2px rgba(245, 158, 11, 0.4);
 }
 
 .luxury-btn-outline {
-  border: 1px solid rgba(189, 103, 42, 0.4);
-  background: rgba(189, 103, 42, 0.05);
-  color: #BD672A;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  background: rgba(245, 158, 11, 0.05);
+  color: #D97706;
   transition: all 300ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .luxury-btn-outline:hover {
-  background: rgba(189, 103, 42, 0.12);
-  border-color: #BD672A;
-  box-shadow: 0 0 16px -2px rgba(189, 103, 42, 0.25);
+  background: rgba(245, 158, 11, 0.12);
+  border-color: #F59E0B;
+  box-shadow: 0 0 16px -2px rgba(245, 158, 11, 0.25);
   transform: translateY(-1px);
 }
 
@@ -170,51 +175,54 @@
   width: 6px;
   height: 6px;
   border-radius: 9999px;
-  background: #BD672A;
-  box-shadow: 0 0 8px 1px rgba(189, 103, 42, 0.6);
+  background: #F59E0B;
+  box-shadow: 0 0 8px 1px rgba(245, 158, 11, 0.6);
 }
 
 /* Glow & Ambient Lighting */
+.amber-glow,
 .copper-glow {
-  box-shadow: 0 0 24px -2px rgba(189, 103, 42, 0.35);
+  box-shadow: 0 0 24px -2px rgba(245, 158, 11, 0.35);
 }
 
+.navy-glow,
 .claret-glow {
-  box-shadow: 0 0 32px -4px rgba(44, 7, 12, 0.45);
+  box-shadow: 0 0 32px -4px rgba(15, 23, 42, 0.45);
 }
 
 /* Academic Card (Existing Compatibility) */
 .academic-card {
   background-color: #FFFFFF;
-  border: 1px solid #E8DFD1;
-  box-shadow: 0 4px 20px -4px rgba(44, 7, 12, 0.04);
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 4px 20px -4px rgba(15, 23, 42, 0.04);
   transition: all 300ms ease;
 }
 
 .academic-card:hover {
-  border-color: #D47A3B;
-  box-shadow: 0 12px 32px -6px rgba(44, 7, 12, 0.08);
+  border-color: #F59E0B;
+  box-shadow: 0 12px 32px -6px rgba(15, 23, 42, 0.08);
 }
 
 .paper-panel {
-  background-color: #FAF6F0;
-  border: 1px solid #E8DFD1;
+  background-color: #F8FAFC;
+  border: 1px solid #E2E8F0;
 }
 
-/* Claret Accent Line */
-.claret-accent-line {
+/* Accent Line */
+.claret-accent-line,
+.navy-accent-line {
   height: 2px;
-  background: linear-gradient(90deg, #BD672A 0%, #3D0B12 50%, transparent 100%);
+  background: linear-gradient(90deg, #F59E0B 0%, #0F172A 50%, transparent 100%);
 }
 
 /* Hairline Metallic Divider */
 .metallic-divider {
   height: 1px;
-  background: linear-gradient(90deg, transparent 0%, rgba(189, 103, 42, 0.35) 50%, transparent 100%);
+  background: linear-gradient(90deg, transparent 0%, rgba(245, 158, 11, 0.35) 50%, transparent 100%);
 }
 
-/* Accessible focus outline in warm copper */
+/* Accessible focus outline in warm amber */
 *:focus-visible {
-  outline: 2px solid #BD672A;
+  outline: 2px solid #F59E0B;
   outline-offset: 3px;
 }

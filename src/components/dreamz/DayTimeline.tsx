@@ -63,38 +63,38 @@ const schedule: TimelineEvent[] = [
 
 export const DayTimeline: React.FC = () => {
   return (
-    <div className="relative pl-6 sm:pl-10 ml-2 sm:ml-4 border-l-2 border-dashed border-[#FDBA74]/80 space-y-7 py-3">
+    <div className="relative pl-6 sm:pl-10 ml-2 sm:ml-4 border-l-2 border-dashed border-[#FCD34D]/80 space-y-7 py-3">
       {schedule.map((item, index) => {
         const Icon = item.icon;
         return (
           <div key={index} className="relative group">
             {/* Glowing Chronological Amber Node */}
-            <div className="absolute -left-[35px] sm:-left-[51px] top-1.5 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-gradient-to-br from-[#FED7AA] to-[#FB923C] ring-4 ring-[#FFF7ED] shadow-[0_0_16px_rgba(251,146,60,0.35)] flex items-center justify-center text-[#7C2D12] transition-transform duration-300 group-hover:scale-110">
+            <div className="absolute -left-[35px] sm:-left-[51px] top-1.5 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-gradient-to-br from-[#FDE68A] to-[#FBBF24] ring-4 ring-[#FFFBEB] shadow-[0_0_16px_rgba(245,158,11,0.35)] flex items-center justify-center text-[#78350F] transition-transform duration-300 group-hover:scale-110">
               <Icon className="w-4 h-4" />
             </div>
 
             {/* Chronicle Card */}
-            <div className="bg-[#FCF8F3] border border-[#F0DEC8] rounded-3xl p-5 sm:p-6 shadow-[0_4px_20px_-4px_rgba(180,59,14,0.05)] hover:border-[#FB923C]/50 hover:shadow-[0_12px_28px_-6px_rgba(180,59,14,0.1)] transition-all duration-300">
+            <div className="bg-[#F8FAFC] border border-[#FEF3C7] rounded-3xl p-5 sm:p-6 shadow-[0_4px_20px_-4px_rgba(180,83,9,0.05)] hover:border-[#FBBF24]/50 hover:shadow-[0_12px_28px_-6px_rgba(180,83,9,0.1)] transition-all duration-300">
               <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
-                <span className="inline-flex items-center gap-1.5 text-xs font-mono font-bold px-3 py-1 rounded-full bg-[#FFEDD5] text-[#9A3412] border border-[#FED7AA]">
+                <span className="inline-flex items-center gap-1.5 text-xs font-mono font-bold px-3 py-1 rounded-full bg-[#FEF3C7] text-[#92400E] border border-[#FDE68A]">
                   {item.time}
                 </span>
-                <span className="text-[11px] font-semibold uppercase tracking-wider text-[#166534] bg-[#DCFCE7] px-2.5 py-0.5 rounded-full border border-[#86EFAC]/60 font-sans">
+                <span className="text-[11px] font-semibold uppercase tracking-wider text-[#0F766E] bg-[#CCFBF1] px-2.5 py-0.5 rounded-full border border-[#5EEAD4]/60 font-sans">
                   {item.phase}
                 </span>
               </div>
 
-              <h4 className="font-editorial text-xl sm:text-2xl font-bold text-[#2A1208] leading-tight mb-2">
+              <h4 className="font-editorial text-xl sm:text-2xl font-bold text-[#451A03] leading-tight mb-2">
                 {item.title}
               </h4>
 
-              <p className="text-xs sm:text-sm text-[#5C3D2E] leading-relaxed mb-3 font-normal">
+              <p className="text-xs sm:text-sm text-[#78350F] leading-relaxed mb-3 font-normal">
                 {item.description}
               </p>
 
-              <div className="pt-2.5 border-t border-[#F0DEC8]/70 flex items-center gap-2 text-[11px] sm:text-xs text-[#8C2C07] font-medium">
-                <span className="font-bold uppercase tracking-wider text-[#B43B0E]">Developmental Goal:</span>
-                <span className="text-[#4A2E20]">{item.focus}</span>
+              <div className="pt-2.5 border-t border-[#FEF3C7]/70 flex items-center gap-2 text-[11px] sm:text-xs text-[#92400E] font-medium">
+                <span className="font-bold uppercase tracking-wider text-[#B45309]">Developmental Goal:</span>
+                <span className="text-[#451A03]">{item.focus}</span>
               </div>
             </div>
           </div>

@@ -145,7 +145,7 @@ const facilities: CampusFacility[] = [
 
 export const ShakunCampusPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-[#F8FAF8] pb-24 text-[#021C16]">
+    <div className="min-h-screen bg-[#F0FDFA] pb-24 text-[#042F2E]">
       <Breadcrumbs
         items={[
           { label: 'Rapid Shakuntlayan', href: '/shakuntlayan' },
@@ -154,15 +154,15 @@ export const ShakunCampusPage: React.FC = () => {
       />
 
       {/* Hero Canvas in Sovereign British Racing Forest Emerald */}
-      <section className="bg-gradient-to-br from-[#042F24] via-[#021C16] to-[#01120D] text-white py-16 sm:py-20 relative overflow-hidden">
+      <section className="bg-gradient-to-br from-[#134E4A] via-[#042F2E] to-[#042F2E] text-white py-16 sm:py-20 relative overflow-hidden">
         {/* Mint Conifer Aurora Glow */}
         <div className="absolute top-0 right-1/4 w-96 h-96 bg-[radial-gradient(circle,_rgba(52,211,153,0.14)_0%,_transparent_70%)] pointer-events-none" />
         <div className="absolute -bottom-16 left-10 w-96 h-96 bg-[radial-gradient(circle,_rgba(197,160,89,0.1)_0%,_transparent_70%)] pointer-events-none" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/10 via-transparent to-black/35 pointer-events-none" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-mono font-bold uppercase tracking-wider bg-[#064E3B] text-[#A7F3D0] border border-[#34D399]/40 shadow-xs">
-            <Microscope className="w-3.5 h-3.5 text-[#34D399]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-mono font-bold uppercase tracking-wider bg-[#115E59] text-[#99F6E4] border border-[#2DD4BF]/40 shadow-xs">
+            <Microscope className="w-3.5 h-3.5 text-[#2DD4BF]" />
             <span>Infrastructure Dossier • Verified Campus Facilities</span>
           </div>
 
@@ -170,7 +170,7 @@ export const ShakunCampusPage: React.FC = () => {
             Rapid Shakuntlayan Campus Infrastructure
           </h1>
 
-          <p className="max-w-2xl mx-auto text-sm sm:text-base text-[#D1E7DF] font-normal leading-relaxed">
+          <p className="max-w-2xl mx-auto text-sm sm:text-base text-[#CCFBF1] font-normal leading-relaxed">
             Architectural and scientific facilities purpose-built for rigorous CBSE scholarship, empirical discovery, and athletic discipline.
           </p>
         </div>
@@ -184,7 +184,7 @@ export const ShakunCampusPage: React.FC = () => {
             return (
               <div
                 key={fac.id}
-                className="rounded-3xl bg-[#F8FAF8] border border-[#D1E5DB] shadow-xs overflow-hidden flex flex-col hover:border-[#042F24] hover:shadow-[0_12px_30px_-8px_rgba(4,47,36,0.12)] transition-all duration-300"
+                className="rounded-3xl bg-[#F0FDFA] border border-[#CCFBF1] shadow-xs overflow-hidden flex flex-col hover:border-[#134E4A] hover:shadow-[0_12px_30px_-8px_rgba(4,47,36,0.12)] transition-all duration-300"
               >
                 {/* Dossier Image Banner */}
                 <div className="h-60 overflow-hidden relative">
@@ -193,11 +193,11 @@ export const ShakunCampusPage: React.FC = () => {
                     alt={fac.title}
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#021C16]/90 via-[#021C16]/30 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#042F2E]/90 via-[#042F2E]/30 to-transparent" />
 
                   {/* Badges on image */}
                   <div className="absolute top-4 left-4 flex items-center gap-2">
-                    <span className="px-3 py-1 rounded-full text-[10px] font-mono font-bold uppercase tracking-wider bg-[#042F24]/90 text-[#A7F3D0] border border-[#34D399]/30 backdrop-blur-md">
+                    <span className="px-3 py-1 rounded-full text-[10px] font-mono font-bold uppercase tracking-wider bg-[#134E4A]/90 text-[#99F6E4] border border-[#2DD4BF]/30 backdrop-blur-md">
                       {fac.dossierCode}
                     </span>
                   </div>
@@ -211,7 +211,7 @@ export const ShakunCampusPage: React.FC = () => {
                         {fac.title}
                       </h3>
                     </div>
-                    <div className="w-10 h-10 rounded-2xl bg-[#064E3B] text-[#A7F3D0] border border-[#34D399]/30 flex items-center justify-center shrink-0">
+                    <div className="w-10 h-10 rounded-2xl bg-[#115E59] text-[#99F6E4] border border-[#2DD4BF]/30 flex items-center justify-center shrink-0">
                       <Icon className="w-5 h-5" />
                     </div>
                   </div>
@@ -219,37 +219,37 @@ export const ShakunCampusPage: React.FC = () => {
 
                 {/* Dossier Specifications Panel */}
                 <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-5">
-                  <p className="text-xs sm:text-sm text-[#3C584E] leading-relaxed">
+                  <p className="text-xs sm:text-sm text-[#3D6B63] leading-relaxed">
                     {fac.desc}
                   </p>
 
                   {/* Architectural Blueprint Specifications Table */}
-                  <div className="p-4 rounded-2xl bg-white border border-[#D1E5DB] space-y-2 text-xs">
-                    <div className="font-mono text-[11px] font-bold uppercase tracking-wider text-[#064E3B] border-b border-[#D1E5DB] pb-1.5 flex items-center justify-between">
+                  <div className="p-4 rounded-2xl bg-white border border-[#CCFBF1] space-y-2 text-xs">
+                    <div className="font-mono text-[11px] font-bold uppercase tracking-wider text-[#115E59] border-b border-[#CCFBF1] pb-1.5 flex items-center justify-between">
                       <span>Dossier Specifications</span>
                       <span className="text-[#8A6A27]">CBSE Verified</span>
                     </div>
-                    <div className="grid grid-cols-2 gap-2 text-[#1E3B32]">
+                    <div className="grid grid-cols-2 gap-2 text-[#1A3C38]">
                       <div>
-                        <span className="text-[10px] text-[#4E776A] block font-mono">Capacity / Layout</span>
-                        <strong className="text-xs text-[#021C16]">{fac.specifications.workstations}</strong>
+                        <span className="text-[10px] text-[#4D7C72] block font-mono">Capacity / Layout</span>
+                        <strong className="text-xs text-[#042F2E]">{fac.specifications.workstations}</strong>
                       </div>
                       <div>
-                        <span className="text-[10px] text-[#4E776A] block font-mono">Compliance Norm</span>
-                        <strong className="text-xs text-[#021C16]">{fac.specifications.standards}</strong>
+                        <span className="text-[10px] text-[#4D7C72] block font-mono">Compliance Norm</span>
+                        <strong className="text-xs text-[#042F2E]">{fac.specifications.standards}</strong>
                       </div>
                     </div>
                   </div>
 
                   {/* Key Apparatus Manifest */}
-                  <div className="pt-2 border-t border-[#D1E5DB]">
+                  <div className="pt-2 border-t border-[#CCFBF1]">
                     <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#8A6A27] block mb-2">
                       Key Inventory & Infrastructure:
                     </span>
-                    <ul className="space-y-1 text-xs text-[#1E3B32]">
+                    <ul className="space-y-1 text-xs text-[#1A3C38]">
                       {fac.keyApparatus.map((item, idx) => (
                         <li key={idx} className="flex items-center gap-2">
-                          <span className="w-1.5 h-1.5 rounded-full bg-[#064E3B]" />
+                          <span className="w-1.5 h-1.5 rounded-full bg-[#115E59]" />
                           <span>{item}</span>
                         </li>
                       ))}
@@ -262,23 +262,23 @@ export const ShakunCampusPage: React.FC = () => {
         </div>
 
         {/* Guided Campus Tour Banner */}
-        <div className="mt-14 p-8 sm:p-10 rounded-3xl bg-gradient-to-r from-[#042F24] via-[#021C16] to-[#01120D] text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl border border-[#0F4738]">
+        <div className="mt-14 p-8 sm:p-10 rounded-3xl bg-gradient-to-r from-[#134E4A] via-[#042F2E] to-[#042F2E] text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl border border-[#115E59]">
           <div className="space-y-1 text-center md:text-left">
-            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#A7F3D0] block">
+            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#99F6E4] block">
               In-Person Verification
             </span>
             <h3 className="font-editorial text-2xl sm:text-3xl font-bold text-white">
               Inspect our laboratories and campus in person
             </h3>
-            <p className="text-xs sm:text-sm text-[#D1E7DF] font-normal">
+            <p className="text-xs sm:text-sm text-[#CCFBF1] font-normal">
               Guided campus tours and academic counselor meetings are scheduled Monday through Saturday.
             </p>
           </div>
           <Link
             to="/visit"
-            className="px-6 py-3.5 rounded-xl bg-[#C5A059] hover:bg-[#B38D46] text-[#021C16] font-bold text-xs uppercase tracking-wider transition-colors shrink-0 flex items-center gap-2 shadow-sm"
+            className="px-6 py-3.5 rounded-xl bg-[#C5A059] hover:bg-[#B38D46] text-[#042F2E] font-bold text-xs uppercase tracking-wider transition-colors shrink-0 flex items-center gap-2 shadow-sm"
           >
-            <Calendar className="w-4 h-4 text-[#021C16]" />
+            <Calendar className="w-4 h-4 text-[#042F2E]" />
             <span>Book Guided Campus Visit</span>
           </Link>
         </div>

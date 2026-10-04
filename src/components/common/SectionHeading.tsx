@@ -18,19 +18,19 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
   light = false
 }) => {
   const badgeClasses = {
-    copper: 'bg-[#BD672A]/10 text-[#BD672A] border-[#BD672A]/25',
-    claret: 'bg-[#3D0B12]/15 text-[#BD672A] border-[#3D0B12]/30',
-    forest: 'bg-[#064E3B]/10 text-[#0D654E] border-[#064E3B]/20',
-    terracotta: 'bg-[#BD672A]/15 text-[#A2521C] border-[#BD672A]/30',
-    gold: 'bg-[#D47A3B]/15 text-[#BD672A] border-[#D47A3B]/30'
+    copper: 'bg-[#F59E0B]/10 text-[#F59E0B] border-[#F59E0B]/25',
+    claret: 'bg-[#162032]/15 text-[#F59E0B] border-[#162032]/30',
+    forest: 'bg-[#115E59]/10 text-[#0F766E] border-[#115E59]/20',
+    terracotta: 'bg-[#F59E0B]/15 text-[#D97706] border-[#F59E0B]/30',
+    gold: 'bg-[#FBBF24]/15 text-[#F59E0B] border-[#FBBF24]/30'
   }[badgeColor];
 
   const dotClasses = {
-    copper: 'bg-[#BD672A] shadow-[0_0_8px_rgba(189,103,42,0.6)]',
-    claret: 'bg-[#BD672A] shadow-[0_0_8px_rgba(189,103,42,0.6)]',
-    forest: 'bg-[#10B981] shadow-[0_0_8px_rgba(16,185,129,0.5)]',
-    terracotta: 'bg-[#BD672A] shadow-[0_0_8px_rgba(189,103,42,0.6)]',
-    gold: 'bg-[#D47A3B] shadow-[0_0_8px_rgba(212,122,59,0.6)]'
+    copper: 'bg-[#F59E0B] shadow-[0_0_8px_rgba(245,158,11,0.6)]',
+    claret: 'bg-[#F59E0B] shadow-[0_0_8px_rgba(245,158,11,0.6)]',
+    forest: 'bg-[#14B8A6] shadow-[0_0_8px_rgba(20,184,166,0.5)]',
+    terracotta: 'bg-[#F59E0B] shadow-[0_0_8px_rgba(245,158,11,0.6)]',
+    gold: 'bg-[#FBBF24] shadow-[0_0_8px_rgba(251,191,36,0.6)]'
   }[badgeColor];
 
   const textAlign = align === 'center' ? 'text-center items-center' : 'text-left items-start';
@@ -66,7 +66,7 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
         <React.Fragment key={idx}>
           {idx > 0 && ' '}
           {isEmotional ? (
-            <span className="italic font-normal text-[#BD672A] drop-shadow-xs">
+            <span className="italic font-normal text-[#F59E0B] drop-shadow-xs">
               {word}
             </span>
           ) : (
@@ -92,7 +92,7 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
 
       <h2
         className={`font-editorial text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight leading-[1.15] ${
-          light ? 'text-[#FAF6F0]' : 'text-[#23070B]'
+          light ? 'text-[#F8FAFC]' : 'text-[#020617]'
         }`}
       >
         {renderTitle(title)}
@@ -100,15 +100,15 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
 
       {/* Luxury Hairline Metallic Divider with Center Diamond */}
       <div className={`flex items-center gap-2 my-4 ${align === 'center' ? 'mx-auto' : ''}`}>
-        <div className="w-8 sm:w-12 h-px bg-gradient-to-r from-transparent to-[#BD672A]/50" />
-        <div className="w-1.5 h-1.5 rotate-45 bg-[#BD672A]/80 shadow-[0_0_6px_rgba(189,103,42,0.4)]" />
-        <div className="w-8 sm:w-12 h-px bg-gradient-to-l from-transparent to-[#BD672A]/50" />
+        <div className="w-8 sm:w-12 h-px bg-gradient-to-r from-transparent to-[#F59E0B]/50" />
+        <div className="w-1.5 h-1.5 rotate-45 bg-[#F59E0B]/80 shadow-[0_0_6px_rgba(245,158,11,0.4)]" />
+        <div className="w-8 sm:w-12 h-px bg-gradient-to-l from-transparent to-[#F59E0B]/50" />
       </div>
 
       {subtitle && (
         <p
           className={`max-w-3xl text-sm sm:text-base leading-relaxed font-sans ${
-            light ? 'text-[#DBCDC5]' : 'text-[#5C4E50]'
+            light ? 'text-[#CBD5E1]' : 'text-[#334155]'
           }`}
         >
           {subtitle}

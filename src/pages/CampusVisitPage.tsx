@@ -59,25 +59,25 @@ export const CampusVisitPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#FAF6F0] pb-24">
+    <div className="min-h-screen bg-[#F8FAFC] pb-24">
       <Breadcrumbs items={[{ label: 'Book a Campus Visit' }]} />
 
       {/* Header Banner */}
-      <section className="bg-[#1C0306] text-white py-16 sm:py-20 relative overflow-hidden">
+      <section className="bg-[#020617] text-white py-16 sm:py-20 relative overflow-hidden">
         {/* Layered radial glow */}
-        <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-[#BD672A]/15 rounded-full blur-[100px] pointer-events-none" />
-        <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-[#3D0B12]/50 rounded-full blur-[100px] pointer-events-none" />
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#BD672A]/30 to-transparent" />
+        <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-[#F59E0B]/15 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-[#162032]/50 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#F59E0B]/30 to-transparent" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-semibold uppercase tracking-widest bg-[#2C070C] text-[#F3C292] border border-[#BD672A]/30 font-mono">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#BD672A] shadow-[0_0_8px_rgba(189,103,42,0.8)]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-semibold uppercase tracking-widest bg-[#0F172A] text-[#FDE68A] border border-[#F59E0B]/30 font-mono">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#F59E0B] shadow-[0_0_8px_rgba(189,103,42,0.8)]" />
             Personal Guided Tour
           </div>
           <h1 className="font-editorial text-3xl sm:text-5xl lg:text-6xl font-medium tracking-tight text-white leading-tight">
-            Experience <span className="italic font-normal text-[#F3C292]">Rapid Schools</span> in Person
+            Experience <span className="italic font-normal text-[#FDE68A]">Rapid Schools</span> in Person
           </h1>
-          <p className="max-w-2xl mx-auto text-sm sm:text-base text-[#D4C3B3] leading-relaxed font-sans">
+          <p className="max-w-2xl mx-auto text-sm sm:text-base text-[#CBD5E1] leading-relaxed font-sans">
             Walk through our vibrant classrooms, science laboratories, creative art studios, and athletic spaces accompanied by an academic counselor.
           </p>
         </div>
@@ -88,84 +88,84 @@ export const CampusVisitPage: React.FC = () => {
           
           {/* Left: What to Expect / Campus Information */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="bg-white p-7 sm:p-9 rounded-3xl border border-[#E8DFD1] shadow-[0_20px_45px_-15px_rgba(44,7,12,0.05)] space-y-6">
-              <h2 className="font-editorial text-2xl font-medium text-[#23070B]">
+            <div className="bg-white p-7 sm:p-9 rounded-3xl border border-[#E2E8F0] shadow-[0_20px_45px_-15px_rgba(44,7,12,0.05)] space-y-6">
+              <h2 className="font-editorial text-2xl font-medium text-[#020617]">
                 What to Expect on Your Tour
               </h2>
 
-              <div className="space-y-4 text-xs sm:text-sm text-[#5C4E50] font-sans">
+              <div className="space-y-4 text-xs sm:text-sm text-[#334155] font-sans">
                 <div className="flex items-start gap-3">
-                  <div className="p-2.5 rounded-xl bg-[#BD672A]/10 text-[#BD672A] shrink-0 border border-[#BD672A]/25">
+                  <div className="p-2.5 rounded-xl bg-[#F59E0B]/10 text-[#F59E0B] shrink-0 border border-[#F59E0B]/25">
                     <Sparkles className="w-4 h-4" />
                   </div>
                   <div>
-                    <strong className="block text-[#23070B] font-semibold text-sm">Curriculum Immersion</strong>
+                    <strong className="block text-[#020617] font-semibold text-sm">Curriculum Immersion</strong>
                     Observe active teaching methodologies and peer collaboration in real-time learning spaces.
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="p-2.5 rounded-xl bg-[#064E3B]/10 text-[#064E3B] shrink-0 border border-[#064E3B]/20">
+                  <div className="p-2.5 rounded-xl bg-[#115E59]/10 text-[#115E59] shrink-0 border border-[#115E59]/20">
                     <GraduationCap className="w-4 h-4" />
                   </div>
                   <div>
-                    <strong className="block text-[#23070B] font-semibold text-sm">Facilities Exploration</strong>
+                    <strong className="block text-[#020617] font-semibold text-sm">Facilities Exploration</strong>
                     Tour science and IT laboratories, sports complexes, libraries, and child-safe play areas.
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="p-2.5 rounded-xl bg-[#BD672A]/10 text-[#BD672A] shrink-0 border border-[#BD672A]/25">
+                  <div className="p-2.5 rounded-xl bg-[#F59E0B]/10 text-[#F59E0B] shrink-0 border border-[#F59E0B]/25">
                     <Clock className="w-4 h-4" />
                   </div>
                   <div>
-                    <strong className="block text-[#23070B] font-semibold text-sm">Counselor Dialogue (45 Mins)</strong>
+                    <strong className="block text-[#020617] font-semibold text-sm">Counselor Dialogue (45 Mins)</strong>
                     One-on-one session addressing curriculum progression, fee structure, and student support.
                   </div>
                 </div>
               </div>
 
-              <div className="pt-5 border-t border-[#E8DFD1] text-xs text-[#6E5D5F] space-y-2.5 font-sans">
+              <div className="pt-5 border-t border-[#E2E8F0] text-xs text-[#475569] space-y-2.5 font-sans">
                 <div className="flex items-start gap-2.5">
-                  <MapPin className="w-4 h-4 text-[#BD672A] shrink-0 mt-0.5" />
+                  <MapPin className="w-4 h-4 text-[#F59E0B] shrink-0 mt-0.5" />
                   <span>{settings.address}</span>
                 </div>
                 <div className="flex items-center gap-2.5">
-                  <Phone className="w-4 h-4 text-[#BD672A] shrink-0" />
+                  <Phone className="w-4 h-4 text-[#F59E0B] shrink-0" />
                   <span>Visiting Desk: {settings.phone}</span>
                 </div>
               </div>
             </div>
 
             {/* Note on Admissions Registry */}
-            <div className="p-5 rounded-2xl bg-white border border-[#E8DFD1] text-[#5C4E50] text-xs leading-relaxed font-sans shadow-xs">
-              <strong className="text-[#23070B] block mb-1">Administrative Note:</strong>
+            <div className="p-5 rounded-2xl bg-white border border-[#E2E8F0] text-[#334155] text-xs leading-relaxed font-sans shadow-xs">
+              <strong className="text-[#020617] block mb-1">Administrative Note:</strong>
               Campus visit appointments are directly confirmed and assigned to senior educational coordinators upon booking.
             </div>
           </div>
 
           {/* Right: Booking Form Card */}
-          <div className="lg:col-span-7 bg-white p-7 sm:p-10 rounded-3xl border border-[#E8DFD1] shadow-[0_20px_45px_-15px_rgba(44,7,12,0.05)]">
+          <div className="lg:col-span-7 bg-white p-7 sm:p-10 rounded-3xl border border-[#E2E8F0] shadow-[0_20px_45px_-15px_rgba(44,7,12,0.05)]">
             {bookingRef ? (
               <div className="text-center py-8 space-y-4">
-                <div className="w-16 h-16 rounded-full bg-[#064E3B]/10 text-[#064E3B] flex items-center justify-center mx-auto border border-[#064E3B]/20">
-                  <CheckCircle2 className="w-10 h-10 text-[#064E3B]" />
+                <div className="w-16 h-16 rounded-full bg-[#115E59]/10 text-[#115E59] flex items-center justify-center mx-auto border border-[#115E59]/20">
+                  <CheckCircle2 className="w-10 h-10 text-[#115E59]" />
                 </div>
-                <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#064E3B] bg-[#ECFDF5] px-3.5 py-1 rounded-full border border-[#064E3B]/20 font-mono">
+                <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#115E59] bg-[#ECFDF5] px-3.5 py-1 rounded-full border border-[#115E59]/20 font-mono">
                   Visit Request Confirmed
                 </span>
-                <h3 className="font-editorial text-3xl font-medium text-[#23070B]">
+                <h3 className="font-editorial text-3xl font-medium text-[#020617]">
                   We Look Forward to Welcoming You!
                 </h3>
-                <p className="text-xs sm:text-sm text-[#5C4E50] max-w-md mx-auto leading-relaxed font-sans">
-                  Your tour of <strong className="text-[#23070B]">{preferredSchool === 'both' ? 'Both Campuses' : preferredSchool === 'dreamz' ? 'Rapid Dreamz' : 'Rapid Shakuntlayan'}</strong> has been registered.
+                <p className="text-xs sm:text-sm text-[#334155] max-w-md mx-auto leading-relaxed font-sans">
+                  Your tour of <strong className="text-[#020617]">{preferredSchool === 'both' ? 'Both Campuses' : preferredSchool === 'dreamz' ? 'Rapid Dreamz' : 'Rapid Shakuntlayan'}</strong> has been registered.
                 </p>
 
-                <div className="p-4 sm:p-5 rounded-2xl bg-[#FCFAF6] border border-[#E8DFD1] inline-block text-left text-xs space-y-1.5 min-w-[280px] font-sans">
-                  <div><strong className="text-[#6E5D5F]">Booking Reference:</strong> <span className="font-mono text-[#BD672A] font-bold ml-1.5">{bookingRef}</span></div>
-                  <div><strong className="text-[#6E5D5F]">Scheduled Date:</strong> <span className="text-[#23070B] ml-1.5">{preferredDate} at {preferredTime}</span></div>
-                  <div><strong className="text-[#6E5D5F]">Parent Name:</strong> <span className="text-[#23070B] ml-1.5">{parentName} ({phone})</span></div>
-                  <div><strong className="text-[#6E5D5F]">Status:</strong> <span className="text-[#BD672A] font-semibold ml-1.5">Pending Confirmation Call</span></div>
+                <div className="p-4 sm:p-5 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] inline-block text-left text-xs space-y-1.5 min-w-[280px] font-sans">
+                  <div><strong className="text-[#475569]">Booking Reference:</strong> <span className="font-mono text-[#F59E0B] font-bold ml-1.5">{bookingRef}</span></div>
+                  <div><strong className="text-[#475569]">Scheduled Date:</strong> <span className="text-[#020617] ml-1.5">{preferredDate} at {preferredTime}</span></div>
+                  <div><strong className="text-[#475569]">Parent Name:</strong> <span className="text-[#020617] ml-1.5">{parentName} ({phone})</span></div>
+                  <div><strong className="text-[#475569]">Status:</strong> <span className="text-[#F59E0B] font-semibold ml-1.5">Pending Confirmation Call</span></div>
                 </div>
 
                 <div className="pt-4 flex justify-center gap-3">
@@ -192,11 +192,11 @@ export const CampusVisitPage: React.FC = () => {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="border-b border-[#E8DFD1] pb-3 mb-2">
-                  <h3 className="font-editorial text-2xl font-medium text-[#23070B]">
+                <div className="border-b border-[#E2E8F0] pb-3 mb-2">
+                  <h3 className="font-editorial text-2xl font-medium text-[#020617]">
                     Schedule Your Campus Tour
                   </h3>
-                  <p className="text-xs text-[#6E5D5F] font-sans mt-0.5">
+                  <p className="text-xs text-[#475569] font-sans mt-0.5">
                     Tours are conducted Monday through Saturday between 9:30 AM and 3:30 PM.
                   </p>
                 </div>
@@ -210,8 +210,8 @@ export const CampusVisitPage: React.FC = () => {
 
                 {/* Which wing */}
                 <div>
-                  <label className="block text-[11px] font-bold text-[#6E5D5F] uppercase tracking-[0.15em] mb-1.5 font-mono">
-                    Which School Wing Would You Like to Tour? <span className="text-[#BD672A]">*</span>
+                  <label className="block text-[11px] font-bold text-[#475569] uppercase tracking-[0.15em] mb-1.5 font-mono">
+                    Which School Wing Would You Like to Tour? <span className="text-[#F59E0B]">*</span>
                   </label>
                   <div className="grid grid-cols-3 gap-2.5">
                     {[
@@ -225,8 +225,8 @@ export const CampusVisitPage: React.FC = () => {
                         onClick={() => setPreferredSchool(opt.id as any)}
                         className={`p-3 rounded-xl border text-xs font-semibold text-center transition-all cursor-pointer font-sans ${
                           preferredSchool === opt.id
-                            ? 'border-[#BD672A] bg-[#BD672A]/10 text-[#23070B] ring-2 ring-[#BD672A]/20 font-bold'
-                            : 'border-[#E8DFD1] bg-[#FCFAF6] hover:border-[#BD672A]/50 text-[#5C4E50]'
+                            ? 'border-[#F59E0B] bg-[#F59E0B]/10 text-[#020617] ring-2 ring-[#F59E0B]/20 font-bold'
+                            : 'border-[#E2E8F0] bg-[#F8FAFC] hover:border-[#F59E0B]/50 text-[#334155]'
                         }`}
                       >
                         {opt.label}
@@ -238,8 +238,8 @@ export const CampusVisitPage: React.FC = () => {
                 {/* Parent Name & Phone */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="visitParentName" className="block text-[11px] font-bold text-[#6E5D5F] uppercase tracking-[0.15em] mb-1 font-mono">
-                      Parent / Visitor Name <span className="text-[#BD672A]">*</span>
+                    <label htmlFor="visitParentName" className="block text-[11px] font-bold text-[#475569] uppercase tracking-[0.15em] mb-1 font-mono">
+                      Parent / Visitor Name <span className="text-[#F59E0B]">*</span>
                     </label>
                     <input
                       id="visitParentName"
@@ -247,14 +247,14 @@ export const CampusVisitPage: React.FC = () => {
                       placeholder="e.g. Meenakshi Sundaram"
                       value={parentName}
                       onChange={(e) => setParentName(e.target.value)}
-                      className="w-full px-3.5 py-2 rounded-xl border border-[#E8DFD1] bg-[#FCFAF6] text-[#23070B] text-xs sm:text-sm focus:bg-white focus:outline-none focus:border-[#BD672A] focus:ring-4 focus:ring-[#BD672A]/15 transition-all"
+                      className="w-full px-3.5 py-2 rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] text-[#020617] text-xs sm:text-sm focus:bg-white focus:outline-none focus:border-[#F59E0B] focus:ring-4 focus:ring-[#F59E0B]/15 transition-all"
                       required
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="visitPhone" className="block text-[11px] font-bold text-[#6E5D5F] uppercase tracking-[0.15em] mb-1 font-mono">
-                      Mobile Number <span className="text-[#BD672A]">*</span>
+                    <label htmlFor="visitPhone" className="block text-[11px] font-bold text-[#475569] uppercase tracking-[0.15em] mb-1 font-mono">
+                      Mobile Number <span className="text-[#F59E0B]">*</span>
                     </label>
                     <input
                       id="visitPhone"
@@ -262,7 +262,7 @@ export const CampusVisitPage: React.FC = () => {
                       placeholder="10-digit mobile number"
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
-                      className="w-full px-3.5 py-2 rounded-xl border border-[#E8DFD1] bg-[#FCFAF6] text-[#23070B] text-xs sm:text-sm focus:bg-white focus:outline-none focus:border-[#BD672A] focus:ring-4 focus:ring-[#BD672A]/15 transition-all"
+                      className="w-full px-3.5 py-2 rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] text-[#020617] text-xs sm:text-sm focus:bg-white focus:outline-none focus:border-[#F59E0B] focus:ring-4 focus:ring-[#F59E0B]/15 transition-all"
                       required
                     />
                   </div>
@@ -271,8 +271,8 @@ export const CampusVisitPage: React.FC = () => {
                 {/* Email & Child Class */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="visitEmail" className="block text-[11px] font-bold text-[#6E5D5F] uppercase tracking-[0.15em] mb-1 font-mono">
-                      Email Address <span className="text-[#BD672A]">*</span>
+                    <label htmlFor="visitEmail" className="block text-[11px] font-bold text-[#475569] uppercase tracking-[0.15em] mb-1 font-mono">
+                      Email Address <span className="text-[#F59E0B]">*</span>
                     </label>
                     <input
                       id="visitEmail"
@@ -280,13 +280,13 @@ export const CampusVisitPage: React.FC = () => {
                       placeholder="visitor@example.com"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="w-full px-3.5 py-2 rounded-xl border border-[#E8DFD1] bg-[#FCFAF6] text-[#23070B] text-xs sm:text-sm focus:bg-white focus:outline-none focus:border-[#BD672A] focus:ring-4 focus:ring-[#BD672A]/15 transition-all"
+                      className="w-full px-3.5 py-2 rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] text-[#020617] text-xs sm:text-sm focus:bg-white focus:outline-none focus:border-[#F59E0B] focus:ring-4 focus:ring-[#F59E0B]/15 transition-all"
                       required
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="visitClass" className="block text-[11px] font-bold text-[#6E5D5F] uppercase tracking-[0.15em] mb-1 font-mono">
+                    <label htmlFor="visitClass" className="block text-[11px] font-bold text-[#475569] uppercase tracking-[0.15em] mb-1 font-mono">
                       Child's Intended Class / Grade
                     </label>
                     <input
@@ -295,7 +295,7 @@ export const CampusVisitPage: React.FC = () => {
                       placeholder="e.g. Nursery or Class 6"
                       value={studentClass}
                       onChange={(e) => setStudentClass(e.target.value)}
-                      className="w-full px-3.5 py-2 rounded-xl border border-[#E8DFD1] bg-[#FCFAF6] text-[#23070B] text-xs sm:text-sm focus:bg-white focus:outline-none focus:border-[#BD672A] focus:ring-4 focus:ring-[#BD672A]/15 transition-all"
+                      className="w-full px-3.5 py-2 rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] text-[#020617] text-xs sm:text-sm focus:bg-white focus:outline-none focus:border-[#F59E0B] focus:ring-4 focus:ring-[#F59E0B]/15 transition-all"
                     />
                   </div>
                 </div>
@@ -303,28 +303,28 @@ export const CampusVisitPage: React.FC = () => {
                 {/* Preferred Date & Time */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="visitDate" className="block text-[11px] font-bold text-[#6E5D5F] uppercase tracking-[0.15em] mb-1 font-mono">
-                      Preferred Date <span className="text-[#BD672A]">*</span>
+                    <label htmlFor="visitDate" className="block text-[11px] font-bold text-[#475569] uppercase tracking-[0.15em] mb-1 font-mono">
+                      Preferred Date <span className="text-[#F59E0B]">*</span>
                     </label>
                     <input
                       id="visitDate"
                       type="date"
                       value={preferredDate}
                       onChange={(e) => setPreferredDate(e.target.value)}
-                      className="w-full px-3.5 py-2 rounded-xl border border-[#E8DFD1] bg-[#FCFAF6] text-[#23070B] text-xs sm:text-sm focus:bg-white focus:outline-none focus:border-[#BD672A] focus:ring-4 focus:ring-[#BD672A]/15 transition-all"
+                      className="w-full px-3.5 py-2 rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] text-[#020617] text-xs sm:text-sm focus:bg-white focus:outline-none focus:border-[#F59E0B] focus:ring-4 focus:ring-[#F59E0B]/15 transition-all"
                       required
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="visitTime" className="block text-[11px] font-bold text-[#6E5D5F] uppercase tracking-[0.15em] mb-1 font-mono">
-                      Preferred Time Slot <span className="text-[#BD672A]">*</span>
+                    <label htmlFor="visitTime" className="block text-[11px] font-bold text-[#475569] uppercase tracking-[0.15em] mb-1 font-mono">
+                      Preferred Time Slot <span className="text-[#F59E0B]">*</span>
                     </label>
                     <select
                       id="visitTime"
                       value={preferredTime}
                       onChange={(e) => setPreferredTime(e.target.value)}
-                      className="w-full px-3.5 py-2 rounded-xl border border-[#E8DFD1] bg-[#FCFAF6] text-[#23070B] text-xs sm:text-sm focus:bg-white focus:outline-none focus:border-[#BD672A] focus:ring-4 focus:ring-[#BD672A]/15 transition-all"
+                      className="w-full px-3.5 py-2 rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] text-[#020617] text-xs sm:text-sm focus:bg-white focus:outline-none focus:border-[#F59E0B] focus:ring-4 focus:ring-[#F59E0B]/15 transition-all"
                     >
                       <option value="09:30 AM">09:30 AM – 10:30 AM</option>
                       <option value="11:00 AM">11:00 AM – 12:00 PM</option>
@@ -336,7 +336,7 @@ export const CampusVisitPage: React.FC = () => {
 
                 {/* Message */}
                 <div>
-                  <label htmlFor="visitMessage" className="block text-[11px] font-bold text-[#6E5D5F] uppercase tracking-[0.15em] mb-1 font-mono">
+                  <label htmlFor="visitMessage" className="block text-[11px] font-bold text-[#475569] uppercase tracking-[0.15em] mb-1 font-mono">
                     Special Requests or Questions (Optional)
                   </label>
                   <textarea
@@ -345,7 +345,7 @@ export const CampusVisitPage: React.FC = () => {
                     placeholder="e.g. Interested in science labs, transport routes, or sports facilities..."
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    className="w-full px-3.5 py-2 rounded-xl border border-[#E8DFD1] bg-[#FCFAF6] text-[#23070B] text-xs sm:text-sm focus:bg-white focus:outline-none focus:border-[#BD672A] focus:ring-4 focus:ring-[#BD672A]/15 transition-all"
+                    className="w-full px-3.5 py-2 rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] text-[#020617] text-xs sm:text-sm focus:bg-white focus:outline-none focus:border-[#F59E0B] focus:ring-4 focus:ring-[#F59E0B]/15 transition-all"
                   />
                 </div>
 

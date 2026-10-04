@@ -154,10 +154,10 @@ export const AcademicStages: React.FC = () => {
         return (
           <div
             key={stage.id}
-            className={`rounded-3xl border transition-all duration-300 overflow-hidden bg-[#F8FAF8] ${
+            className={`rounded-3xl border transition-all duration-300 overflow-hidden bg-[#F0FDFA] ${
               isOpen
-                ? 'border-[#042F24] shadow-[0_12px_32px_-8px_rgba(4,47,36,0.12)] ring-1 ring-[#042F24]/30'
-                : 'border-[#D1E5DB] hover:border-[#34D399]/60 hover:shadow-sm'
+                ? 'border-[#134E4A] shadow-[0_12px_32px_-8px_rgba(4,47,36,0.12)] ring-1 ring-[#134E4A]/30'
+                : 'border-[#CCFBF1] hover:border-[#2DD4BF]/60 hover:shadow-sm'
             }`}
           >
             {/* Dossier Header / Accordion Trigger */}
@@ -168,7 +168,7 @@ export const AcademicStages: React.FC = () => {
             >
               <div className="space-y-2">
                 <div className="flex flex-wrap items-center gap-2 sm:gap-3">
-                  <span className="px-3 py-1 rounded-full text-[11px] font-mono font-bold uppercase tracking-wider bg-[#064E3B] text-[#A7F3D0] border border-[#34D399]/30">
+                  <span className="px-3 py-1 rounded-full text-[11px] font-mono font-bold uppercase tracking-wider bg-[#115E59] text-[#99F6E4] border border-[#2DD4BF]/30">
                     {stage.divisionCode}
                   </span>
                   <span className="text-[11px] font-mono font-semibold text-[#8A6A27] uppercase tracking-wider bg-[#F9F5EA] px-2.5 py-0.5 rounded-full border border-[#C5A059]/40">
@@ -177,10 +177,10 @@ export const AcademicStages: React.FC = () => {
                 </div>
 
                 <div className="flex flex-wrap items-baseline gap-2 sm:gap-3">
-                  <h3 className="font-editorial text-2xl sm:text-3xl font-bold text-[#021C16]">
+                  <h3 className="font-editorial text-2xl sm:text-3xl font-bold text-[#042F2E]">
                     {stage.title}
                   </h3>
-                  <span className="text-xs sm:text-sm font-semibold text-[#2D5A4C] bg-[#E3EFE9] px-3 py-0.5 rounded-full">
+                  <span className="text-xs sm:text-sm font-semibold text-[#2D6A5E] bg-[#F0FDFA] px-3 py-0.5 rounded-full">
                     {stage.grades} • {stage.ageGroup}
                   </span>
                 </div>
@@ -189,8 +189,8 @@ export const AcademicStages: React.FC = () => {
               <div
                 className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 ${
                   isOpen
-                    ? 'rotate-180 bg-[#064E3B] text-[#A7F3D0]'
-                    : 'bg-[#E3EFE9] text-[#064E3B] hover:bg-[#D1E5DB]'
+                    ? 'rotate-180 bg-[#115E59] text-[#99F6E4]'
+                    : 'bg-[#F0FDFA] text-[#115E59] hover:bg-[#CCFBF1]'
                 }`}
               >
                 <ChevronDown className="w-5 h-5" />
@@ -199,22 +199,22 @@ export const AcademicStages: React.FC = () => {
 
             {/* Dossier Body */}
             {isOpen && (
-              <div className="px-6 sm:px-8 pb-8 pt-2 border-t border-[#D1E5DB] space-y-6">
-                <p className="text-sm sm:text-base text-[#1E3B32] leading-relaxed font-normal">
+              <div className="px-6 sm:px-8 pb-8 pt-2 border-t border-[#CCFBF1] space-y-6">
+                <p className="text-sm sm:text-base text-[#1A3C38] leading-relaxed font-normal">
                   {stage.overview}
                 </p>
 
                 {/* If Senior Secondary, render Stream Markers Dossier */}
                 {stage.streams && (
-                  <div className="p-6 rounded-2xl bg-[#042F24] text-white border border-[#064E3B] shadow-sm space-y-4">
-                    <div className="flex flex-wrap items-center justify-between gap-2 border-b border-[#0D654E] pb-3">
+                  <div className="p-6 rounded-2xl bg-[#134E4A] text-white border border-[#115E59] shadow-sm space-y-4">
+                    <div className="flex flex-wrap items-center justify-between gap-2 border-b border-[#0F766E] pb-3">
                       <div className="flex items-center gap-2">
                         <GraduationCap className="w-5 h-5 text-[#E5C37E]" />
                         <h4 className="font-editorial text-xl font-bold text-[#E5C37E]">
                           Specialized Academic Concentrations (Classes 11 & 12)
                         </h4>
                       </div>
-                      <span className="text-xs font-mono text-[#A7F3D0]">
+                      <span className="text-xs font-mono text-[#99F6E4]">
                         CBSE Affiliated Curricula
                       </span>
                     </div>
@@ -230,8 +230,8 @@ export const AcademicStages: React.FC = () => {
                           }}
                           className={`px-4 py-2 rounded-xl text-xs font-bold font-mono transition-all cursor-pointer ${
                             selectedStream === idx
-                              ? 'bg-[#C5A059] text-[#021C16] shadow-sm'
-                              : 'bg-[#093C2F] text-[#D1E7DF] hover:bg-[#0E4C3C]'
+                              ? 'bg-[#C5A059] text-[#042F2E] shadow-sm'
+                              : 'bg-[#134E4A] text-[#CCFBF1] hover:bg-[#115E59]'
                           }`}
                         >
                           {stream.name}
@@ -240,17 +240,17 @@ export const AcademicStages: React.FC = () => {
                     </div>
 
                     {/* Active Stream Content */}
-                    <div className="p-4 rounded-xl bg-[#021C16] border border-[#0F4C3C] space-y-3">
+                    <div className="p-4 rounded-xl bg-[#042F2E] border border-[#115E59] space-y-3">
                       <div className="flex flex-wrap items-center justify-between gap-2">
-                        <span className="text-xs font-bold uppercase tracking-wider text-[#A7F3D0] font-mono">
+                        <span className="text-xs font-bold uppercase tracking-wider text-[#99F6E4] font-mono">
                           {stage.streams[selectedStream].badge}
                         </span>
-                        <span className="text-xs text-[#D1E7DF]">
+                        <span className="text-xs text-[#CCFBF1]">
                           Target Gateways: <strong className="text-white">{stage.streams[selectedStream].gateway}</strong>
                         </span>
                       </div>
 
-                      <div className="text-xs text-[#B2D6C9]">
+                      <div className="text-xs text-[#99F6E4]">
                         <strong className="block text-white mb-1.5 uppercase font-mono tracking-wider">
                           Elective Subject Matrix:
                         </strong>
@@ -270,15 +270,15 @@ export const AcademicStages: React.FC = () => {
                 {/* Grid: Subjects, Pedagogy, Laboratories, and Assessment */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
                   {/* Subjects Panel */}
-                  <div className="p-6 rounded-2xl bg-white border border-[#D1E5DB] shadow-2xs space-y-3">
-                    <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-[#064E3B] flex items-center gap-2">
-                      <BookOpen className="w-4 h-4 text-[#064E3B]" />
+                  <div className="p-6 rounded-2xl bg-white border border-[#CCFBF1] shadow-2xs space-y-3">
+                    <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-[#115E59] flex items-center gap-2">
+                      <BookOpen className="w-4 h-4 text-[#115E59]" />
                       Core Curriculum Framework
                     </h4>
-                    <ul className="space-y-2 text-xs sm:text-sm text-[#1E3B32]">
+                    <ul className="space-y-2 text-xs sm:text-sm text-[#1A3C38]">
                       {stage.subjects.map((sub, i) => (
                         <li key={i} className="flex items-start gap-2.5">
-                          <CheckCircle2 className="w-4 h-4 text-[#064E3B] shrink-0 mt-0.5" />
+                          <CheckCircle2 className="w-4 h-4 text-[#115E59] shrink-0 mt-0.5" />
                           <span>{sub}</span>
                         </li>
                       ))}
@@ -286,38 +286,38 @@ export const AcademicStages: React.FC = () => {
                   </div>
 
                   {/* Pedagogy & Assessment Panel */}
-                  <div className="p-6 rounded-2xl bg-white border border-[#D1E5DB] shadow-2xs space-y-5">
+                  <div className="p-6 rounded-2xl bg-white border border-[#CCFBF1] shadow-2xs space-y-5">
                     <div>
-                      <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-[#064E3B] mb-2 flex items-center gap-2">
-                        <Compass className="w-4 h-4 text-[#064E3B]" />
+                      <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-[#115E59] mb-2 flex items-center gap-2">
+                        <Compass className="w-4 h-4 text-[#115E59]" />
                         Teaching & Laboratory Methodology
                       </h4>
-                      <p className="text-xs sm:text-sm text-[#3C584E] leading-relaxed">
+                      <p className="text-xs sm:text-sm text-[#3D6B63] leading-relaxed">
                         {stage.pedagogy}
                       </p>
                     </div>
 
                     <div>
-                      <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-[#064E3B] mb-2 flex items-center gap-2">
-                        <Microscope className="w-4 h-4 text-[#064E3B]" />
+                      <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-[#115E59] mb-2 flex items-center gap-2">
+                        <Microscope className="w-4 h-4 text-[#115E59]" />
                         Dedicated Laboratory Facilities
                       </h4>
-                      <ul className="space-y-1 text-xs text-[#1E3B32]">
+                      <ul className="space-y-1 text-xs text-[#1A3C38]">
                         {stage.practicalLabs.map((lab, lIdx) => (
                           <li key={lIdx} className="flex items-center gap-2">
-                            <span className="w-1.5 h-1.5 rounded-full bg-[#064E3B]" />
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#115E59]" />
                             <span>{lab}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
 
-                    <div className="pt-3 border-t border-[#D1E5DB]">
-                      <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-[#064E3B] mb-1.5 flex items-center gap-2">
-                        <ShieldCheck className="w-4 h-4 text-[#064E3B]" />
+                    <div className="pt-3 border-t border-[#CCFBF1]">
+                      <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-[#115E59] mb-1.5 flex items-center gap-2">
+                        <ShieldCheck className="w-4 h-4 text-[#115E59]" />
                         Assessment & Board Alignment
                       </h4>
-                      <p className="text-xs text-[#3C584E] leading-relaxed">
+                      <p className="text-xs text-[#3D6B63] leading-relaxed">
                         {stage.assessment}
                       </p>
                     </div>

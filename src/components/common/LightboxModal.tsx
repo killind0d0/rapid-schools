@@ -37,7 +37,7 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
 
   return (
     <div
-      className="fixed inset-0 z-50 bg-[#1C0306]/92 backdrop-blur-xl flex items-center justify-center p-4 sm:p-6"
+      className="fixed inset-0 z-50 bg-[#020617]/92 backdrop-blur-xl flex items-center justify-center p-4 sm:p-6"
       role="dialog"
       aria-modal="true"
       aria-label={item.title}
@@ -45,7 +45,7 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
       {/* Close button */}
       <button
         onClick={onClose}
-        className="absolute top-4 right-4 sm:top-6 sm:right-6 p-2.5 rounded-full bg-white/10 hover:bg-[#BD672A] text-white border border-white/15 transition-all z-10 cursor-pointer shadow-lg"
+        className="absolute top-4 right-4 sm:top-6 sm:right-6 p-2.5 rounded-full bg-white/10 hover:bg-[#F59E0B] text-white border border-white/15 transition-all z-10 cursor-pointer shadow-lg"
         aria-label="Close image modal"
       >
         <X className="w-5 h-5" />
@@ -55,7 +55,7 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
       {currentIndex > 0 && (
         <button
           onClick={() => onNavigate(currentIndex - 1)}
-          className="absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/10 hover:bg-[#BD672A] text-white border border-white/15 transition-all cursor-pointer shadow-lg"
+          className="absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/10 hover:bg-[#F59E0B] text-white border border-white/15 transition-all cursor-pointer shadow-lg"
           aria-label="Previous image"
         >
           <ChevronLeft className="w-6 h-6" />
@@ -66,7 +66,7 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
       {currentIndex < items.length - 1 && (
         <button
           onClick={() => onNavigate(currentIndex + 1)}
-          className="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/10 hover:bg-[#BD672A] text-white border border-white/15 transition-all cursor-pointer shadow-lg"
+          className="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/10 hover:bg-[#F59E0B] text-white border border-white/15 transition-all cursor-pointer shadow-lg"
           aria-label="Next image"
         >
           <ChevronRight className="w-6 h-6" />
@@ -75,7 +75,7 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
 
       {/* Main Image and Caption Card */}
       <div className="max-w-4xl max-h-[90vh] flex flex-col items-center">
-        <div className="p-2 rounded-2xl bg-[#2C070C]/80 border border-[#BD672A]/30 shadow-2xl">
+        <div className="p-2 rounded-2xl bg-[#0F172A]/80 border border-[#F59E0B]/30 shadow-2xl">
           <img
             src={item.imageUrl}
             alt={item.altText || item.title}
@@ -83,11 +83,11 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
           />
         </div>
         <div className="mt-4 text-center text-white max-w-xl">
-          <span className="text-[11px] uppercase tracking-[0.2em] text-[#F3C292] font-semibold block mb-1 font-mono">
+          <span className="text-[11px] uppercase tracking-[0.2em] text-[#FDE68A] font-semibold block mb-1 font-mono">
             {item.category} • {item.targetSchool === 'dreamz' ? 'Rapid Dreamz' : item.targetSchool === 'shakuntlayan' ? 'Rapid Shakuntlayan' : 'Rapid Schools'}
           </span>
-          <h3 className="text-xl sm:text-2xl font-medium font-editorial text-[#FAF6F0]">{item.title}</h3>
-          <p className="text-xs sm:text-sm text-[#D8C7B8] mt-1 font-sans">{item.caption}</p>
+          <h3 className="text-xl sm:text-2xl font-medium font-editorial text-[#F8FAFC]">{item.title}</h3>
+          <p className="text-xs sm:text-sm text-[#CBD5E1] mt-1 font-sans">{item.caption}</p>
         </div>
       </div>
     </div>

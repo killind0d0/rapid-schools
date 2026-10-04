@@ -92,7 +92,7 @@ export const WhyRapid: React.FC = () => {
   const IconComponent = current.icon;
 
   return (
-    <section className="py-20 sm:py-24 bg-[#FAF6F0] relative">
+    <section className="py-20 sm:py-24 bg-[#F8FAFC] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <SectionHeading
@@ -113,11 +113,11 @@ export const WhyRapid: React.FC = () => {
                 onClick={() => setActivePillar(pillar.id)}
                 className={`flex items-center gap-2.5 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold tracking-wide transition-all cursor-pointer ${
                   isActive
-                    ? 'bg-[#2C070C] text-[#F3C292] shadow-[0_4px_18px_-2px_rgba(44,7,12,0.4)] border border-[#BD672A]/50 scale-105'
-                    : 'bg-white text-[#423738] hover:bg-[#FCFAF6] border border-[#E8DFD1]'
+                    ? 'bg-[#0F172A] text-[#FDE68A] shadow-[0_4px_18px_-2px_rgba(44,7,12,0.4)] border border-[#F59E0B]/50 scale-105'
+                    : 'bg-white text-[#1E293B] hover:bg-[#F8FAFC] border border-[#E2E8F0]'
                 }`}
               >
-                <span className={`font-editorial italic font-bold text-sm ${isActive ? 'text-[#F3C292]' : 'text-[#BD672A]'}`}>
+                <span className={`font-editorial italic font-bold text-sm ${isActive ? 'text-[#FDE68A]' : 'text-[#F59E0B]'}`}>
                   {pillar.roman}.
                 </span>
                 <span>{pillar.title.split('&')[0].trim()}</span>
@@ -127,33 +127,33 @@ export const WhyRapid: React.FC = () => {
         </div>
 
         {/* Active Pillar Card on Alabaster Sandstone Paper */}
-        <div className="rounded-3xl bg-white border border-[#E8DFD1] p-8 sm:p-12 shadow-[0_20px_45px_-15px_rgba(44,7,12,0.05)]">
+        <div className="rounded-3xl bg-white border border-[#E2E8F0] p-8 sm:p-12 shadow-[0_20px_45px_-15px_rgba(44,7,12,0.05)]">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             
             <div className="lg:col-span-7 space-y-4">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#BD672A]/10 text-[#BD672A] border border-[#BD672A]/25">
-                <IconComponent className="w-4 h-4 text-[#BD672A]" />
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F59E0B]/10 text-[#F59E0B] border border-[#F59E0B]/25">
+                <IconComponent className="w-4 h-4 text-[#F59E0B]" />
                 <span className="text-[10px] font-bold uppercase tracking-[0.2em] font-mono">
                   Dimension {current.roman}
                 </span>
               </div>
 
-              <h3 className="font-editorial text-2xl sm:text-3xl lg:text-4xl font-medium text-[#23070B] tracking-tight">
+              <h3 className="font-editorial text-2xl sm:text-3xl lg:text-4xl font-medium text-[#020617] tracking-tight">
                 {current.title}
               </h3>
               
-              <p className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#BD672A] font-mono">
+              <p className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#F59E0B] font-mono">
                 {current.tagline}
               </p>
 
-              <p className="text-sm sm:text-base text-[#5C4E50] leading-relaxed font-sans">
+              <p className="text-sm sm:text-base text-[#334155] leading-relaxed font-sans">
                 {current.description}
               </p>
 
               <div className="pt-4 grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                 {current.highlights.map((highlight, index) => (
-                  <div key={index} className="flex items-start gap-2.5 text-xs sm:text-sm text-[#423738] font-medium font-sans">
-                    <CheckCircle className="w-4 h-4 text-[#BD672A] shrink-0 mt-0.5" />
+                  <div key={index} className="flex items-start gap-2.5 text-xs sm:text-sm text-[#1E293B] font-medium font-sans">
+                    <CheckCircle className="w-4 h-4 text-[#F59E0B] shrink-0 mt-0.5" />
                     <span>{highlight}</span>
                   </div>
                 ))}
@@ -161,18 +161,18 @@ export const WhyRapid: React.FC = () => {
             </div>
 
             {/* Right side educational quote/card */}
-            <div className="lg:col-span-5 bg-[#FCFAF6] p-7 sm:p-9 rounded-2xl border border-[#E8DFD1] shadow-xs space-y-4 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-24 h-24 bg-[#BD672A]/5 rounded-full blur-xl pointer-events-none" />
-              <div className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#BD672A] font-mono flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#BD672A]" />
+            <div className="lg:col-span-5 bg-[#F8FAFC] p-7 sm:p-9 rounded-2xl border border-[#E2E8F0] shadow-xs space-y-4 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-[#F59E0B]/5 rounded-full blur-xl pointer-events-none" />
+              <div className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#F59E0B] font-mono flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#F59E0B]" />
                 Institutional Credo
               </div>
-              <blockquote className="text-lg sm:text-xl font-editorial italic text-[#23070B] leading-relaxed">
+              <blockquote className="text-lg sm:text-xl font-editorial italic text-[#020617] leading-relaxed">
                 "An institution is defined not merely by brick and mortar, but by the intellectual vitality, character, and humanity of the students who walk its corridors."
               </blockquote>
-              <div className="pt-4 border-t border-[#E8DFD1] flex items-center justify-between text-xs text-[#6E5D5F]">
-                <span className="font-bold text-[#23070B] font-outfit uppercase tracking-wider">Rapid Schools Charter</span>
-                <span className="font-mono text-[#BD672A] text-[11px]">NEP 2020 Aligned</span>
+              <div className="pt-4 border-t border-[#E2E8F0] flex items-center justify-between text-xs text-[#475569]">
+                <span className="font-bold text-[#020617] font-outfit uppercase tracking-wider">Rapid Schools Charter</span>
+                <span className="font-mono text-[#F59E0B] text-[11px]">NEP 2020 Aligned</span>
               </div>
             </div>
 
